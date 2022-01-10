@@ -1,3 +1,9 @@
+This repository hosts the modelling documentation for the UK implementation of Akoma Ntoso.
+
+The documentation is contained in the [wiki](https://bitbucket.org/MattLynchPCO/uk-akn-model/wiki/).
+
+---
+
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
