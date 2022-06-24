@@ -21,4 +21,4 @@ This documentation includes:
   - [Element and attribute naming conventions](naming-conventions)
   - [@class values and their role](type)
   - [Element ID Scheme](id-scheme)
-  - [LDAPP Data Dictionary](data-dictionary)
+  - [LDAPP Data Dictionary](data-dictionary.md)
