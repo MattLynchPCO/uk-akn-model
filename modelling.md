@@ -1,8 +1,6 @@
-\======= LDAPP Modelling =======
-
 # Introduction
 
-This document describes the LDAPP data model. The basic presumption is
+This documentation describes the LDAPP data model. The basic presumption is
 that LDAPP XML is based on [Akoma Ntoso](http://www.akomantoso.org/)
 (AKN) with some extensions and some restrictions. See also [general
 information about extending and restricting Akoma
@@ -10,15 +8,15 @@ Ntoso](https://lists.oasis-open.org/archives/legaldocml/201512/msg00004/Extendin
 
 The starting point is the [prototype Element
 Catalog](https://docs.google.com/spreadsheets/d/15YY9VpiqCyZ9PsqdoNts-NKg5v4goxfTWuaP2zxfNXQ/edit#gid=1496705114)
-which will become the [LDAPP Data Dictionary](data-dictionary).
+which will become the [LDAPP Data Dictionary](data-dictionary.md).
 
 This documentation includes:
 
-  - [Introduction](modelling)
-  - [Guiding principles](principles)
-  - [Description of the LDAPP Schemas](schema-description)
-  - [LDAPP extensions to Akoma Ntoso](ldapp-extensions)
-  - [Element and attribute naming conventions](naming-conventions)
-  - [@class values and their role](type)
-  - [Element ID Scheme](id-scheme)
+  - [Introduction](modelling.md)
+  - [Guiding principles](principles.md)
+  - [Description of the LDAPP Schemas](schema-description.md)
+  - [LDAPP extensions to Akoma Ntoso](ldapp-extensions.md)
+  - [Element and attribute naming conventions](naming-conventions.md)
+  - [@class values and their role](type.md)
+  - [Element ID Scheme](id-scheme.md)
   - [LDAPP Data Dictionary](data-dictionary.md)
