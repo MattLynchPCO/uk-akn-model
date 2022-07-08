@@ -2,21 +2,21 @@
 
 This section includes:
 
-  - [Document level elements](data-dictionary/document-level-elements)
-  - [Document metadata elements](data-dictionary/metadata-elements)
-  - [Front matter elements](data-dictionary/front-matter-elements)
-  - [Tail matter elements](data-dictionary/tail-matter-elements)
-  - [Grouping elements](data-dictionary/grouping-elements)
-  - [Section-level elements and below](data-dictionary/section-elements)
-  - [Schedule elements](data-dictionary/schedule-elements)
-  - [Miscellaneous other block elements](data-dictionary/block-elements)
-  - [EU legislation elements](data-dictionary/EU-elements)
-  - [In-line elements](data-dictionary/inline-elements)
-  - [Reference elements](data-dictionary/ref-elements)
+  - [Document level elements](data-dictionary/document-level-elements.md)
+  - [Document metadata elements](data-dictionary/metadata-elements.md)
+  - [Front matter elements](data-dictionary/front-matter-elements.md)
+  - [Tail matter elements](data-dictionary/tail-matter-elements.md)
+  - [Grouping elements](data-dictionary/grouping-elements.md)
+  - [Section-level elements and below](data-dictionary/section-elements.md)
+  - [Schedule elements](data-dictionary/schedule-elements.md)
+  - [Miscellaneous other block elements](data-dictionary/block-elements.md)
+  - [EU legislation elements](data-dictionary/EU-elements.md)
+  - [In-line elements](data-dictionary/inline-elements.md)
+  - [Reference elements](data-dictionary/ref-elements.md)
   - [Entities and elements for annotation and
-    history](data-dictionary/history-elements)
+    history](data-dictionary/history-elements.md)
   - [Change track and alternative
-    elements](data-dictionary/ct-alt-elements)
-  - [Table elements (XHTML)](data-dictionary/table-elements)
+    elements](data-dictionary/ct-alt-elements.md)
+  - [Table elements (XHTML)](data-dictionary/table-elements.md)
   - [Mathematical formula elements
-    (MathML)](data-dictionary/mathml-elements)
+    (MathML)](data-dictionary/mathml-elements.md)
