@@ -6,13 +6,11 @@ that LDAPP XML is based on [Akoma Ntoso](http://www.akomantoso.org/)
 information about extending and restricting Akoma
 Ntoso](https://lists.oasis-open.org/archives/legaldocml/201512/msg00004/Extending_Akoma_Ntoso.pdf).
 
-The starting point is the [prototype Element
+The origin of this documentation is the [prototype Element
 Catalog](https://docs.google.com/spreadsheets/d/15YY9VpiqCyZ9PsqdoNts-NKg5v4goxfTWuaP2zxfNXQ/edit#gid=1496705114)
-which will become the [LDAPP Data Dictionary](data-dictionary.md).
 
 This documentation includes:
 
-  - [Introduction](modelling.md)
   - [Guiding principles](principles.md)
   - [Description of the LDAPP Schemas](schema-description.md)
   - [LDAPP extensions to Akoma Ntoso](ldapp-extensions.md)
