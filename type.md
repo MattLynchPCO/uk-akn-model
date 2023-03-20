@@ -1,6 +1,6 @@
 # Element hierarchy, @class and @refersTo
 
-In legislation in the UK, many elements that have the same semantic role
+In legislation in the UK, some elements that have the same semantic role
 and formatting have different names based on what document or component
 of a document they appear in. For instance, the main building block of
 an Act is the "section" but this is called a "clause" in a Bill
@@ -16,7 +16,7 @@ this similarity however, @type is not available on most //hcontainer
 elements. For formatting purposes it is expedient to use the @class
 attribute which vastly simplifies CSS for formatting documents while
 editing. However, AKN requires that this semantic role reference an
-ontology. We will therefore also add (at a later stage) a similar value
+ontology. We will therefore consider adding (at a later stage) a similar value
 in the @refersTo attribute to reference an ontology either within the
 document or, more likely, in an external ontology.
 
@@ -44,21 +44,6 @@ be different so we have equivalents specifically for schedules below.
 See [Grouping or higher division
 elements](data-dictionary_grouping-elements)
 
-The MVP deployed LEGI used an earlier version of this table (below).
-This is deprecated and, when we deploy the updated version, data
-migration of existing documents will need to be performed to conform to
-the table above.
-
-|           |                                                                     |
-| --------- | ------------------------------------------------------------------- |
-| **Value** | **Interpretation**                                                  |
-| group0    | Extra grouping level                                                |
-| group1    | 1st level grouping (e.g. group of parts)                            |
-| group2    | 2nd level grouping (e.g. part)                                      |
-| group3    | 3rd level grouping (e.g. chapter \[division\])                      |
-| group4    | 4th level grouping (e.g. crossheading \[subdivision in Australia\]) |
-| group5    | 5th level grouping (e.g. nested crossheading)                       |
-
 ## Section-level and below in the body
 
 See [section-level and below elements](data-dictionary_section-elements)
@@ -76,6 +61,8 @@ elements).
 | para2      | Sub-paragraph within //\*\[@class="para1"\]         |
 | para3      | Sub-sub-paragraph within //\*\[@class="para2"\]     |
 | para4      | Sub-sub-sub-paragraph within //\*\[@class="para3"\] |
+| step       | Step, usually within a section or subsection        |
+
 
 ## Schedule and below elements
 
@@ -96,19 +83,6 @@ See [Schedule and below elements](data-dictionary_schedule-elements)
 | schGroup6 | 6th level grouping (e.g. sub-section - SI/SSI only)                 |
 | schGroup7 | 7th level grouping (e.g. crossheading \[subdivision in Australia\]) |
 | schGroup8 | 8th level grouping (e.g. nested crossheading)                       |
-
-The original grouping class names were as follows but we have introduced
-new levels to match the body grouping elements.
-
-|           |                                                                     |
-| --------- | ------------------------------------------------------------------- |
-| **Value** | **Interpretation**                                                  |
-| schGroup0 | Extra grouping level                                                |
-| schGroup1 | 1st level grouping (e.g. group of parts)                            |
-| schGroup2 | 2nd level grouping (e.g. part)                                      |
-| schGroup3 | 3rd level grouping (e.g. chapter \[division\])                      |
-| schGroup4 | 4th level grouping (e.g. crossheading \[subdivision in Australia\]) |
-| schGroup5 | 5th level grouping (e.g. nested crossheading)                       |
 
 Note that paragraphs or sub-paragraphs that are children of a schProv1
 or schProv2 will use @class="para1".
