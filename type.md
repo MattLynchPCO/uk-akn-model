@@ -42,11 +42,11 @@ Although we could reuse this within a schedule, the formatting tends to
 be different so we have equivalents specifically for schedules below.
 
 See [Grouping or higher division
-elements](data-dictionary_grouping-elements)
+elements](data-dictionary/grouping-elements.md)
 
 ## Section-level and below in the body
 
-See [section-level and below elements](data-dictionary_section-elements)
+See [section-level and below elements](data-dictionary/section-elements.md)
 also called "Basic Unit" and "Subdivision" elements in AKN (despite many
 jurisdictions having division and subdivision as "Higher Division"
 elements).
@@ -66,7 +66,7 @@ elements).
 
 ## Schedule and below elements
 
-See [Schedule and below elements](data-dictionary_schedule-elements)
+See [Schedule and below elements](data-dictionary/schedule-elements.md)
 
 |           |                                                                     |
 | --------- | ------------------------------------------------------------------- |
