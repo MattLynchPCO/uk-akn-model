@@ -1,15 +1,24 @@
 ## Table elements
 
-AKN includes a subset of the XHTML table markup for tables. Despite AKN
-being an OASIS standard, it inexplicably does not use the obvious
-competing table markup created by OASIS. The major missing elements from
+AKN includes a subset of the XHTML table markup for tables. The major missing elements from
 XHTML are //thead, //tbody and //tfoot. Some XML tools also are unable
 to apply the column and row merging attributes of XHTML if the same
 element names are used with a different namespace (this is particularly
-true of CSS-driven styling). We therefore propose to use //foreign to
+true of CSS-driven styling). We therefore  use //foreign to
 wrap XHTML table namespace elements rather than the AKN //table
-elements. On import into LDAPP, AKN tables can be mapped to XHTML tables
-relatively reliably although the conversion back is somewhat lossy.
+elements. 
+
+### Table-wide formatting
+Formatting and presentation matters affecting the whole table are reflected in the @class attribute of the //table element.
+
+Possible values and their expected presentation are as follows:
+
+| value | meaning |
+|---------|-----------|
+| allBorders | The table should have a single continous border around the table and between each row and column |
+| tbc | ... |
+
+### Elements used from XHTML model
 
 Elements from the XHTML table model include:
 
