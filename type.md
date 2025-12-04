@@ -1,4 +1,4 @@
-# Element hierarchy, @class and @refersTo
+# Element hierarchy and use of @class attribute
 
 In legislation in the UK, some elements that have the same semantic role
 and formatting have different names based on what document or component
@@ -8,17 +8,12 @@ an Act is the "section" but this is called a "clause" in a Bill
 equivalent structure in an SI can be called "rule", "regulation", or
 "article" (there may be others) despite being formatted very similarly.
 
-AKN requires us to use //hcontainer\[@name="*name*"\] or the equivalent
-//*name* to reflect the normal name of a referenceable element in a
+AKN requires us to use //*name* (or where the named element doesn't exist in the schema, //hcontainer\[@name="*name*"\])
+ to reflect the normal name of a referenceable element in a
 document. In order to capture the similarity of formatting and semantic
-role, we originally proposed to use the AKN @type attribute to represent
-this similarity however, @type is not available on most //hcontainer
-elements. For formatting purposes it is expedient to use the @class
-attribute which vastly simplifies CSS for formatting documents while
-editing. However, AKN requires that this semantic role reference an
-ontology. We will therefore consider adding (at a later stage) a similar value
-in the @refersTo attribute to reference an ontology either within the
-document or, more likely, in an external ontology.
+role, it is expedient to use the @class
+attribute which simplifies CSS for formatting documents while
+editing. 
 
 The following tables describe the different values and their
 interpretation within the LDAPP documents.
@@ -35,11 +30,11 @@ interpretation within the LDAPP documents.
 | group4    | 4th level grouping (e.g. chapter \[division\])                      |
 | group5    | 5th level grouping (e.g. section - SI/SSI only)                     |
 | group6    | 6th level grouping (e.g. sub-section - SI/SSI only)                 |
-| group7    | 7th level grouping (e.g. crossheading \[subdivision in Australia\]) |
+| group7    | 7th level grouping (e.g. crossheading)                              |
 | group8    | 8th level grouping (e.g. nested crossheading)                       |
 
-Although we could reuse this within a schedule, the formatting tends to
-be different so we have equivalents specifically for schedules below.
+The formatting within schedules may be different to so we have 
+equivalents specifically for schedules below.
 
 See [Grouping or higher division
 elements](data-dictionary/grouping-elements.md)
@@ -81,7 +76,7 @@ See [Schedule and below elements](data-dictionary/schedule-elements.md)
 | schGroup4 | 4th level grouping (e.g. chapter \[division\])                      |
 | schGroup5 | 5th level grouping (e.g. section - SI/SSI only)                     |
 | schGroup6 | 6th level grouping (e.g. sub-section - SI/SSI only)                 |
-| schGroup7 | 7th level grouping (e.g. crossheading \[subdivision in Australia\]) |
+| schGroup7 | 7th level grouping (e.g. crossheading)                              |
 | schGroup8 | 8th level grouping (e.g. nested crossheading)                       |
 
 Note that paragraphs or sub-paragraphs that are children of a schProv1
