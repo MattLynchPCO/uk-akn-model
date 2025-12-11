@@ -1,4 +1,4 @@
-\======= LDAPP Data Dictionary =======
+## Lawmaker element dictionary
 
 This section includes:
 
@@ -13,10 +13,7 @@ This section includes:
   - [EU legislation elements](data-dictionary/EU-elements.md)
   - [In-line elements](data-dictionary/inline-elements.md)
   - [Reference elements](data-dictionary/ref-elements.md)
-  - [Entities and elements for annotation and
-    history](data-dictionary/history-elements.md)
-  - [Change track and alternative
-    elements](data-dictionary/ct-alt-elements.md)
+  - [Entities and elements for annotation and history](data-dictionary/history-elements.md)
+  - [Change track and alternative elements](data-dictionary/ct-alt-elements.md)
   - [Table elements (XHTML)](data-dictionary/table-elements.md)
-  - [Mathematical formula elements
-    (MathML)](data-dictionary/mathml-elements.md)
+  - [Mathematical formula elements (MathML)](data-dictionary/mathml-elements.md)
