@@ -177,7 +177,7 @@ To ensure a valid name attribute, the [`num`](https://docs.oasis-open.org/legald
 #### Definitions
 
 
-For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
+For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'captainstable' in the *number* component, with a full `@eId` like 'sec_1__def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
 
 **Example:**
 
