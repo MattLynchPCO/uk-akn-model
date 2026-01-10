@@ -4,7 +4,7 @@
 
 ## Use of @name and @class
 
-Following in the spirit of the Akoma Ntoso standard, where elements have a consistent name, we use that name in the [`@name` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925107) of [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) (or equivalent named element). The [`@class` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925090) is used to specify consistent formatting for elements with different names but similar formatting in different document types or contexts.
+In line with the Akoma Ntoso standard, where a provision or other legislative entity has a consistent name, we use the matching element in Akoma Ntoso if it exists or, if it does not, we use the provision's name in the [`@name` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925107) of [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) (or equivalent named element). The [`@class` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925090) is used to specify consistent formatting for elements with different names but similar formatting in different document types or contexts.
 
 **Example:** A section in an Act, clause in a Bill, rule in an SI, regulation in an SI, or order in an SI all have `@class="prov1"` (indicating a first level standard provision), even though they have different `@name` values.
 
