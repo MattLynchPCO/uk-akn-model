@@ -2,7 +2,7 @@
 # Introduction
 
 This documentation describes the Lawmaker data model. Lawmaker uses XML compliant with the [Akoma Ntoso](http://www.akomantoso.org/)
-(AKN) schema with some extensions and some restrictions. 
+(AKN) schema with some limited extensions. 
 
 This documentation includes:
 
