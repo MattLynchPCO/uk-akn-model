@@ -176,24 +176,26 @@ To ensure a valid name attribute, the [`num`](https://docs.oasis-open.org/legald
 
 #### Definitions
 
-For definitions, we propose to replace the //num component with the
-defined term (//def) with any non-name characters (and occurrences of
-“-”) removed (i.e. ‘the definition of “captain’s table”’ becomes
-‘dfcaptainstable’). For bi-lingual publication of legislation, it will
-be desirable to include the defined term in both languages in each
-language rendition (AKN does not provide a standard solution for this
-but we will address that when we need to) so the English term would be
-available in any Welsh or Gaelic rendition that is created.
 
-#### Unnumbered grouping elements
+For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
 
-In order to uniquely identify grouping elements without a //num
-(//hcontainer\[@name="crossheading"\] and possibly //level), it is
-necessary to find some alternative for the *number* for each element.
-The cross-reference wording either quotes the contents of the heading or
-refers to the following section number. It would be impossible to have
-an ID scheme that was guaranteed unique that could accommodate both
-reference forms simultaneously. Therefore a compromise is necessary.
+**Example:**
+
+```xml
+<hcontainer name="definition" eId="sec_1__def__captainstable" class="definition">
+  <num>—</num>
+  <intro>
+    <p><def>captain's table</def> means</p>
+  </intro>
+  <content>
+    <p>the table at which the captain dines;</p>
+  </content>
+</hcontainer>
+```
+
+#### Unnumbered Grouping Elements
+
+To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element. The cross-reference wording either quotes the contents of the [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading) or refers to the following section number. It would be impossible to have an ID scheme that was guaranteed unique that could accommodate both reference forms simultaneously. Therefore a compromise is necessary.
 
 The following alternatives have been identified:
 
@@ -298,24 +300,8 @@ the number of the occurrence of an element with the ID preceding the
 
 ## @GUID
 
-Although AKN calls this a "Globally Unique Identifier" which has a quite
-specific and well-understood meaning, the standard states: "This
-attribute is an application-specific identifier that a local
-implementation may need to add to elements according to local rules and
-syntaxes. GUID is not a required attribute. Its use and specification is
-totally dependent on the representation and storage requirements of the
-author of the Manifestation. Despite the name, GUID\[sic\] do not even
-have to be globally unique across documents of the same collection. They
-are meant as a way to place ids from legacy formats and collections and
-that are still in use. The usage of GUID attribute has no required
-syntax and does not impact on compliance with this specification."
+The [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) in the AKN standard is described as an "application-specific identifier that a local implementation may need to add to elements according to local rules and syntaxes." The standard notes that "GUID is not a required attribute. Its use and specification is totally dependent on the representation and storage requirements of the author of the Manifestation. Despite the name, GUIDs do not even have to be globally unique across documents of the same collection."
 
-However, we require this value on every referencable element to ensure
-cross-references can be updated and require it to be unique at least
-within the system and allocate values compliant with the [GUID
-standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2)
-(which is Microsoft's name for a
-[UUID](https://tools.ietf.org/html/rfc4122)).
+This implementation requires the `@GUID` attribute on every referenceable element to ensure cross-references can be updated reliably. The values are required to be unique at least within the system and are allocated compliant with the [GUID standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2) (which is Microsoft's name for a [UUID](https://tools.ietf.org/html/rfc4122)).
 
-So that the @GUID value is a valid NMTOKEN and can therefore be treated
-as an XML ID, we prefix the serialized form of the GUID by "\_".
+To ensure that the `@GUID` value is a valid NMTOKEN and can therefore be treated as an XML ID, the serialized form of the GUID is prefixed with "_".

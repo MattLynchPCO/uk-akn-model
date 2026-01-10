@@ -1,59 +1,60 @@
 # LDAPP Extensions to AKN
 
-Aware that additional attributes that are not part of AKN but extend AKN
-will be needed for UK LDAPP, we introduce an attribute name space with
-the prefix “ukl” to capture these additional extensions. The URI for
-this namespace will be
-“<https://www.legislation.gov.uk/namespaces/UK-AKN>”.
+This document describes extensions to the [Akoma Ntoso (AKN) XML standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html) that are specific to the UK Lawmaker (LDAPP) implementation.
 
-These extensions include:
+## Namespace Declaration
 
-  - //quotedStructure context attributes (see [quotedStructure in the
-    Data
-    Dictionary](https://ldapp.teratext.leidos.com.au/doku.php?id=data-dictionary_block-elements#quotedstructure_embeddedstructure_and_mod)):
+Additional attributes that extend AKN are placed in a dedicated namespace with the prefix `ukl:`. The URI for this namespace is:
 
-<!-- end list -->
-
-``` 
-   * @ukl:docName the @name attribute of the //bill or //act from which or into which the quoted element is being taken or inserted
-   * @ukl:indent the indent level of the quoted element (so we can support nested structures, paragraphs in definitions, provisos, steps etc) - one of indent0, indent1, indent2, indent3, indent4, indent5
-* %%//%%ref@ukl:targetGuid the GUID equivalent of the @eId component of @href
-* %%//%%ref@ukl:targetJref, set to the value of the @ukl:jref attribute of the target of the reference (only set if the target element itself has a @ukl:jref)
-* %%//%%rref@ukl:fromGuid the GUID equivalent of @from
-* %%//%%rref@ukl:upToGuid the GUID equivalent of @upTo
-* %%//%%num@ukl:autonumber which is set to "no" if the contents of the %%//%%num are not to be changed when auto-numbering.
-* %%//%%def@ukl:startQuote and %%//%%def@ukl:endQuote to mirror those used in %%//%%quotedStructure
-* %%//%%*[@class="prov1"]@ukl:jref and %%//%%*[@class="sch"]@ukl:jref to store the user-defined J-ref string used while provision numbering is still in flux
-* %%//%%*[@class="prov1|prov2|schProv1|schProv2|para1|para2|para3]@ukl:type - initially either unset or with the value "money" for financial provisions - other supported values to be determined
+```
+https://www.legislation.gov.uk/namespaces/UK-AKN
 ```
 
-In addition, while editing, Lawmaker makes use of change track markup in
-the style of TeraText for Legislation rather than the Akoma Ntoso change
-track. While we use the //ins and //del inline tags, we have added
-custom attributes to those tags and to //hcontainer elements to ensure
-that the fragments of XML are self contained representations of the
-changes rather than relying on metadata located elsewhere in the
-document to interpret the change. This facilitates rendering in the
-editing tool and production of PDF. We have therefore added the
-following attributes:
+These extensions are necessary to support specific requirements of UK legislative drafting and publishing that are not covered by the standard AKN schema.
 
-  - //ins|del@ukl:changeStart, marking the starting character (typically
-    "\[") of a group of related changes,
-  - //ins|del@ukl:changeEnd, marking the ending character (typically
-    "\]") of a group of related changes,
-  - //ins|del@ukl:changeDnum, recording the DNum of an amendment
-    associated with the first of a series of change track markup
-    recording that amendment (typically on the same element as the
-    @ukl:changeStart),
-  - //hcontainer@ukl:change, marking change of a whole element, values
-    include:
-      - del, delete the whole element,
-      - ins, insert the whole element,
-      - delStruct, delete the structural container (typically including
-        //num and //heading, start and end tags),
-      - insStruct, insert the structural container (typically including
-        //num and //heading, start and end tags),
-  - //hcontainer@ukl:changeStart, marking the starting character
-    (typically "\[") of a group of related changes, and
-  - //hcontainer@ukl:changeEnd, marking the ending character (typically
-    "\]") of a group of related changes.
+## Extension Attributes
+
+### quotedStructure Context Attributes
+
+For the [`quotedStructure`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_quotedStructure) element, the following UK-specific attributes are used:
+
+- `@ukl:docName` - The `@name` attribute of the [`bill`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_bill) or [`act`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_act) from which or into which the quoted element is being taken or inserted
+- `@ukl:indent` - The indent level of the quoted element (to support nested structures, paragraphs in definitions, provisos, steps, etc.) - one of: `indent0`, `indent1`, `indent2`, `indent3`, `indent4`, `indent5`
+
+### Reference Attributes
+
+For [`ref`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ref) and [`rref`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_rref) elements:
+
+- `ref@ukl:targetGuid` - The GUID equivalent of the `@eId` component of `@href`
+- `ref@ukl:targetJref` - Set to the value of the `@ukl:jref` attribute of the target of the reference (only set if the target element itself has a `@ukl:jref`)
+- `rref@ukl:fromGuid` - The GUID equivalent of `@from`
+- `rref@ukl:upToGuid` - The GUID equivalent of `@upTo`
+
+### Other Element Attributes
+
+- `num@ukl:autonumber` - Set to "no" if the contents of the [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) are not to be changed when auto-numbering
+- `def@ukl:startQuote` and `def@ukl:endQuote` - Mirror those used in `quotedStructure` for the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element
+- `*[@class="prov1"]@ukl:jref` and `*[@class="sch"]@ukl:jref` - Store the user-defined J-ref string used while provision numbering is still in flux
+- `*[@class="prov1|prov2|schProv1|schProv2|para1|para2|para3"]@ukl:type` - Initially either unset or with the value "money" for financial provisions - other supported values to be determined
+
+## Change Tracking Attributes
+
+While editing, Lawmaker uses change track markup in the style of TeraText for Legislation rather than the standard Akoma Ntoso change track. While the [`ins`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ins) and [`del`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_del) inline tags are used, custom attributes have been added to those tags and to [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) elements to ensure that the fragments of XML are self-contained representations of the changes rather than relying on metadata located elsewhere in the document to interpret the change. This facilitates rendering in the editing tool and production of PDF.
+
+The following change tracking attributes are used:
+
+### For ins and del Elements
+
+- `ins|del@ukl:changeStart` - Marking the starting character (typically "[") of a group of related changes
+- `ins|del@ukl:changeEnd` - Marking the ending character (typically "]") of a group of related changes
+- `ins|del@ukl:changeDnum` - Recording the DNum of an amendment associated with the first of a series of change track markup recording that amendment (typically on the same element as the `@ukl:changeStart`)
+
+### For hcontainer Elements
+
+- `hcontainer@ukl:change` - Marking change of a whole element, values include:
+  - `del` - Delete the whole element
+  - `ins` - Insert the whole element
+  - `delStruct` - Delete the structural container (typically including [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) and [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading), start and end tags)
+  - `insStruct` - Insert the structural container (typically including `num` and `heading`, start and end tags)
+- `hcontainer@ukl:changeStart` - Marking the starting character (typically "[") of a group of related changes
+- `hcontainer@ukl:changeEnd` - Marking the ending character (typically "]") of a group of related changes
