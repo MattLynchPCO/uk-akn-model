@@ -1,22 +1,10 @@
-# Element hierarchy and use of @class attribute
+# Element Hierarchy and Use of @class Attribute
 
-In legislation in the UK, some elements that have the same semantic role
-and formatting have different names based on what document or component
-of a document they appear in. For instance, the main building block of
-an Act is the "section" but this is called a "clause" in a Bill
-(although references within that Bill are to "section") and the
-equivalent structure in an SI can be called "rule", "regulation", or
-"article" (there may be others) despite being formatted very similarly.
+In UK legislation, some elements that have the same semantic role and formatting have different names based on what document or component of a document they appear in. For instance, the main building block of an Act is the "section" but this is called a "clause" in a Bill (although references within that Bill are to "section"), and the equivalent structure in an SI can be called "rule", "regulation", or "article" (there may be others) despite being formatted very similarly.
 
-AKN requires us to use //*name* (or where the named element doesn't exist in the schema, //hcontainer\[@name="*name*"\])
- to reflect the normal name of a referenceable element in a
-document. In order to capture the similarity of formatting and semantic
-role, it is expedient to use the @class
-attribute which simplifies CSS for formatting documents while
-editing. 
+The [Akoma Ntoso (AKN) standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html) requires using the element name (or where the named element doesn't exist in the schema, [`hcontainer[@name="..."]`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer)) to reflect the normal name of a referenceable element in a document. To capture the similarity of formatting and semantic role, it is appropriate to use the [`@class` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925090), which simplifies CSS for formatting documents while editing. 
 
-The following tables describe the different values and their
-interpretation within the LDAPP documents.
+The following tables describe the different `@class` values and their interpretation within UK AKN documents.
 
 ## Grouping elements in the body
 
@@ -33,18 +21,13 @@ interpretation within the LDAPP documents.
 | group7    | 7th level grouping (e.g. crossheading)                              |
 | group8    | 8th level grouping (e.g. nested crossheading)                       |
 
-The formatting within schedules may be different to so we have 
-equivalents specifically for schedules below.
+The formatting within schedules may be different, so there are equivalents specifically for schedules below.
 
-See [Grouping or higher division
-elements](data-dictionary/grouping-elements.md)
+See [Grouping or Higher Division Elements](data-dictionary/grouping-elements.md)
 
-## Section-level and below in the body
+## Section-Level and Below in the Body
 
-See [section-level and below elements](data-dictionary/section-elements.md)
-also called "Basic Unit" and "Subdivision" elements in AKN (despite many
-jurisdictions having division and subdivision as "Higher Division"
-elements).
+See [Section-Level and Below Elements](data-dictionary/section-elements.md), also called "Basic Unit" and "Subdivision" elements in the [AKN standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html) (despite many jurisdictions having division and subdivision as "Higher Division" elements).
 
 |            |                                                     |
 | ---------- | --------------------------------------------------- |
@@ -59,9 +42,11 @@ elements).
 | step       | Step, usually within a section or subsection        |
 
 
-## Schedule and below elements
+## Schedule and Below Elements
 
-See [Schedule and below elements](data-dictionary/schedule-elements.md)
+See [Schedule and Below Elements](data-dictionary/schedule-elements.md)
+
+The table below shows `@class` values for schedules and their nested elements:
 
 |           |                                                                     |
 | --------- | ------------------------------------------------------------------- |
@@ -79,5 +64,4 @@ See [Schedule and below elements](data-dictionary/schedule-elements.md)
 | schGroup7 | 7th level grouping (e.g. crossheading)                              |
 | schGroup8 | 8th level grouping (e.g. nested crossheading)                       |
 
-Note that paragraphs or sub-paragraphs that are children of a schProv1
-or schProv2 will use @class="para1".
+**Note:** Paragraphs or sub-paragraphs that are children of a `schProv1` or `schProv2` will use `@class="para1"`.

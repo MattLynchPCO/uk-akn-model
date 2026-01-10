@@ -1,6 +1,8 @@
-# Element ID Scheme and references
+# Element ID Scheme and References
 
-## Cross reference requirements
+This document describes the identifier scheme used for elements in UK legislation following the [Akoma Ntoso (AKN) naming conventions](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html). It covers both the [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) for structural identification and the [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) for persistent references.
+
+## Cross-Reference Requirements
 
 ### Section-level elements and below
 
@@ -109,33 +111,17 @@ elements).
 
 ## @eId
 
-See [AKN id
-scheme](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303)
-including the list of standard abbreviations.
+The [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) provides a human-readable structural identifier for elements. See the [AKN naming conventions specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303) including the list of standard abbreviations.
 
-AKN recommends use of an optional *prefix*, an *element\_ref*
-(essentially the name or abbreviated name of the element) and the
-*number* (possibly empty). The prefix is the identifier of any
-containing component necessary to ensure uniqueness of the ID. The
-default separator between the *prefix* and *element\_ref* is double
-underscore and between the *element\_ref* and the *number* is single
-underscore. This broad approach was adapted from the EnAct and LEAP
-approaches.
+The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`). This approach was adapted from the EnAct and LEAP implementations.
 
-Despite CLML using simpler separators, we choose to follow the AKN
-examples more closely (EnAct used "-" and ".", CLML uses "-" as the
-separator in IDs and "/" as the separator in URIs and avoids the
-*element\_ref* for common structures within a section or equivalent).
+Despite CLML using simpler separators, this implementation follows the AKN examples more closely. EnAct used "-" and ".", CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_section) or equivalent.
 
-### element\_ref component
+### element_ref Component
 
-Although the abbreviations listed in the above AKN documentation are not
-always standard in a UK context (e.g. "sec" instead of "s" for section,
-"dvs" instead of "div" for division, "chp" instead of "cap" for chapter)
-we choose to follow the AKN standard where specified.
+Although the abbreviations listed in the AKN naming conventions documentation are not always standard in a UK context (e.g., "sec" instead of "s" for section, "dvs" instead of "div" for division, "chp" instead of "cap" for chapter), this implementation follows the AKN standard where specified for consistency and interoperability.
 
-The following table describes the abbreviations used by LDAPP and their
-source:
+The following table describes the abbreviations used in this implementation and their source:
 
 |                       |                  |            |                                                       |
 | --------------------- | ---------------- | ---------- | ----------------------------------------------------- |
@@ -184,36 +170,32 @@ source:
 be the master or the result?) \[I have code that is more up-to-date than
 this table - TJA\]</span>
 
-### number component
+### number Component
 
-To ensure a valid name attribute, to turn the //num component into the
-*number* component of the @eId, we strip out the redundant @name
-component if present (the *element\_ref* component should provide this
-information) and any non-name characters including spaces, punctuation,
-and brackets. For most elements this is sufficient to uniquely identify
-the element. The two major exceptions are definitions and grouping
-elements without a //num.
+To ensure a valid name attribute, the [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) component is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For most elements this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
 
 #### Definitions
 
-For definitions, we propose to replace the //num component with the
-defined term (//def) with any non-name characters (and occurrences of
-“-”) removed (i.e. ‘the definition of “captain’s table”’ becomes
-‘dfcaptainstable’). For bi-lingual publication of legislation, it will
-be desirable to include the defined term in both languages in each
-language rendition (AKN does not provide a standard solution for this
-but we will address that when we need to) so the English term would be
-available in any Welsh or Gaelic rendition that is created.
 
-#### Unnumbered grouping elements
+For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'captainstable' in the *number* component, with a full `@eId` like 'sec_1__def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
 
-In order to uniquely identify grouping elements without a //num
-(//hcontainer\[@name="crossheading"\] and possibly //level), it is
-necessary to find some alternative for the *number* for each element.
-The cross-reference wording either quotes the contents of the heading or
-refers to the following section number. It would be impossible to have
-an ID scheme that was guaranteed unique that could accommodate both
-reference forms simultaneously. Therefore a compromise is necessary.
+**Example:**
+
+```xml
+<hcontainer name="definition" eId="sec_1__def__captainstable" class="definition">
+  <num>—</num>
+  <intro>
+    <p><def>captain's table</def> means</p>
+  </intro>
+  <content>
+    <p>the table at which the captain dines;</p>
+  </content>
+</hcontainer>
+```
+
+#### Unnumbered Grouping Elements
+
+To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element. The cross-reference wording either quotes the contents of the [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading) or refers to the following section number. It would be impossible to have an ID scheme that was guaranteed unique that could accommodate both reference forms simultaneously. Therefore a compromise is necessary.
 
 The following alternatives have been identified:
 
@@ -318,24 +300,8 @@ the number of the occurrence of an element with the ID preceding the
 
 ## @GUID
 
-Although AKN calls this a "Globally Unique Identifier" which has a quite
-specific and well-understood meaning, the standard states: "This
-attribute is an application-specific identifier that a local
-implementation may need to add to elements according to local rules and
-syntaxes. GUID is not a required attribute. Its use and specification is
-totally dependent on the representation and storage requirements of the
-author of the Manifestation. Despite the name, GUID\[sic\] do not even
-have to be globally unique across documents of the same collection. They
-are meant as a way to place ids from legacy formats and collections and
-that are still in use. The usage of GUID attribute has no required
-syntax and does not impact on compliance with this specification."
+The [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) in the AKN standard is described as an "application-specific identifier that a local implementation may need to add to elements according to local rules and syntaxes." The standard notes that "GUID is not a required attribute. Its use and specification is totally dependent on the representation and storage requirements of the author of the Manifestation. Despite the name, GUIDs do not even have to be globally unique across documents of the same collection."
 
-However, we require this value on every referencable element to ensure
-cross-references can be updated and require it to be unique at least
-within the system and allocate values compliant with the [GUID
-standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2)
-(which is Microsoft's name for a
-[UUID](https://tools.ietf.org/html/rfc4122)).
+This implementation requires the `@GUID` attribute on every referenceable element to ensure cross-references can be updated reliably. The values are required to be unique at least within the system and are allocated compliant with the [GUID standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2) (which is Microsoft's name for a [UUID](https://tools.ietf.org/html/rfc4122)).
 
-So that the @GUID value is a valid NMTOKEN and can therefore be treated
-as an XML ID, we prefix the serialized form of the GUID by "\_".
+To ensure that the `@GUID` value is a valid NMTOKEN and can therefore be treated as an XML ID, the serialized form of the GUID is prefixed with "_".

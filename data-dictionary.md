@@ -1,6 +1,10 @@
-## Lawmaker element dictionary
+# Lawmaker Element Dictionary
 
-This section includes:
+This document provides an organized index of elements used in the UK implementation of the [Akoma Ntoso (AKN) XML standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html) for legislation. Each linked section contains detailed information about specific element categories, their usage, and examples.
+
+## Element Categories
+
+This dictionary is organized into the following categories:
 
   - [Document level elements](data-dictionary/document-level-elements.md)
   - [Document metadata elements](data-dictionary/metadata-elements.md)
