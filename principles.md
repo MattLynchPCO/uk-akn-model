@@ -18,7 +18,7 @@ In line with the Akoma Ntoso standard, where a provision or other legislative en
 </hcontainer>
 ```
 
-The AKN schema does not provide a `@name` attribute for certain elements, in particular [`blockContainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_blockContainer) and [`tblock`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_tblock). Where a consistent name is applied to these elements, we use the `@class` attribute to hold the name rather than introducing a new namespace attribute. While this is not the primary intended use of `@class` according to the AKN documentation, it provides a practical solution until future versions of AKN may add `@name` to these elements.
+The AKN schema does not provide a `@name` attribute for certain elements, in particular [`blockContainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_blockContainer) and [`tblock`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_tblock). Where these are used to represent provisions or other entities with specific names, we use the `@class` attribute to hold the name rather than introducing a new namespace attribute. While this is not the primary intended use of `@class` according to the AKN documentation, it provides a practical solution until future versions of AKN may add `@name` to these elements.
 
 **Example:** Using `@class` to hold the name for a `tblock` element in a preamble:
 
