@@ -9,11 +9,11 @@ In line with the Akoma Ntoso standard, where a provision or other legislative en
 **Example:** A section in an Act, clause in a Bill, rule in an SI, regulation in an SI, or order in an SI all have `@class="prov1"` (indicating a first level standard provision), even though they have different `@name` values.
 
 ```xml
-<hcontainer name="section" eId="sec_1" class="prov1">
+<hcontainer name="regulation" eId="reg_1" class="prov1">
   <num>1</num>
-  <heading>Title of section</heading>
+  <heading>Title of regulation</heading>
   <content>
-    <p>Content of the section.</p>
+    <p>Content of the regulation.</p>
   </content>
 </hcontainer>
 ```
