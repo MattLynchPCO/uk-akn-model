@@ -18,12 +18,14 @@ Following in the spirit of the Akoma Ntoso standard, where elements have a consi
 
 The AKN schema does not provide a `@name` attribute for certain elements, in particular [`blockContainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_blockContainer) and [`tblock`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_tblock). Where a consistent name is applied to these elements, we use the `@class` attribute to hold the name rather than introducing a new namespace attribute. While this is not the primary intended use of `@class` according to the AKN documentation, it provides a practical solution until future versions of AKN may add `@name` to these elements.
 
-**Example:** Using `@class` to hold the name for a `tblock` element:
+**Example:** Using `@class` to hold the name for a `tblock` element in a preamble:
 
 ```xml
-<tblock class="explanatoryNotesStatement" eId="preface__explNotesStmnt">
-  <p>Amendments to the Bill since the previous version are indicated by sidelining in the right margin.</p>
-</tblock>
+<preface eId="preface">
+  <tblock class="explanatoryNotesStatement" eId="preface__explNotesStmnt">
+    <p>Amendments to the Bill since the previous version are indicated by sidelining in the right margin.</p>
+  </tblock>
+</preface>
 ```
 
 ## Use of blockContainer vs tblock
@@ -34,14 +36,21 @@ The Akoma Ntoso standard provides [`tblock`](https://docs.oasis-open.org/legaldo
 - Block constructs that would normally appear within a named provision, such as tables, formulas, and similar content which have optional number and heading
 - Consistency between parts of the document where [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) is valid and those where only `tblock` or `blockContainer` are permitted (e.g., [`preamble`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_preamble), [`conclusions`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_conclusions))
 
-**Example:** Using `tblock` in a preamble:
+**Example:** Using `tblock` for a table structure:
 
 ```xml
-<preface eId="preface">
-  <tblock class="explanatoryNotesStatement" eId="preface__explNotesStmnt">
-    <p>Amendments to the Bill since the previous version are indicated by sidelining in the right margin.</p>
-  </tblock>
-</preface>
+<tblock class="table" eId="sec_1__subsec_2__tbl__oc_1">
+  <foreign>
+    <table xmlns="http://www.w3.org/1999/xhtml">
+      <thead>
+        <tr><th>Column 1</th><th>Column 2</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Data 1</td><td>Data 2</td></tr>
+      </tbody>
+    </table>
+  </foreign>
+</tblock>
 ```
 
 **Use `blockContainer` in parts where `hcontainer` is not permitted:**
@@ -78,5 +87,7 @@ Therefore, we use the [`level`](https://docs.oasis-open.org/legaldocml/akn-core/
   </level>
 </subsection>
 ```
+
+**Note:** The trailing commas in the paragraph text above are intentional and reflect the legal formatting conventions used in UK legislation, where list items within amendment text are punctuated as part of a continuous sentence.
 
 This approach allows `hcontainer` elements (such as definitions) to be nested within `level` elements while maintaining a consistent structure for lettered provisions.
