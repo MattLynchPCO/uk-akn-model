@@ -1,5 +1,7 @@
 # Guiding Principles
 
+**Note on examples:** The XML examples in this document omit GUID attributes for clarity and readability. In actual UK AKN implementation, every referenceable element requires a GUID attribute (see [Element ID Scheme](id-scheme.md#guid) for details).
+
 ## Use of @name and @class
 
 Following in the spirit of the Akoma Ntoso standard, where elements have a consistent name, we use that name in the [`@name` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925107) of [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) (or equivalent named element). The [`@class` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925090) is used to specify consistent formatting for elements with different names but similar formatting in different document types or contexts.
