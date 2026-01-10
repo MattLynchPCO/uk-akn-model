@@ -1,114 +1,45 @@
-# Element and attribute naming conventions
+# Element and Attribute Naming Conventions
 
-AKN provides a template approach where particular named elements such as
-//section or //part map on to //hcontainer\[@name="section"\] and
-//hcontainer\[@name="part"\] respectively. Philosophically, AKN requires
-you to use in the @name attribute the normal name you would use to
-reference that element. This is generally fine as the context or even
-the name alone can usually determine the formatting and structural place
-of the element. However, there are some exceptions.
+This document describes naming conventions for elements and attributes in the UK implementation of the [Akoma Ntoso (AKN) XML standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html).
 
-## Case for element and attribute names
+The AKN standard provides a template approach where particular named elements such as [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_section) or [`part`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_part) map to [`hcontainer[@name="section"]`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) and `hcontainer[@name="part"]` respectively. The AKN approach requires using in the `@name` attribute the normal name you would use to reference that element. This is generally appropriate as the context or even the name alone can usually determine the formatting and structural placement of the element. However, there are some exceptions.
 
-AKN consistently uses camel-case with an initial lower case for all
-names whether element, attribute, group, attributeGroup or complexType.
-This is also consistent with the naming of elements and attributes
-within the XSD Schema. We will therefore continue this tradition.
+## Case for Element and Attribute Names
 
-The exception is for included namespaces from other XML vocabularies
-including MathML and possibly XHTML and CLML (the latter primarily for
-metadata).
+The AKN standard consistently uses camelCase with an initial lowercase letter for all names whether element, attribute, group, attributeGroup, or complexType. This is also consistent with the naming of elements and attributes within the XSD Schema. This implementation continues this convention.
 
-## //act and //bill
+The exception is for included namespaces from other XML vocabularies including [MathML](https://www.w3.org/Math/) and possibly XHTML and CLML (the latter primarily for metadata).
 
-All primary and subordinate legislation in as made, or in force form,
-whether Acts, Statutory Rules, Statutory Instruments, Orders-in-Council,
-Ministerial Directions or Ministerial Orders have the document level
-element //act. According to the schema, this is the same as
-//container\[@name="act"\]. We note that @name is allowed on an //act
-and typically provides further qualification of the document types (many
-of which are demonstrably NOT Acts of Parliament). It is not clear in
-AKN whether //act@name overrides the //container@name or sits in a
-separate namespace. There is also a //bill element. We see no reason to
-depart from the current TNA practice to use //act in the current way.
+## act and bill Elements
 
-Since draft statutory instruments and orders, particularly in the UK
-where some SIs are tabled in draft form, may be published as drafts, we
-propose to use //bill for draft SIs/SSIs and other subordinate
-legislation including when drafts are tabled in Parliament. Conversion
-from //bill to //act will happen, as with Acts of Parliament, when the
-instrument is being prepared for publication "as made" (i.e. in it's
-final, as law form).
+All primary and subordinate legislation in as-made or in-force form, whether Acts, Statutory Rules, Statutory Instruments, Orders-in-Council, Ministerial Directions, or Ministerial Orders use the document-level [`act`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_act) element. According to the schema, this is equivalent to `container[@name="act"]`. The `@name` attribute is allowed on an `act` element and typically provides further qualification of the document type (many of which are demonstrably not Acts of Parliament). There is also a [`bill`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_bill) element in the AKN standard.
 
-## //hcontainer v //container v //block general principals
+Since draft statutory instruments and orders, particularly in the UK where some SIs are tabled in draft form, may be published as drafts, this implementation uses `bill` for draft SIs/SSIs and other subordinate legislation including when drafts are tabled in Parliament. Conversion from `bill` to `act` happens, as with Acts of Parliament, when the instrument is being prepared for publication "as made" (i.e., in its final, enacted form).
 
-AKN generally uses //container for whole documents, //hcontainer for
-hierarchical pure content elements that represent a hierarchical
-structure within the document, and //block to contain mixed content
-displayed in Western European tradition as vertical blocks on a page.
-Therefore most named or referenceable elements in an Act or subordinate
-legislation map to //hcontainer.
+## hcontainer vs container vs block General Principles
 
-We note also that AKN normally treats //*name* where defined as
-equivalent to //hcontainer\[@name="*name*"\] (occasionally
-//container\[@name="*name*"\]) so we should not use these different
-serializations to distinguish between two different uses.
+The AKN standard generally uses [`container`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_container) for whole documents, [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) for hierarchical pure content elements that represent a hierarchical structure within the document, and [`block`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_block) to contain mixed content displayed in Western European tradition as vertical blocks on a page. Therefore most named or referenceable elements in an Act or subordinate legislation map to `hcontainer`.
 
-AKN creates a number of specific named elements. Some of the names we
-would use are already available and some are not (e.g. there is a //rule
-but no //regulation, //definition, //schedule, //subsubparagraph -
-noting there is a //subparagraph but not //sub-paragraph). Although some
-extension of the AKN namespace has been necessary to introduce
-additional attributes, we have adopted elements that are native AKN
-compliant rather than extending the AKN element namespace to avoid
-unnecessary translation and maximise the chance that any particular
-instance will validate against a standard AKN schema.
+The AKN standard normally treats an element like `section` where defined as equivalent to `hcontainer[@name="section"]` (occasionally `container[@name="..."]`), so these different serializations should not be used to distinguish between two different uses.
 
-In particular we use the following:
+The AKN standard creates a number of specific named elements. Some of the names needed are already available in AKN and some are not (e.g., there is a [`rule`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_rule) element but no `regulation`, `definition`, `schedule`, or `subsubparagraph` element - noting there is a [`subparagraph`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_subparagraph) but not `sub-paragraph`). Although some extension of the AKN namespace has been necessary to introduce additional attributes (see [LDAPP Extensions](ldapp-extensions.md)), this implementation adopts elements that are native AKN-compliant rather than extending the AKN element namespace. This approach avoids unnecessary translation and maximizes the chance that any particular instance will validate against a standard AKN schema.
 
-  - //hcontainer\[@name="schedule"\] (rather than introducing a non-AKN
-    //schedule),
-  - //hcontainer\[@name="definition"\] (rather than introducing a
-    non-AKN //definition),
-  - //hcontainer\[@name="subsubparagraph"\] (rather than introducing a
-    non-AKN //subsubparagraph) \[Noting that UK and Scottish parliaments
-    use "sub-paragraph" and "sub-sub-paragraph" but there is already a
-    //subparagraph in AKN.\],
-  - //hcontainer\[@name="regulation"\] (rather than non-AKN
-    //regulation),
+In particular this implementation uses the following:
 
-We note that, where an element has a normal name, that name should be
-used (whether in the //*name* form or the //hcontainer\[@name="*name*"\]
-form). Where there is no name, //level should be used for //hcontainer
-equivalents, and //p should be used for //block equivalents.
+  - `hcontainer[@name="schedule"]` (rather than introducing a non-AKN `schedule` element)
+  - `hcontainer[@name="definition"]` (rather than introducing a non-AKN `definition` element)
+  - `hcontainer[@name="subsubparagraph"]` (rather than introducing a non-AKN `subsubparagraph` element) - UK and Scottish parliaments use "sub-paragraph" and "sub-sub-paragraph" but there is already a [`subparagraph`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_subparagraph) element in AKN
+  - `hcontainer[@name="regulation"]` (rather than a non-AKN `regulation` element)
 
-## Lists v paragraphing
+Where an element has a normal name, that name should be used (whether in the named element form or the `hcontainer[@name="..."]` form). Where there is no name, [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level) should be used for `hcontainer` equivalents, and [`p`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_p) should be used for `block` equivalents.
 
-AKN provides a number of different constructs for numbered and
-unnumbered lists including //blockList, //ul and //ol. These can be
-single level or nested. We avoid completely using the borrowed HTML
-constructs of //ul and //ol. We use //blockList in the //body and also
-in front matter and tail matter for bulleted lists (//num should have
-the value of the bullet or dash used), unnumbered lists (formatted
-basically the same as a bulletted list but without a bullet present) and
-numbered lists that are not like standard English paragraphing
-constructs (ie. 1., 2. , 3. but not (a), (b), (c)).
+## Lists vs Paragraphing
 
-While AKN anticipates English-style paragraphing be marked up using
-nested //blockList elements, although some naming conventions apply they
-are not consistent across all different document types and even within
-collections of the same document type. Because we wish to allow
-//hcontainer within the paragraphs (specifically for definitions but
-potentially other constructs) we have adopted the use of //level as an
-unnamed //hcontainer and reserve //paragraph and //subparagraph for
-constructs that look more like sections or subsections but have that
-name because of their context (typically in a schedule or SI/SSI).
+The AKN standard provides a number of different constructs for numbered and unnumbered lists including [`blockList`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_blockList), [`ul`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ul), and [`ol`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ol). These can be single level or nested. This implementation avoids completely using the borrowed HTML constructs of `ul` and `ol`. It uses `blockList` in the [`body`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_body) and also in front matter and tail matter for bulleted lists ([`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) should have the value of the bullet or dash used), unnumbered lists (formatted basically the same as a bulleted list but without a bullet present), and numbered lists that are not like standard English paragraphing constructs (i.e., "1.", "2.", "3." but not "(a)", "(b)", "(c)").
 
-These //hcontainer templates are not permitted within //preface,
-//preamble and //conclusions but English-style paragraphing occurs often
-in these contexts also. We will therefore use
-//blockContainer\[@class="..."\] where we would in the body use //level.
-These //blockContainer's can nest. For example:
+While the AKN standard anticipates English-style paragraphing be marked up using nested `blockList` elements, naming conventions for these elements are not consistent across all different document types or even within collections of the same document type. Because this implementation needs to allow `hcontainer` within the paragraphs (specifically for definitions but potentially other constructs), it adopts the use of [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level) as an unnamed `hcontainer` and reserves [`paragraph`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_paragraph) and [`subparagraph`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_subparagraph) for constructs that look more like sections or subsections but have that name because of their context (typically in a schedule or SI/SSI).
+
+These `hcontainer` templates are not permitted within [`preface`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_preface), [`preamble`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_preamble), and [`conclusions`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_conclusions), but English-style paragraphing occurs often in these contexts also. Therefore this implementation uses [`blockContainer[@class="..."]`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_blockContainer) where it would in the body use `level`. These `blockContainer` elements can nest. For example:
 
 ``` 
   <blockContainer class="para1" eId="backCover__explNote__para_e" GUID="_78724833-d43d-4361-b54b-8273b7e5c953">

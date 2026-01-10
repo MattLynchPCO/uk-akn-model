@@ -1,6 +1,8 @@
-# Element ID Scheme and references
+# Element ID Scheme and References
 
-## Cross reference requirements
+This document describes the identifier scheme used for elements in UK legislation following the [Akoma Ntoso (AKN) naming conventions](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html). It covers both the [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) for structural identification and the [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) for persistent references.
+
+## Cross-Reference Requirements
 
 ### Section-level elements and below
 
@@ -109,33 +111,17 @@ elements).
 
 ## @eId
 
-See [AKN id
-scheme](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303)
-including the list of standard abbreviations.
+The [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) provides a human-readable structural identifier for elements. See the [AKN naming conventions specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303) including the list of standard abbreviations.
 
-AKN recommends use of an optional *prefix*, an *element\_ref*
-(essentially the name or abbreviated name of the element) and the
-*number* (possibly empty). The prefix is the identifier of any
-containing component necessary to ensure uniqueness of the ID. The
-default separator between the *prefix* and *element\_ref* is double
-underscore and between the *element\_ref* and the *number* is single
-underscore. This broad approach was adapted from the EnAct and LEAP
-approaches.
+The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`). This approach was adapted from the EnAct and LEAP implementations.
 
-Despite CLML using simpler separators, we choose to follow the AKN
-examples more closely (EnAct used "-" and ".", CLML uses "-" as the
-separator in IDs and "/" as the separator in URIs and avoids the
-*element\_ref* for common structures within a section or equivalent).
+Despite CLML using simpler separators, this implementation follows the AKN examples more closely. EnAct used "-" and ".", CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_section) or equivalent.
 
-### element\_ref component
+### element_ref Component
 
-Although the abbreviations listed in the above AKN documentation are not
-always standard in a UK context (e.g. "sec" instead of "s" for section,
-"dvs" instead of "div" for division, "chp" instead of "cap" for chapter)
-we choose to follow the AKN standard where specified.
+Although the abbreviations listed in the AKN naming conventions documentation are not always standard in a UK context (e.g., "sec" instead of "s" for section, "dvs" instead of "div" for division, "chp" instead of "cap" for chapter), this implementation follows the AKN standard where specified for consistency and interoperability.
 
-The following table describes the abbreviations used by LDAPP and their
-source:
+The following table describes the abbreviations used in this implementation and their source:
 
 |                       |                  |            |                                                       |
 | --------------------- | ---------------- | ---------- | ----------------------------------------------------- |
@@ -184,15 +170,9 @@ source:
 be the master or the result?) \[I have code that is more up-to-date than
 this table - TJA\]</span>
 
-### number component
+### number Component
 
-To ensure a valid name attribute, to turn the //num component into the
-*number* component of the @eId, we strip out the redundant @name
-component if present (the *element\_ref* component should provide this
-information) and any non-name characters including spaces, punctuation,
-and brackets. For most elements this is sufficient to uniquely identify
-the element. The two major exceptions are definitions and grouping
-elements without a //num.
+To ensure a valid name attribute, the [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) component is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For most elements this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
 
 #### Definitions
 
