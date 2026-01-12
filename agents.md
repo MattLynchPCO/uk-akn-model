@@ -18,6 +18,11 @@ When mentioning any AKN elements, attributes, or concepts in the documentation, 
   - Use this for specific element definitions and technical specifications
   - Link to specific element anchors when discussing particular elements (e.g., `#element_hcontainer` for the hcontainer element)
 
+- **XSD Element Documentation**: For detailed XSD schema documentation of specific elements, use the pattern:
+  - `https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_{elementname}.html`
+  - Example: For the `section` element, use `os-part2-specs_xsd_Element_section.html`
+  - This provides XSD-level technical details including allowed attributes, parent/child elements, and schema constraints
+
 - **Part 1 (Vocabulary)**: https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html
   - Use this for conceptual information about AKN vocabulary and structure
   - Reference when discussing overall AKN concepts, patterns, or design principles
