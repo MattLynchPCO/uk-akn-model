@@ -2,21 +2,30 @@
 
 This document describes naming conventions for elements and attributes in the UK implementation of the [Akoma Ntoso (AKN) XML standard](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html).
 
-The AKN standard provides a template approach where particular named elements such as [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_section) or [`part`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_part) map to [`hcontainer[@name="section"]`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) and `hcontainer[@name="part"]` respectively. The AKN approach requires using in the `@name` attribute the normal name you would use to reference that element. This is generally appropriate as the context or even the name alone can usually determine the formatting and structural placement of the element. However, there are some exceptions.
+AKN is based around design patterns where elements fall into one of a limited number of content models. From [the documentation|https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html#_Toc523925046]:
 
-## Case for Element and Attribute Names
+> All elements in this schema fall under one of six content models: hierarchical container, container, subFlow, block, inline and markerBesides named elements, the schema also provides for a generic element for each of them that can be used for markup and that fits the content models but can be specified by a precise name that is not used in this schema. The 'name' attribute must be used for naming the element. When required, the attribute name gives a name to the element.
 
-The AKN standard consistently uses camelCase with an initial lowercase letter for all names whether element, attribute, group, attributeGroup, or complexType. This is also consistent with the naming of elements and attributes within the XSD Schema. This implementation continues this convention.
+In line with AKN's principle of descriptiveness, element names are descriptive and should match the ordinary name of the provision etc. which they represent. Where the relevant element doesn't exist in the AKN schema, generic elements with a descriptive `name` attribute can be used instead. For example:
 
-The exception is for included namespaces from other XML vocabularies including [MathML](https://www.w3.org/Math/) and possibly XHTML and CLML (the latter primarily for metadata).
+* `<section>` is used to represent a section (whether that is a section of a Bill or a section grouping within a statutory instrument).
+* `<hcontainer name="regulation">` is used to represent a regulation within a statutory instrument because `<regulation>` does not exist within the schema.
 
 ## act and bill Elements
 
-All primary and subordinate legislation in as-made or in-force form, whether Acts, Statutory Rules, Statutory Instruments, Orders-in-Council, Ministerial Directions, or Ministerial Orders use the document-level [`act`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_act) element. According to the schema, this is equivalent to `container[@name="act"]`. The `@name` attribute is allowed on an `act` element and typically provides further qualification of the document type (many of which are demonstrably not Acts of Parliament). There is also a [`bill`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_bill) element in the AKN standard.
+The approach to `<act>` and `<bill>` represents an exception from the general principle of descriptiveness.
 
-Since draft statutory instruments and orders, particularly in the UK where some SIs are tabled in draft form, may be published as drafts, this implementation uses `bill` for draft SIs/SSIs and other subordinate legislation including when drafts are tabled in Parliament. Conversion from `bill` to `act` happens, as with Acts of Parliament, when the instrument is being prepared for publication "as made" (i.e., in its final, enacted form).
+All primary and subordinate legislation, in enacted or made form, whether Acts, Statutory Instruments, Statutory Rules etc. use the document-level [`act`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_act) element. The `@name` attribute is used to provide further qualification of the document type.
 
-## hcontainer vs container vs block General Principles
+All primary and subordinate legislation in draft form use the [`bill`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_bill) element in the AKN standard. Again, the `@name` attribute provides further qualification as to the document type.
+
+For possible `@name` values see [document-level-elements].
+
+## Lower Camel Case for Element and Attribute Names
+
+In line with AKN, lower camel case (lowerCamelCase) is used for all element and attribute names within this implementation. The exception is for elements and attributes in namespaces from other XML vocabularies including [MathML](https://www.w3.org/Math/) and possibly XHTML and CLML (the latter primarily for metadata).
+
+## Use of hcontainer vs container vs block
 
 The AKN standard generally uses [`container`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_container) for whole documents, [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) for hierarchical pure content elements that represent a hierarchical structure within the document, and [`block`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_block) to contain mixed content displayed in Western European tradition as vertical blocks on a page. Therefore most named or referenceable elements in an Act or subordinate legislation map to `hcontainer`.
 
