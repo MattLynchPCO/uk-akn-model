@@ -4,13 +4,9 @@ This document describes extensions to the [Akoma Ntoso (AKN) XML standard](https
 
 ## Namespace Declaration
 
-Additional attributes that extend AKN are placed in a dedicated namespace with the prefix `ukl:`. The URI for this namespace is:
+Additional attributes that extend AKN are placed in a dedicated namespace (URI: `https://www.legislation.gov.uk/namespaces/UK-AKN`). In practice Lawmaker uses the prefix `ukl` for this namespace.  
 
-```
-https://www.legislation.gov.uk/namespaces/UK-AKN
-```
-
-These extensions are necessary to support specific requirements of UK legislative drafting and publishing that are not covered by the standard AKN schema.
+These extensions are necessary to support specific requirements of UK legislative drafting and publishing that are not covered by the standard AKN schema. They are mostly intended to be used for transient purposes during the drafting phase.
 
 ## Extension Attributes
 
@@ -39,22 +35,21 @@ For [`ref`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/
 
 ## Change Tracking Attributes
 
-While editing, Lawmaker uses change track markup in the style of TeraText for Legislation rather than the standard Akoma Ntoso change track. The [`ins`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ins) and [`del`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_del) inline tags are used, but custom attributes have been added to those tags and to [`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_hcontainer) elements. These custom attributes ensure that the fragments of XML are self-contained representations of the changes rather than relying on metadata located elsewhere in the document to interpret the change. This facilitates rendering in the editing tool and production of PDF.
+Lawmaker uses change track markup which extends the Akoma Ntoso change track vocabulary, enabling both structural and textual changes to be marked up.
+
+The [`ins`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_ins) and [`del`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_del) inline tags are used for textual changes, while custom attributes are used on structural elements (e.g. `hcontainer` elements) to represent the equivalent changes. In addition, custom attributes have been added in both cases to capture richer information about the change and ensure that the fragments of XML are self-contained representations of the changes rather than relying on metadata located elsewhere in the document to interpret the change. This facilitates rendering in the editing tool and production of PDF.
 
 The following change tracking attributes are used:
 
 ### For ins and del Elements
 
-- `ins|del@ukl:changeStart` - Marking the starting character (typically "[") of a group of related changes
-- `ins|del@ukl:changeEnd` - Marking the ending character (typically "]") of a group of related changes
-- `ins|del@ukl:changeDnum` - Recording the DNum of an amendment associated with the first of a series of change track markup recording that amendment (typically on the same element as the `@ukl:changeStart`)
-
-### For hcontainer Elements
-
-- `hcontainer@ukl:change` - Marking change of a whole element, values include:
+- `ukl:changeStart` - True if the element is the first part of the change
+- `ukl:changeEnd` - True if the element is the last part of the change
+- `ukl:changeDnum` - value of any amendment ID (Dnum) associated with the change (typically on the same element as the `@ukl:changeStart`)
+- `ukl:change` - applied to a structural element (e.g. `hcontainer`) to indicate a change to the whole element (where `<ins>` and `<del>` elements are not used). Possible include:
   - `del` - Delete the whole element
   - `ins` - Insert the whole element
-  - `delStruct` - Delete the structural container (typically including [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) and [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading), start and end tags)
-  - `insStruct` - Insert the structural container (typically including `num` and `heading`, start and end tags)
-- `hcontainer@ukl:changeStart` - Marking the starting character (typically "[") of a group of related changes
-- `hcontainer@ukl:changeEnd` - Marking the ending character (typically "]") of a group of related changes
+  - `delStruct` - ?
+  - `insStruct` - ?
+  - `insReplace` - Insert whole element as part of substitution
+  - `delReplace` - Delete whole element as part of substitution
