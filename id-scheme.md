@@ -1,6 +1,6 @@
 # Element ID Scheme and References
 
-This document describes the identifier scheme used for elements in UK legislation following the [Akoma Ntoso (AKN) naming conventions](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html). It covers both the [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) for structural identification and the [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) for persistent references.
+This document describes the identifier scheme used for elements in UK legislation following the [Akoma Ntoso (AKN) naming conventions](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html). It covers both the `@eId` attribute for structural identification and the `@GUID` attribute for persistent references.
 
 ## Cross-Reference Requirements
 
@@ -111,11 +111,11 @@ elements).
 
 ## @eId
 
-The [`@eId` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925104) provides a human-readable structural identifier for elements. See the [AKN naming conventions specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303) including the list of standard abbreviations.
+The `@eId` attribute provides a human-readable structural identifier for elements. See the [AKN naming conventions specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303) including the list of standard abbreviations.
 
-The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`). This approach was adapted from the EnAct and LEAP implementations.
+The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`).
 
-Despite CLML using simpler separators, this implementation follows the AKN examples more closely. EnAct used "-" and ".", CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_section) or equivalent.
+Despite CLML using simpler separators, this implementation follows the AKN naming convention closely. CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/schemas/akomantoso30.xsd_Element_section.html) or equivalent.
 
 ### element_ref Component
 
@@ -126,38 +126,24 @@ The following table describes the abbreviations used in this implementation and 
 |                       |                  |            |                                                       |
 | --------------------- | ---------------- | ---------- | ----------------------------------------------------- |
 | **XML element/@name** | **element\_ref** | **Source** | **Comments**                                          |
-| \<alinea\>            | al               | AKN        | Not likely to be used                                 |
 | \<amendmentBody\>     | body             | AKN        |                                                       |
 | \<article\>           | art              | AKN        |                                                       |
 | \<attachment\>        | att              | AKN        |                                                       |
 | \<blockList\>         | list             | AKN        |                                                       |
 | \<chapter\>           | chp              | AKN        | Would prefer to use "ch" or "cap"                     |
-| \<citation\>          | cit              | AKN        |                                                       |
-| \<citations\>         | cits             | AKN        |                                                       |
 | \<clause\>            | cl               | AKN        |                                                       |
 | \<component\>         | cmp              | AKN        |                                                       |
-| \<components\>        | cmpnts           | AKN        |                                                       |
-| \<componentRef\>      | cref             | AKN        |                                                       |
-| \<debateBody\>        | body             | AKN        |                                                       |
-| \<debateSection\>     | dbsect           | AKN        |                                                       |
-| \<division\>          | dvs              | AKN        | Would prefer to use "div"                             |
-| \<documentRef\>       | dref             | AKN        |                                                       |
-| \<eventRef\>          | eref             | AKN        |                                                       |
-| \<judgmentBody\>      | body             | AKN        |                                                       |
 | \<intro\>             | intro            | AKN        |                                                       |
 | \<list\>              | list             | AKN        |                                                       |
 | \<listIntroduction\>  | intro            | AKN        |                                                       |
-| \<listWrapUp\>        | wrap             | AKN        |                                                       |
+| \<listWrapUp\>        | wrapup           | AKN        |                                                       |
 | \<mainBody\>          | body             | AKN        |                                                       |
 | \<paragraph\>         | para             | AKN        |                                                       |
 | \<quotedStructure\>   | qstr             | AKN        |                                                       |
 | \<quotedText\>        | qtext            | AKN        |                                                       |
-| \<recital\>           | rec              | AKN        |                                                       |
-| \<recitals\>          | recs             | AKN        |                                                       |
 | \<section\>           | sec              | AKN        | Would prefer to use "s"                               |
 | \<subchapter\>        | subchp           | AKN        |                                                       |
 | \<subclause\>         | subcl            | AKN        |                                                       |
-| \<subdivision\>       | subdvs           | AKN        | Would prefer to use "subdiv"                          |
 | \<subparagraph\>      | subpara          | AKN        |                                                       |
 | \<subsection\>        | subsec           | AKN        | Would prefer to use "subs"                            |
 | \<temporalGroup\>     | tmpg             | AKN        |                                                       |
@@ -172,7 +158,9 @@ this table - TJA\]</span>
 
 ### number Component
 
-To ensure a valid name attribute, the [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) component is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For most elements this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
+The [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) element is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For example, from "Part 1" you get "1".
+
+For most elements this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
 
 #### Definitions
 
@@ -183,112 +171,43 @@ For definitions, the *number* component is replaced with the defined term from t
 
 ```xml
 <hcontainer name="definition" eId="sec_1__def__captainstable" class="definition">
-  <num>—</num>
-  <intro>
-    <p><def>captain's table</def> means</p>
-  </intro>
   <content>
-    <p>the table at which the captain dines;</p>
+    <p><def>captain's table</def> means the table at which the captain dines;</p>
   </content>
 </hcontainer>
 ```
 
 #### Unnumbered Grouping Elements
 
-To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element. The cross-reference wording either quotes the contents of the [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading) or refers to the following section number. It would be impossible to have an ID scheme that was guaranteed unique that could accommodate both reference forms simultaneously. Therefore a compromise is necessary.
+To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element. The cross-reference wording either quotes the contents of the [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading) or refers to the following section number.
 
-The following alternatives have been identified:
+This implementation uses the number of the first descendant section in place of the missing `num`. This approach:
 
-1.  Use the /heading text directly
+- Is guaranteed unique within context
+- Is based on one of the two reference forms
+- Is easy for users to understand
+- Can be allocated in any language rendition independently
+- Won't change if the text of the heading changes, but will change if new sections are inserted or the first section is renumbered
 
-<!-- end list -->
+**Example:**
 
-``` 
-   - without modification;
-     * For:   based on one of the two reference forms,
-     * For:   easy for user to understand,
-     * For:   almost certain to be unique within context,
-     * Against:   its potentially quite long,
-     * Against:   it does not accommodate the reference form based on next section,
-     * Against:   IDs for different languages are usually different,
-     * Against:   includes non-name characters (can’t be an XML ID),
-     * Both:  the ID will change if the text of the heading changes,
-   - choose one language (choose English as it avoids most character issues);
-     * For:   based on one of the two reference forms,
-     * For:   easy for user to understand,
-     * For:   almost certain to be unique within context,
-     * For:   IDs for Chinese and English are the same,
-     * Against:   the choice of language is visible,
-     * Against:   its potentially quite long,
-     * Against:   it does not accommodate the reference form based on next section,
-     * Against:   can only generate ID for other language rendition if matching English rendition is available,
-     * Against:   includes non-name characters (can’t be an XML ID),
-     * Both:  the ID will change if the text of the heading changes,
-   - choose one language (English) and strip non-ASCII characters from the heading contents;
-     * For:   based on one of the two reference forms,
-     * For:   easy for user to understand,
-     * For:   almost certain to be unique within context,
-     * For:   IDs for all language renditions are the same,
-     * Against:   the choice of language is visible,
-     * Against:   its potentially quite long,
-     * Against:   it does not accommodate the reference form based on next section,
-     * Against:   can only generate ID for other language rendition if matching English rendition is available,
-     * Both:  the ID will change if the text of the heading changes,
-   - choose one language (English), calculate a checksum (we propose an MD5 checksum) based on the heading content encoded so that it contains only valid name characters;
-     * For:   based on one of the two reference forms,
-     * For:   language choice hidden,
-     * Against:   it is always quite long,
-     * Against:   it does not accommodate the reference form based on next section,
-     * Against:   can only generate ID for other language rendition if matching English rendition is available,
-     * Against:   cannot guarantee uniqueness;
-     * Both:  the ID will change if the text of the heading changes,
-- insert an additional attribute on the element which contains a unique value ===
-   - use a GUID;
-     * For:   guaranteed unique,
-     * For/Against:   same mechanism for @eId as for @guid rendering one redundant,
-     * Against:   it is always quite long (32 characters per GUID),
-     * Against:   it bears no relationship to either reference wording form,
-     * Against:   it must be assigned simultaneously to all language versions to guarantee the same ID for corresponding renditions,
-     * Both:  the ID won't change if the text of the heading changes,
-   - assign a number whenever a new element of that type is inserted into the document by finding the largest number in the document already and incrementing; 
-     * For:   guaranteed unique,
-     * For:   easy for user to understand,
-     * Against:   it bears no relationship to either reference wording form,
-     * Against:   it must be coordinated between languages so that the same number is assigned to corresponding elements in both languages,
-     * Both:  the ID won't change if the text of the heading changes,
-- choose the @no component of the first /provision1 that appears within the grouping element (cross-reference wording might change but not ID and ID might change but not wording):
-   - just use the first descendant section number in place of the missing %%//%%num;
-     * For:   guaranteed unique (within context),
-     * For:   based on one of the two reference forms,
-     * For:   easy for user to understand,
-     * For:   can be allocated in any language rendition independently,
-     * Against: may be difficult to determine from the @eId alone whether the number is from the element itself or the first descendant section
-     * Both:  the ID won't change if the text of the heading changes but will change if new sections are inserted or the first section is renumbered,
-   - insert a marker character immediately after the //element_ref// and before the //number//;
-      * For:  guaranteed unique (within context),
-      * For:  based on one of the two reference forms,
-      * For:  easy for user to understand,
-      * For:  can be allocated in either language rendition independently,
-      * For:  can distinguish numbered grouping element (one with @no) from unlabeled grouping element.
-      * Both: the ID won't change if the text of the heading changes but will change if new sections are inserted or the first section is renumbered,
+For a crossheading that contains sections 15, 16, and 17, the `@eId` would be `xhdg_15`, using the number from the first section (15) within the grouping element.
+
+```xml
+<hcontainer name="crossheading" eId="part_1__xhdg_15">
+  <heading>Financial Provisions</heading>
+  <section eId="part_1__sec_15">
+    <num>15</num>
+    <heading>Funding</heading>
+    <content>...</content>
+  </section>
+  <section eId="part_1__sec_16">
+    <num>16</num>
+    <heading>Payments</heading>
+    <content>...</content>
+  </section>
+</hcontainer>
 ```
-
-Of these options, 1.a and 1.b are unacceptable because they are not
-valid XML ID’s, 1.c and 1.d require that the attribute is assigned
-simultaneously to all language renditions (which is not a problem as
-multi-lingual documents in the UK are almost certainly to be translated
-from existing English documents) and 2.a and 2.b can calculate the ID
-from the English rendition alone but any other language rendition would
-require a matching English rendition to be present before assigning ID’s
-(again probably acceptable in the UK). Given that we also want to make
-use of the ID’s for checking that the versions match structurally, none
-of these schemes is particularly satisfactory. Items 1.b, 1.c and 1.d
-may have undesirable political side-effects. Items 3.a and 3.b are the
-most promising. Because cross-headings are always unnumbered, we
-consider the risk that 3.b is trying to address as low, and since either
-3.a or 3.b satisfies nearly all the criteria and produces short ID’s
-with clear semantics, 3.a appears to be the best choice of these options
-for the UK context.
 
 ### Duplicate @eId values
 
@@ -300,7 +219,9 @@ the number of the occurrence of an element with the ID preceding the
 
 ## @GUID
 
-The [`@GUID` attribute](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#_Toc523925105) in the AKN standard is described as an "application-specific identifier that a local implementation may need to add to elements according to local rules and syntaxes." The standard notes that "GUID is not a required attribute. Its use and specification is totally dependent on the representation and storage requirements of the author of the Manifestation. Despite the name, GUIDs do not even have to be globally unique across documents of the same collection."
+The `@GUID` attribute in the AKN standard is described as follows:
+
+> This attribute is an application-specific identifier that a local implementation may need to add to elements according to local rules and syntaxes. GUID is not a required attribute. Its use and specification is totally dependent on the representation and storage requirements of the author of the Manifestation. Despite the name, GUIDs do not even have to be globally unique across documents of the same collection.
 
 This implementation requires the `@GUID` attribute on every referenceable element to ensure cross-references can be updated reliably. The values are required to be unique at least within the system and are allocated compliant with the [GUID standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2) (which is Microsoft's name for a [UUID](https://tools.ietf.org/html/rfc4122)).
 
