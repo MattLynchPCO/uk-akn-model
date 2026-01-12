@@ -113,13 +113,13 @@ elements).
 
 The `@eId` attribute provides a human-readable structural identifier for elements. See the [AKN naming conventions specification](https://docs.oasis-open.org/legaldocml/akn-nc/v1.0/os/akn-nc-v1.0-os.html#_Toc531692303) including the list of standard abbreviations.
 
-The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`).
+The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID - in practice the prefix will usually be the eId of the parent element. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`).
 
 Despite CLML using simpler separators, this implementation follows the AKN naming convention closely. CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_section.html) or equivalent.
 
 ### element_ref Component
 
-Although the abbreviations listed in the AKN naming conventions documentation are not always standard in a UK context (e.g., "sec" instead of "s" for section, "dvs" instead of "div" for division, "chp" instead of "cap" for chapter), this implementation follows the AKN standard where specified for consistency and interoperability.
+Although the abbreviations listed in the AKN naming conventions documentation are not always standard in a UK context (e.g., "sec" instead of "s" for section, "dvs" instead of "div" for division, "chp" instead of "cap" for chapter), this implementation follows the AKN standard where specified for consistency and interoperability. However, to keep eIds to a reasonable length, we have adopted other abbreviations for elements for which there is not a conventional abbreviation in the documentation, in particular for provisions that are represented as `<hcontainer name="element_name">`.
 
 The following table describes the abbreviations used in this implementation and their source:
 
@@ -130,7 +130,7 @@ The following table describes the abbreviations used in this implementation and 
 | \<article\>           | art              | AKN        |                                                       |
 | \<attachment\>        | att              | AKN        |                                                       |
 | \<blockList\>         | list             | AKN        |                                                       |
-| \<chapter\>           | chp              | AKN        | Would prefer to use "ch" or "cap"                     |
+| \<chapter\>           | chp              | AKN        |                                                       |
 | \<clause\>            | cl               | AKN        |                                                       |
 | \<component\>         | cmp              | AKN        |                                                       |
 | \<intro\>             | intro            | AKN        |                                                       |
@@ -141,29 +141,23 @@ The following table describes the abbreviations used in this implementation and 
 | \<paragraph\>         | para             | AKN        |                                                       |
 | \<quotedStructure\>   | qstr             | AKN        |                                                       |
 | \<quotedText\>        | qtext            | AKN        |                                                       |
-| \<section\>           | sec              | AKN        | Would prefer to use "s"                               |
+| \<section\>           | sec              | AKN        |                                                       |
 | \<subchapter\>        | subchp           | AKN        |                                                       |
-| \<subclause\>         | subcl            | AKN        |                                                       |
 | \<subparagraph\>      | subpara          | AKN        |                                                       |
-| \<subsection\>        | subsec           | AKN        | Would prefer to use "subs"                            |
-| \<temporalGroup\>     | tmpg             | AKN        |                                                       |
+| \<subsection\>        | subsec           | AKN        |                                                       |
 | \<wrapUp\>            | wrapup           | AKN        |                                                       |
-| @name="definition"    | def              | LDAPP      | Note that //def content will be used instead of //num |
-| @name="schedule"      | sch              | LDAPP      |                                                       |
-| @name="crossheading"  | xhdg             | LDAPP      |                                                       |
-
-<span class="underline">TODO - need to complete this list (should this
-be the master or the result?) \[I have code that is more up-to-date than
-this table - TJA\]</span>
+| @name="definition"    | def              | Lawmaker   | Note that //def content will be used instead of //num |
+| @name="schedule"      | sch              | Lawmaker   |                                                       |
+| @name="crossheading"  | xhdg             | Lawmaker   |                                                       |
+| @name="step"          | step             | Lawmaker   |                                                       |
 
 ### number Component
 
 The [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) element is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For example, from "Part 1" you get "1".
 
-For most elements this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
+For element that are numbered this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
 
 #### Definitions
-
 
 For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'captainstable' in the *number* component, with a full `@eId` like 'sec_1__def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
 
@@ -179,9 +173,9 @@ For definitions, the *number* component is replaced with the defined term from t
 
 #### Unnumbered Grouping Elements
 
-To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element. The cross-reference wording either quotes the contents of the [`heading`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_heading) or refers to the following section number.
+To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element.
 
-This implementation uses the number of the first descendant section in place of the missing `num`. This approach:
+Lawmaker uses the number of the first descendant section in place of the missing `num`. This approach:
 
 - Is guaranteed unique within context
 - Is based on one of the two reference forms
@@ -196,12 +190,12 @@ For a crossheading that contains sections 15, 16, and 17, the `@eId` would be `x
 ```xml
 <hcontainer name="crossheading" eId="part_1__xhdg_15">
   <heading>Financial Provisions</heading>
-  <section eId="part_1__sec_15">
+  <section eId="sec_15">
     <num>15</num>
     <heading>Funding</heading>
     <content>...</content>
   </section>
-  <section eId="part_1__sec_16">
+  <section eId="sec_16">
     <num>16</num>
     <heading>Payments</heading>
     <content>...</content>
@@ -211,11 +205,11 @@ For a crossheading that contains sections 15, 16, and 17, the `@eId` would be `x
 
 ### Duplicate @eId values
 
-If after all of these calculations are applied, a duplicate ID occurs
-within a single document, at the level the duplication occurs an
-additional component is inserted with *prefix* 'oc’ and *number* set to
-the number of the occurrence of an element with the ID preceding the
+If after all of these calculations are applied, a duplicate ID would occur
+within a single document, an additional component is inserted at the level the duplication occurs in the form `oc_x' where 'x' is the number of the occurrence of the element with the ID preceding the
 ‘oc’ component.
+
+For example, if there were two sections immediately following one another with the same number 15, they would be assigned eIds `sec_15__oc_1` and `sec_15__oc_2`.
 
 ## @GUID
 
@@ -223,6 +217,4 @@ The `@GUID` attribute in the AKN standard is described as follows:
 
 > This attribute is an application-specific identifier that a local implementation may need to add to elements according to local rules and syntaxes. GUID is not a required attribute. Its use and specification is totally dependent on the representation and storage requirements of the author of the Manifestation. Despite the name, GUIDs do not even have to be globally unique across documents of the same collection.
 
-This implementation requires the `@GUID` attribute on every referenceable element to ensure cross-references can be updated reliably. The values are required to be unique at least within the system and are allocated compliant with the [GUID standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2) (which is Microsoft's name for a [UUID](https://tools.ietf.org/html/rfc4122)).
-
-To ensure that the `@GUID` value is a valid NMTOKEN and can therefore be treated as an XML ID, the serialized form of the GUID is prefixed with "_".
+This implementation requires the `@GUID` attribute on every referenceable element to ensure cross-references can be updated reliably. The values are required to be unique at least within the system and are allocated compliant with the [GUID standard](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=netframework-4.7.2) (which is Microsoft's name for a [UUID](https://tools.ietf.org/html/rfc4122)). To ensure that the `@GUID` value is a valid NMTOKEN and can therefore be treated as an XML ID, the serialized form of the GUID is prefixed with "_".
