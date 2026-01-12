@@ -153,13 +153,13 @@ The following table describes the abbreviations used in this implementation and 
 
 ### number Component
 
-The [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) element is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For example, from "Part 1" you get "1".
+The [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_num.html) element is converted into the *number* component of the `@eId` by stripping out the redundant element name component if present (the *element_ref* component already provides this information) and any non-name characters including spaces, punctuation, and brackets. For example, from "Part 1" you get "1".
 
 For element that are numbered this is sufficient to uniquely identify the element. The two major exceptions are definitions and grouping elements without a `num`.
 
 #### Definitions
 
-For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_def) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'captainstable' in the *number* component, with a full `@eId` like 'sec_1__def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
+For definitions, the *number* component is replaced with the defined term from the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_def.html) element, with any non-name characters (and occurrences of "-") removed (e.g., 'the definition of "captain's table"' becomes 'captainstable' in the *number* component, with a full `@eId` like 'sec_1__def__captainstable'). For bilingual publication of legislation, it is desirable to include the defined term in both languages in each language rendition. The AKN standard does not provide a standard solution for this, but when needed, the English term would be available in any Welsh or Gaelic rendition that is created.
 
 **Example:**
 
@@ -173,7 +173,7 @@ For definitions, the *number* component is replaced with the defined term from t
 
 #### Unnumbered Grouping Elements
 
-To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_num) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_level)), it is necessary to find some alternative for the *number* for each element.
+To uniquely identify grouping elements without a [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_num.html) (such as `hcontainer[@name="crossheading"]` and possibly [`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)), it is necessary to find some alternative for the *number* for each element.
 
 Lawmaker uses the number of the first descendant section in place of the missing `num`. This approach:
 
