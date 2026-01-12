@@ -115,7 +115,7 @@ The `@eId` attribute provides a human-readable structural identifier for element
 
 The AKN standard recommends using an optional *prefix*, an *element_ref* (essentially the name or abbreviated name of the element), and the *number* (possibly empty). The prefix is the identifier of any containing component necessary to ensure uniqueness of the ID. The default separator between the *prefix* and *element_ref* is double underscore (`__`) and between the *element_ref* and the *number* is single underscore (`_`).
 
-Despite CLML using simpler separators, this implementation follows the AKN naming convention closely. CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/schemas/akomantoso30.xsd_Element_section.html) or equivalent.
+Despite CLML using simpler separators, this implementation follows the AKN naming convention closely. CLML uses "-" as the separator in IDs and "/" as the separator in URIs and avoids the *element_ref* for common structures within a [`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_section.html) or equivalent.
 
 ### element_ref Component
 
