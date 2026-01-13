@@ -146,8 +146,7 @@ allows them to be referenced from one source in both the cover page and
 the back matter.
 
 Within //conclusions, as with //preface and //preamble, //hcontainer is
-not permitted. See generally [Lists v
-paragraphing](https://ldapp.teratext.leidos.com.au/doku.php?id=naming-conventions#lists_v_paragraphing)
+not permitted. See generally [Lists vs Paragraphing](../general-principles.md#lists-vs-paragraphing)
 
 ### //blockContainer\[@class="explanatoryNote"\]
 
