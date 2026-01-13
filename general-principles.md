@@ -195,13 +195,13 @@ Note also that `math` (from MathML not AKN) has the following attributes which a
 
 ## Formatting Elements
 
-### //num and //heading Elements
+### num and heading Elements
 
 All `num` elements should contain the number as it appears on the page including brackets, element name, and any punctuation characters if present (this is consistent with the examples provided in the AKN standard). For instance for Part 5 the `num` element should contain "Part 5" not just "5". For subsection 5(1), the `num` element should contain "(1)" (the parent `section` element would contain "5" (or "5." if legacy style)). The case of the name component should be mixed case e.g. "Part" not "PART", "Chapter" not "CHAPTER".
 
 To manage re-numbering, we introduce a new optional attribute @ukl:renumber="yes|no" (with "yes" as the default value). See [LDAPP extensions to AKN](ldapp-extensions.md).
 
-### //eop and //eol Elements
+### eop and eol Elements
 
 LDAPP requires the creation and application of amendment wording that makes use of line and page numbers. Therefore we make use of the native AKN elements for marking up end of page (`eop`) and end of line (`eol`) and the native @number, @breakAt and @breakWith attributes (see [section 5.6 of the AKN standard](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html#_Toc523925049)). We are likely to use within the system processing instructions and turn these into `eop` and `eol` elements on export.
 
