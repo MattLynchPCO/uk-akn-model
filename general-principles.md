@@ -8,7 +8,7 @@ This document describes guiding principles and naming conventions for elements a
 
 AKN is based around design patterns where elements fall into one of a limited number of content models. From [the documentation](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html#_Toc523925046):
 
-> All elements in this schema fall under one of six content models: hierarchical container, container, subFlow, block, inline and markerBesides named elements, the schema also provides for a generic element for each of them that can be used for markup and that fits the content models but can be specified by a precise name that is not used in this schema. The 'name' attribute must be used for naming the element. When required, the attribute name gives a name to the element.
+> All elements in this schema fall under one of six content models: hierarchical container, container, subFlow, block, inline and marker. Besides named elements, the schema also provides for a generic element for each of them that can be used for markup and that fits the content models but can be specified by a precise name that is not used in this schema. The 'name' attribute must be used for naming the element. When required, the attribute name gives a name to the element.
 
 In line with AKN's principle of descriptiveness, element names are descriptive and should match the ordinary name of the provision etc. which they represent. Where the relevant element doesn't exist in the AKN schema, generic elements with a descriptive `name` attribute can be used instead. For example:
 
