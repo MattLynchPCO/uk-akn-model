@@ -138,7 +138,3 @@ The Akoma Ntoso standard provides [`tblock`](https://docs.oasis-open.org/legaldo
 All `num` elements contain the number as it appears on the page including brackets, element name, and any punctuation characters if present. For instance for Part 5 the `num` element contains "Part 5" not just "5". For subsection (1) in section 5, the `num` element of the subsection should contain "(1)" (the parent `section` element would contain "5"). The case of the text in the `num` should be sentence case e.g. "Part" not "PART", "Chapter" not "CHAPTER", with the allcaps or smallcaps being treated as a matter of presentation.
 
 To manage re-numbering, an optional attribute @ukl:autonumber="yes|no" can be added to the `num` element. See [LDAPP extensions to AKN](ldapp-extensions.md).
-
-### eop and eol Elements
-
-LDAPP requires the creation and application of amendment wording that makes use of line and page numbers. Therefore we make use of the native AKN elements for marking up end of page (`eop`) and end of line (`eol`) and the native @number, @breakAt and @breakWith attributes (see [section 5.6 of the AKN standard](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html#_Toc523925049)). We are likely to use within the system processing instructions and turn these into `eop` and `eol` elements on export.
