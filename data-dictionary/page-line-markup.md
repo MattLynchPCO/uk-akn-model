@@ -59,6 +59,8 @@ In this example:
 - `<?L 1-2?>` marks page 1, line 2 (at "Sentencing")
 - `<?L 1-6?>` marks page 1, line 6 (mid-paragraph, where a line break occurs in the formatted output)
 
+**Note:** The ellipsis (`...`) in code examples indicates that content has been abbreviated for clarity.
+
 ### Placement Within Content
 
 Processing instructions are placed immediately before the text they mark. When a line break occurs within a paragraph, the processing instruction is inserted at that point within the text content:
@@ -91,7 +93,15 @@ These processing instructions indicate where line and page breaks occur in the f
 
 ## Conversion to AKN Elements on Export
 
-On export for final publication, the processing instructions can be converted to the native AKN elements if required by the target system. The AKN standard provides `eop` and `eol` elements for this purpose, though in practice the processing instructions may be retained or removed depending on the export requirements.
+The processing instructions remain in the XML throughout the editing and amendment process within Lawmaker. When documents are exported for final publication or integration with other systems:
+
+- The processing instructions may be **retained** if the target system supports them and they are needed for downstream processing
+- They may be **removed** if the target system does not require page/line information
+- They may be **converted** to AKN's `eop` and `eol` elements if required by the target system to comply with strict AKN schema validation
+
+The export configuration determines which approach is used based on the requirements of the receiving system.
+
+The AKN standard provides `eop` and `eol` elements for representing page and line breaks:
 
 ### End of Page (eop)
 
