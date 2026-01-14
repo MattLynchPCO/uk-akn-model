@@ -8,7 +8,7 @@ This document describes guiding principles and naming conventions for elements a
 
 In line with AKN, lower camel case (lowerCamelCase) is used for all element and attribute names within this implementation. The exception is for elements and attributes in namespaces from other XML vocabularies where appropriate, e.g. [MathML](https://www.w3.org/Math/) , XHTML and CLML.
 
-## Descriptiveness and the AKN Design Philosophy
+## Descriptiveness and AKN design patterns
 
 AKN is based around design patterns where elements fall into one of a limited number of content models. From [the documentation](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part1-vocabulary/akn-core-v1.0-os-part1-vocabulary.html#_Toc523925046):
 
@@ -131,30 +131,13 @@ The Akoma Ntoso standard provides [`tblock`](https://docs.oasis-open.org/legaldo
 - Where it is replacing what would otherwise be an `hcontainer` if permitted, as `blockContainer` supports [`intro`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_intro), [`wrapUp`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_wrapUp), and [`content`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_content) (although does not require them like `hcontainer` does)
 - If `tblock` would be used in the [`body`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs.html#element_body), it is appropriate to use it whether in the `body` or in parts of the document that don't allow `hcontainer`
 
-## Specific Element Guidelines
-
-### "formula"
-
-The AKN element `formula` looks like it is intended for the enacting words or similar. However the name "formula" in UK legislation is more often used to refer to a mathematical equation. The recommended solution for mathematical equations is to use `foreign` to wrap MathML (see section 5.14 of the [AKN Core Version 1.0 Part 1 Vocabulary](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/akn-core-v1.0-part1-vocabulary.html)). This doesn't support inline equations as `foreign` is a block element.
-
-This doesn't really allow us to identify something as a formula with just an image where legacy data hasn't been converted.
-
-For normal block mathematical formulas we will use a new `tblock[@name="formula"]` which supports either an `img` or `foreign` or both.
-
-The `subFlow` element (or a similar construct) will need to be used to code inline formulas (`tblock[@name="formula"]`) as inline formulas will still need image alternatives.
-
-Note also that `math` (from MathML not AKN) has the following attributes which are also relevant to these issues:
-
-- @display="block|inline" to distinguish whether the formula should be inline with text or a separate block;
-- @altimg="URI" to point to an alternative image for the formula (and @altimg-width, @altimg-height and @altimg-valign for controlling the display of that image)
-
 ## Formatting Elements
 
-### num and heading Elements
+### num Elements
 
-All `num` elements should contain the number as it appears on the page including brackets, element name, and any punctuation characters if present (this is consistent with the examples provided in the AKN standard). For instance for Part 5 the `num` element should contain "Part 5" not just "5". For subsection 5(1), the `num` element should contain "(1)" (the parent `section` element would contain "5" (or "5." if legacy style)). The case of the name component should be mixed case e.g. "Part" not "PART", "Chapter" not "CHAPTER".
+All `num` elements contain the number as it appears on the page including brackets, element name, and any punctuation characters if present. For instance for Part 5 the `num` element contains "Part 5" not just "5". For subsection (1) in section 5, the `num` element of the subsection should contain "(1)" (the parent `section` element would contain "5"). The case of the text in the `num` should be sentence case e.g. "Part" not "PART", "Chapter" not "CHAPTER", with the allcaps or smallcaps being treated as a matter of presentation.
 
-To manage re-numbering, we introduce a new optional attribute @ukl:renumber="yes|no" (with "yes" as the default value). See [LDAPP extensions to AKN](ldapp-extensions.md).
+To manage re-numbering, an optional attribute @ukl:autonumber="yes|no" can be added to the `num` element. See [LDAPP extensions to AKN](ldapp-extensions.md).
 
 ### eop and eol Elements
 
