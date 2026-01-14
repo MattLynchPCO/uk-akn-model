@@ -20,7 +20,7 @@ Using processing instructions during the editing phase provides several advantag
 
 ## Processing Instructions
 
-During the editing phase within Lawmaker, page and line positions are marked using processing instructions with the format:
+During the editing phase within Lawmaker, page and line breaks are marked using processing instructions with the format:
 
 ```xml
 <?L page-line?>
@@ -105,7 +105,7 @@ The AKN standard provides `eop` and `eol` elements for representing page and lin
 
 ### End of Page (eop)
 
-The [`eop`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eop.html) element marks the end of a page in the AKN standard.
+The [`eop`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eop.html) element marks the end of a page.
 
 ```xml
 <eop number="1"/>
@@ -118,7 +118,7 @@ The `eop` element supports the following attributes:
 
 ### End of Line (eol)
 
-The [`eol`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eol.html) element marks the end of a line in the AKN standard.
+The [`eol`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eol.html) element marks the end of a line.
 
 ```xml
 <eol number="12"/>
