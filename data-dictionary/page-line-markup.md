@@ -17,7 +17,6 @@ Using processing instructions during the editing phase provides several advantag
 - They can be easily inserted and removed without disrupting the content model
 - They are invisible to most XML processing tools but can be accessed when needed
 - They can be converted to proper AKN elements at the point of export
-
 ## Processing Instructions
 
 During the editing phase within Lawmaker, page and line breaks are marked using processing instructions such as:
@@ -45,7 +44,6 @@ The `eop` element supports the following attributes (from the AKN standard):
 - `@number` - The page number
 - `@breakAt` - Indicates where the break occurs (e.g., "word", "char")
 - `@breakWith` - Specifies the hyphenation character if a word is broken
-
 ### End of Line (eol)
 
 The [`eol`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eol.html) element marks the end of a line.
@@ -58,7 +56,6 @@ The `eol` element supports similar attributes:
 - `@number` - The line number
 - `@breakAt` - Indicates where the break occurs
 - `@breakWith` - Specifies the hyphenation character if a word is broken
-
 ## Usage in Amendment Wording
 
 Page and line numbers are critical for amendment wording, allowing precise references such as:
