@@ -6,9 +6,9 @@ LDAPP requires the creation and application of amendment wording that makes use 
 
 ## Implementation Approach
 
-Unlike the standard AKN approach, **we do not use AKN's `eop` (end of page) and `eol` (end of line) elements** in the working XML documents within Lawmaker.
+Unlike the standard AKN approach, we do not use AKN's `eop` (end of page) and `eol` (end of line) elements in the working XML documents within Lawmaker.
 
-Instead, we use **XML processing instructions** to mark page and line breaks during the drafting and editing phase. These processing instructions are then converted to the native AKN `eop` and `eol` elements only on export for final publication.
+Instead, we use XML processing instructions to mark page and line breaks.
 
 ### Rationale
 
@@ -16,7 +16,7 @@ Using processing instructions during the editing phase provides several advantag
 - Processing instructions do not affect the document structure or validation
 - They can be easily inserted and removed without disrupting the content model
 - They are invisible to most XML processing tools but can be accessed when needed
-- They can be converted to proper AKN elements at the point of export
+- They can be converted to proper AKN elements at a later point if necessary 
 
 ## Processing Instructions
 
@@ -32,7 +32,7 @@ Where:
 
 ### Examples from UK Legislative Documents
 
-The following examples are taken from actual UK Bill XML documents showing how processing instructions are used in practice:
+The following examples are taken from UK Bill XML documents showing how processing instructions are used in practice:
 
 ```xml
 <part class="group2" eId="pt_1">
@@ -91,54 +91,16 @@ Here, line 35 of page 1 transitions to line 1 of page 2 mid-paragraph.
 
 These processing instructions indicate where line and page breaks occur in the formatted PDF output without altering the document's XML structure.
 
-## Conversion to AKN Elements on Export
 
-The processing instructions remain in the XML throughout the editing and amendment process within Lawmaker. When documents are exported for final publication or integration with other systems:
-
-- The processing instructions may be **retained** if the target system supports them and they are needed for downstream processing
-- They may be **removed** if the target system does not require page/line information
-- They may be **converted** to AKN's `eop` and `eol` elements if required by the target system to comply with strict AKN schema validation
-
-The export configuration determines which approach is used based on the requirements of the receiving system.
-
-The AKN standard provides `eop` and `eol` elements for representing page and line breaks:
-
-### End of Page (eop)
-
-The [`eop`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eop.html) element marks the end of a page.
-
-```xml
-<eop number="1"/>
-```
-
-The `eop` element supports the following attributes:
-- `@number` - The page number
-- `@breakAt` - Indicates where the break occurs (e.g., "word", "char")
-- `@breakWith` - Specifies the hyphenation character if a word is broken
-
-### End of Line (eol)
-
-The [`eol`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/akn-core-v1.0-os-part2-specs_xsd_Element_eol.html) element marks the end of a line.
-
-```xml
-<eol number="12"/>
-```
-
-The `eol` element supports similar attributes:
-- `@number` - The line number
-- `@breakAt` - Indicates where the break occurs
-- `@breakWith` - Specifies the hyphenation character if a word is broken
-
-**Note:** The processing instruction format `<?L page-line?>` combines both page and line information in a single instruction, which differs from the AKN approach where page and line breaks are separate elements.
 
 ## Usage in Amendment Wording
 
-Page and line numbers are critical for amendment wording, allowing precise references such as:
+Page and line numbers are used in amendment wording to identify the precise location of a change, e.g.:
 
 - "On page 5, line 12, leave out..."
 - "On page 3, line 7, at end insert..."
 
-The processing instruction approach ensures that this information is preserved throughout the drafting process and accurately converted for publication.
+Storing them in the Bill XML as processing instruction ensures that this information is available to assist with the automation if applying amendments to produced a revised Bill.
 
 ## Reference
 
