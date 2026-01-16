@@ -7,7 +7,6 @@ This documentation describes the Lawmaker data model. Lawmaker uses XML complian
 This documentation includes:
 
   - [General principles and naming conventions](general-principles.md)
-  - [Description of the LDAPP Schemas](schema-description.md)
   - [Lawmaker extensions to Akoma Ntoso](ldapp-extensions.md)
   - [@class values and their role](type.md)
   - [Element ID Scheme](id-scheme.md)

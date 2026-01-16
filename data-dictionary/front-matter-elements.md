@@ -621,6 +621,7 @@ The simple case with a single block is obvious:
 We avoid the use of multiple //recital elements unless the top level
 blocks are numbered preferring to use a single //recital with multiple
 //p elements and paragraphing within the single recital. See also [Lists vs Paragraphing](../general-principles.md#lists-vs-paragraphing).
+>>>>>>> b5a70e3539c93a0b020e9a1f7c1c1f98b861c6d5
 
 ``` 
  <recitals>

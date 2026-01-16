@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?><akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:ukl="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 ../schemas/akomantoso30.xsd"><?DMS-Component componentId="7a96a7b4-2fe0-4a99-ab02-2d19cfdc07d5" seriesId="0e4afafa-870c-4dca-a4e1-75b25dcfaefb" versionNumber="0"?>
+ 
+ <bill contains="originalVersion" name="ukpubb">
+  <meta><?DMS-Component componentId="91a2eb2d-a958-4a74-8af9-c4fbfc194c88" seriesId="43c792b3-fe11-4550-919f-b7883f3d5e83" versionNumber="0"?>
+   
+   <identification source="#author">
+    <FRBRWork>
+     <FRBRthis value="#varWork"/>
+     <FRBRuri value="#varWorkUri"/>
+     <FRBRalias name="ttflConfigHistory" value="#varCHOiid"/>
+     <FRBRalias name="ttflConfigHistory" value="#varCHOiid"/>
+     <FRBRalias name="alternateUri" value="https://lawmaker.legislation.gov.uk/pdr/ukpubb/HC/59_1/286/bill"/><FRBRdate date="9999-01-01" name="draft"/>
+     <FRBRdate date="2025-07-16T16:25:55Z" name="published"/><FRBRauthor href="#varAuthor"/>
+     <FRBRcountry value="GB-UKM"/>
+     <FRBRsubtype value="#varDocSubType"/>
+     <FRBRnumber value="#varProjectId"/>
+     <FRBRname value="#varBillTitle"/>
+     <FRBRprescriptive value="true"/>
+     <FRBRauthoritative value="false"/>
+    </FRBRWork>
+    <FRBRExpression>
+     <FRBRthis value="#varExpression"/>
+     <FRBRuri value="#varExpressionUri"/>
+     <FRBRalias name="ttflVersionDescription" value="#varVDOiid"/>
+     <FRBRalias name="alternateUri" value="https://lawmaker.legislation.gov.uk/pdr/ukpubb/HC/59_1/286/bill"/><FRBRdate date="9999-01-01" name="draft"/>
+     <FRBRdate date="2025-07-16T16:25:55Z" name="published"/><FRBRauthor href="#varAuthor"/>
+     <FRBRversionNumber value="public-committee-hc"/>
+     <FRBRauthoritative value="false"/>
+     <FRBRmasterExpression href="" showAs=""/>
+     <FRBRlanguage language="eng"/>
+    </FRBRExpression>
+    <FRBRManifestation>
+     <FRBRthis value="#varManifestation"/>
+     <FRBRuri value="#varManifestationUri"/>
+     <FRBRdate date="9999-01-01" name="akn_xml"/>
+     <FRBRdate date="2025-07-16T16:25:55Z" name="published"/><FRBRauthor href="#varAuthor"/>
+     <FRBRformat value="application/akn+xml"/>
+    </FRBRManifestation>
+   </identification>
+   <references source="#author">
+    <TLCConcept GUID="_22699770-793e-433c-98f6-2a970bd21cdd" eId="varDocSubType" href="#varOntologies" showAs="Government Bill"/>
+    <TLCConcept GUID="_2efd1ffc-3aba-45b7-8143-be92b0ac2834" eId="varBillTitle" href="#varOntologies" showAs="Sustainable Aviation Fuel Bill"/>
+    <TLCConcept GUID="_c5fe9fed-b67b-40be-84e3-41502f43ddff" eId="varHouse" href="#varOntologies" showAs="House of Commons"/>
+    <TLCProcess GUID="_942a80e3-3e8a-4b5d-9906-6bbd946cb036" eId="varStageVersion" href="#varOntologies" showAs="As amended in Public Bill Committee"/>
+    <TLCProcess GUID="_c2da9b1f-ce56-457c-acec-ebd38a10597a" eId="varProjectId" href="#varOntologies" showAs="UK001027"/>
+    <TLCProcess GUID="_97dcbfb3-adca-4339-b825-4438ae93c649" eId="varWork" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill"/>
+    <TLCProcess GUID="_834bb421-7814-4f0c-b11e-01054bd5e97c" eId="varWorkUri" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill"/>
+    <TLCProcess GUID="_aea490c2-09cd-4762-a6e0-a803385b5d07" eId="varCHOiid" href="#varOntologies" showAs=""/>
+    <TLCProcess GUID="_36616fcc-4fa7-4ff9-9337-78a0b8a15bd2" eId="varExpression" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill@public-committee-hc"/>
+    <TLCProcess GUID="_43ec63ea-de02-4925-b29b-0878f0895eb3" eId="varExpressionUri" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill@public-committee-hc"/>
+    <TLCProcess GUID="_70c9406b-9d79-4dfc-b66e-0920b84787ea" eId="varVDOiid" href="#varOntologies" showAs=""/>
+    <TLCProcess GUID="_4c5a6821-a1ab-4e77-ac73-621bd6df0c22" eId="varManifestation" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill@public-committee-hc/xml"/>
+    <TLCProcess GUID="_c12cf28c-0bbf-4843-88f0-07cbd0d18ad5" eId="varManifestationUri" href="#varOntologies" showAs="https://lawmaker.legislation.gov.uk/pdr/UK001027/bill@public-committee-hc/xml"/>
+    <TLCConcept GUID="_7f271408-579c-4fcb-9073-48c0fed20c54" eId="varActYear" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_82846949-f84b-49a5-bd51-9f9325cdfea2" eId="varActTitle" href="#varOntologies" showAs="Sustainable Aviation Fuel Bill #varActYear"/>
+    <TLCConcept GUID="_1f03d9f2-dca3-4705-9938-2a566f93f34f" eId="varIntroDate" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_e6079442-941d-4d8a-9b97-876b16bf75fa" eId="varPublicationDate" href="#varOntologies" showAs="2025-07-17"/>
+    <TLCConcept GUID="_aad4d81e-c5ba-4e0d-b341-1746cc1eb5ff" eId="varBillNoComp" href="#varOntologies" showAs="286"/>
+    <TLCConcept GUID="_6fc76402-d86b-48d2-a953-dab32f855fac" eId="varBillNo" href="#varOntologies" showAs="Bill 286"/>
+    <TLCConcept GUID="_6a78c31d-b82e-4ffe-a505-1b42213a71d6" eId="varSessionNo" href="#varOntologies" showAs="59/1"/>
+    <TLCConcept GUID="_1d0ccc00-f27e-4c7d-97af-cd90b696097e" eId="varBillYear" href="#varOntologies" showAs="2025"/>
+    <TLCConcept GUID="_d1dce729-bdd1-4731-bbff-cc3adfd18c0f" eId="varSession" href="#varOntologies" showAs="59/1"/>
+    <TLCConcept GUID="_b0610968-0d26-451a-bc5b-1d246017f4bf" eId="varBroughtFromDate" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_413844b3-9875-4915-adbe-36093ba4d1a7" eId="varPassedDate" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_d1ba2b65-feac-49e0-a19f-9f557ef2725a" eId="varAssentDate" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_4ddc9e88-6e1c-4ba7-acb7-3281a0f5016a" eId="varActNoComp" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_43ff227e-0d47-4db0-9e6d-b074419720dc" eId="varActNo" href="#varOntologies" showAs=""/>
+    <TLCConcept GUID="_14a2cf91-cb99-448d-b3d6-0b086651429c" eId="varDocType" href="#varOntologies" showAs="UK Bill"/>
+    <TLCConcept GUID="_0f8bbb53-5675-461b-a6aa-da5ba5a5867f" eId="varSystem" href="#varOntologies" showAs="LDAPP"/>
+    <TLCConcept GUID="_429d1794-0216-4646-a06d-d9bcaaaa2557" eId="varAuthor" href="#varOntologies" showAs="UK Parliament"/>
+    <TLCConcept GUID="_5affdaae-44f6-436d-914f-165b29f6bd1a" eId="varJurisdiction" href="#varOntologies" showAs="United Kingdom"/>
+    <TLCConcept GUID="_dbc833f2-79ac-423a-b2aa-a0ca4332fbe0" eId="varOntologies" href="https://www.legislation.gov.uk/ontologies/UK-AKN" showAs="https://www.legislation.gov.uk/ontologies/UK-AKN"/>
+    <TLCConcept GUID="_032a47f2-0a67-4c96-9b37-00d9b7d6f6e6" eId="varSovereign" href="#varOntologies" showAs="Charles III"/>
+    <TLCPerson GUID="_58888492-b036-44d8-989e-53ea863abcc8" eId="person-4038" href="#Secretary_Heidi_Alexander" showAs="Secretary Heidi Alexander" ukl:class="varIntroducingMember"/>
+    <TLCPerson GUID="_ca2888a7-cd85-415f-9520-8d9434f8b5e9" eId="person-4514" href="#The_Prime_Minister" showAs="The Prime Minister" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_3216fd90-20e4-4e2e-aa0c-6c0d95868eb4" eId="person-4031" href="#The_Chancellor_of_the_Exchequer" showAs="The Chancellor of the Exchequer" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_3e6804ad-9946-4af8-b9f5-cef0e196dabb" eId="person-1510" href="#Secretary_Ed_Miliband" showAs="Secretary Ed Miliband" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_a4113a75-0085-4ee0-8018-3dd1ada4e291" eId="person-413" href="#Secretary_Hilary_Benn" showAs="Secretary Hilary Benn" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_c6a66bb9-d536-4a28-a953-80afed30ce04" eId="person-3966" href="#Secretary_Ian_Murray" showAs="Secretary Ian Murray" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_af1f91da-c8b9-4d7e-b304-8a9bd6e76d9a" eId="person-4425" href="#Secretary_Jo_Stevens" showAs="Secretary Jo Stevens" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_4dac6abd-e24f-4056-b6e4-af0bbd5ae1bd" eId="person-4268" href="#Secretary_Steve_Reed" showAs="Secretary Steve Reed" ukl:class="varSupportingMembers"/>
+    <TLCPerson GUID="_d5b3e9a9-9d06-44a2-b699-a0aac63b96e0" eId="person-4316" href="#Mike_Kane" showAs="Mike Kane" ukl:class="varSupportingMembers"/>
+   </references>
+  </meta>
+  <coverPage GUID="_dd78d8cf-ee09-4cc1-9ccc-2911fc6a41eb" eId="cp"><?DMS-Component componentId="22a8a986-a2eb-45ee-962b-2c11dd1549e5" seriesId="564849e7-a5f2-445d-894d-8ba01456ac2b" versionNumber="1"?>
+   <block GUID="_09b53481-f896-432a-b6b2-e2f7dc37310d" eId="cp__st" name="title"><docTitle GUID="_dff5237f-8763-4fe6-be77-053348ed916b" eId="cp__st__dtitle"><ref class="placeholder" href="#varBillTitle"/></docTitle></block>
+   <block GUID="_f021049a-f229-469e-bd38-a2471ee77aae" eId="cp__stage" name="stageVersion">[<docStage GUID="_2bcf238e-fcce-41b4-94c6-57c6d1f5f220" eId="cp_stage_dstage"><ref class="placeholder" href="#varStageVersion"/></docStage>]</block>
+   <block GUID="_6ad17d8f-4645-4e01-a589-0c357a0d4de8" eId="cp__hdg" name="ToCHeading">CONTENTS</block>
+   <toc GUID="_74582063-d463-4167-a3c4-7372f7a83aac" class="body" eId="cp__toc">
+    <tocItem class="group7ToC" href="#xhdg_1" level="7"><inline name="tocHeading">Revenue certainty contracts</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_1" level="5"><inline name="tocNum">1</inline><inline name="tocHeading">Direction to offer revenue certainty contract</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_2" level="5"><inline name="tocNum">2</inline><inline name="tocHeading">Notice of directions and revocation</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_3" level="5"><inline name="tocNum">3</inline><inline name="tocHeading">Registration and publication of contracts</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_6" level="7"><inline name="tocHeading">Designated counterparty</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_4" level="5"><inline name="tocNum">4</inline><inline name="tocHeading">Designation of counterparty</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_5" level="5"><inline name="tocNum">5</inline><inline name="tocHeading">Transfer schemes</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_7" level="7"><inline name="tocHeading">Levy funding</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_6" level="5"><inline name="tocNum">6</inline><inline name="tocHeading">Levy on suppliers</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_7" level="5"><inline name="tocNum">7</inline><inline name="tocHeading">Collateral for levy</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_8" level="5"><inline name="tocNum">8</inline><inline name="tocHeading">Administration etc of levy and disputes</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_9" level="5"><inline name="tocNum">9</inline><inline name="tocHeading">Calculation or determination of matters under levy regulations</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_11" level="7"><inline name="tocHeading">Surpluses</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_10" level="5"><inline name="tocNum">10</inline><inline name="tocHeading">Payment of surpluses to levy payers</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg" level="7"><inline name="tocHeading">Financial penalties</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_11" level="5"><inline name="tocNum">11</inline><inline name="tocHeading">Financial penalties</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_14" level="7"><inline name="tocHeading">Directions, information and advice</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_12" level="5"><inline name="tocNum">12</inline><inline name="tocHeading">Power to direct designated counterparty</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_13" level="5"><inline name="tocNum">13</inline><inline name="tocHeading">Information and advice</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_16__oc_1" level="7"><inline name="tocHeading">Financial assistance</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_14" level="5"><inline name="tocNum">14</inline><inline name="tocHeading">Financial assistance for designated counterparty</inline></tocItem>
+    <tocItem class="group7ToC" href="#xhdg_17" level="7"><inline name="tocHeading">General</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_15" level="5"><inline name="tocNum">15</inline><inline name="tocHeading">Regulations</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_16" level="5"><inline name="tocNum">16</inline><inline name="tocHeading">Interpretation</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_17" level="5"><inline name="tocNum">17</inline><inline name="tocHeading">Extent</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_18" level="5"><inline name="tocNum">18</inline><inline name="tocHeading">Commencement</inline></tocItem>
+    <tocItem class="prov1ToC" href="#sec_19" level="5"><inline name="tocNum">19</inline><inline name="tocHeading">Short title</inline></tocItem>
+    <tocItem class="ruleToc" href="#sched" level="0"/>
+    <tocItem class="schToC" href="#sched" level="1"><inline name="tocNum">Schedule</inline><inline name="tocHeading">Financial penalties for failure to comply with levy regulations</inline></tocItem>
+   </toc>
+  </coverPage>
+  <preface GUID="_88c1e956-9d07-4314-8374-3b09d75e77e9" eId="preface"><?DMS-Component componentId="394c7ca7-1be9-4dce-b088-6eb5cb2637ec" seriesId="d7ca9c88-ccf7-4401-8b83-6ee572ddc94c" versionNumber="1"?>
+   
+   <block name="stageVersion">[<docStage><ref class="placeholder" href="#varStageVersion"/></docStage>]</block>
+   <longTitle GUID="_b8ac55e5-fd57-453c-b333-d925ffefdf89" eId="preface__longtitle">
+    <p class="A">A</p>
+    <p class="Bill">bill</p>
+    <p class="To">to</p>
+    <p>Make provision about sustainable aviation fuel.</p>
+   </longTitle>
+  </preface>
+  <preamble GUID="_8a245b53-2e1b-4575-97de-41561919f9f0" eId="preamble"><?DMS-Component componentId="408f6756-ab06-440b-bd49-755dcb362e33" seriesId="f2ec8af5-ae93-4ac0-9e89-6ab5d5ff77cc" versionNumber="1"?>
+   
+   <formula name="enactingText">
+    <p><inline name="dropCap">B</inline><inline name="smallCaps">e it enacted</inline> by the King’s most Excellent Majesty, by and with the advice and consent of the Lords Spiritual and Temporal, and Commons, in this present Parliament assembled, and by the authority of the same, as follows:—</p>
+   </formula>
+  </preamble>
+  <body><?DMS-Component componentId="1039624f-7f1c-4d1d-9835-58c0ce239876" seriesId="95603b0c-0ec9-4ee3-b295-6d9c0a32e18a" versionNumber="1"?>
+   
+   <hcontainer GUID="_51220012-bc19-40f4-adb8-26a9cdb7d887" class="group7" eId="xhdg_1" name="crossheading"><?DMS-Component componentId="94d3b3b9-d018-4d99-bcd3-f4e58900f5b6" seriesId="1c43712b-4ca9-49c3-8886-7666d59ceeb3" versionNumber="1"?>
+    
+    <heading GUID="_ffb64360-f04a-4d49-ae91-a2753a18e86c" eId="xhdg_1__hdg"><?L 1-1?>Revenue certainty contracts</heading>
+    <section GUID="_8fac53b4-789e-495b-a733-cbee436be766" class="prov1" eId="sec_1" ukl:jref="j002"><?DMS-Component componentId="dde7bc12-6c9b-4fa0-8703-65e72d41cec1" seriesId="83ae95d6-874d-4264-a7af-7272a7b664a5" versionNumber="1"?>
+     
+     <num><?L 1-2?>1</num>
+     <heading GUID="_eb1a74c5-35a8-478a-90a8-3361f2fd865b" eId="sec_1__hdg">Direction to offer revenue certainty contract</heading>
+     <subsection GUID="_64f0bac8-7e90-4ace-a379-ec60fb5c4e20" class="prov2" eId="sec_1__subsec_1">
+      <num><?L 1-3?>(1)</num>
+      <content>
+       <p>The Secretary of State may direct the designated counterparty (see <ref class="valid" href="#sec_4" ukl:targetGuid="_e3058066-54f9-4fb7-82da-16f9ca119c59" ukl:targetJref="j004">section 4</ref><?L 1-4?>) to offer to enter into a revenue certainty contract with a producer of <?L 1-5?>sustainable aviation fuel.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_b7c78b5c-6cff-4746-831e-b4ae01f88f74" class="prov2" eId="sec_1__subsec_2">
+      <num><?L 1-6?>(2)</num>
+      <intro GUID="_744b30e0-a9f5-4e5f-8146-74052cdc4a9f" eId="sec_1__subsec_2__intro">
+       <p>In this Act “revenue certainty contract” means a contract which provides for—</p>
+      </intro>
+      <level GUID="_cdf38b26-69ce-4f82-9ef1-188ad53a2e9d" class="para1" eId="sec_1__subsec_2__para_a">
+       <num><?L 1-7?>(a)</num>
+       <content>
+        <p>the designated counterparty to make payments to the producer in <?L 1-8?>respect of sustainable aviation fuel sold by the producer during a <?L 1-9?>period for which the strike price is higher than the market reference <?L 1-10?>price,</p>
+       </content>
+      </level>
+      <level GUID="_d9fdec83-e3ac-4081-b1a7-fc96c624e7ca" class="para1" eId="sec_1__subsec_2__para_b">
+       <num><?L 1-11?>(b)</num>
+       <content>
+        <p>the producer to make payments to the designated counterparty in <?L 1-12?>respect of sustainable aviation fuel sold by the producer during a <?L 1-13?>period for which the market reference price is higher than the strike <?L 1-14?>price, and</p>
+       </content>
+      </level>
+      <level GUID="_551eb17b-992d-40d4-a4e9-f9d210a5e333" class="para1" eId="sec_1__subsec_2__para_c">
+       <num><?L 1-15?>(c)</num>
+       <content>
+        <p>the payments referred to in <mref><ref class="valid" href="#sec_1__subsec_2__para_a" ukl:targetGuid="_cdf38b26-69ce-4f82-9ef1-188ad53a2e9d">paragraphs (a)</ref> and <ref class="valid" href="#sec_1__subsec_2__para_b" ukl:targetGuid="_d9fdec83-e3ac-4081-b1a7-fc96c624e7ca">(b)</ref></mref> to be calculated <?L 1-16?>by reference to the difference between the strike price and the market <?L 1-17?>reference price.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_a7f4cfc1-dcb9-4ae4-9052-6b724390bf42" class="prov2" eId="sec_1__subsec_3">
+      <num><?L 1-18?>(3)</num>
+      <intro GUID="_0e6be0ab-dd7a-4d46-a84e-1fb50123aeeb" eId="sec_1__subsec_3__intro">
+       <p>In <ref class="valid" href="#sec_1__subsec_2" ukl:targetGuid="_b7c78b5c-6cff-4746-831e-b4ae01f88f74">subsection (2)</ref>—</p>
+      </intro>
+      <hcontainer GUID="_9b1de15f-cb1c-4c9d-836b-7616ce418536" class="definition" eId="sec_1__subsec_3__def_marketreferenceprice_" name="definition">
+       <content>
+        <p><def GUID="_f3ede7a7-3f46-47c7-829c-b8898cbec700" eId="sec_1__subsec_3__def_marketreferenceprice" ukl:endQuote="”" ukl:startQuote="“"><?L 1-19?>market reference price</def> means an amount that is determined in <?L 1-20?>accordance with the contract as the reference price for sustainable <?L 1-21?>aviation fuel sold during a period specified in, or determined under, <?L 1-22?>the contract;</p>
+       </content>
+      </hcontainer>
+      <hcontainer GUID="_16ff5117-4155-460e-a671-c12c2761482a" class="definition" eId="sec_1__subsec_3__def_strikeprice_" name="definition">
+       <content>
+        <p><def GUID="_b6402c06-32cb-4e5c-8476-2b04bc31d25e" eId="sec_1__subsec_3__def_strikeprice" ukl:endQuote="”" ukl:startQuote="“"><?L 1-23?>strike price</def> means an amount that is determined in accordance with <?L 1-24?>the contract as the strike price for sustainable aviation fuel sold during <?L 1-25?>that period.</p>
+       </content>
+      </hcontainer>
+     </subsection>
+     <subsection GUID="_64fe7d86-83fe-4793-a793-1ee703b67ce8" class="prov2" eId="sec_1__subsec_4">
+      <num><?L 1-26?>(4)</num>
+      <intro GUID="_f7913420-0ff1-4db9-96ee-0d679b33a5a2" eId="sec_1__subsec_4__intro">
+       <p>A direction under <ref class="valid" href="#sec_1__subsec_1" ukl:targetGuid="_64f0bac8-7e90-4ace-a379-ec60fb5c4e20">subsection (1)</ref> must be in writing and must specify—</p>
+      </intro>
+      <level GUID="_95caae74-3edf-4ef7-8e86-2b44cb0b1029" class="para1" eId="sec_1__subsec_4__para_a">
+       <num><?L 1-27?>(a)</num>
+       <content>
+        <p>the name of the producer to which the offer is to be made,</p>
+       </content>
+      </level>
+      <level GUID="_8ee22fb3-9af1-4e1c-9ee8-54e8f49936ad" class="para1" eId="sec_1__subsec_4__para_b">
+       <num><?L 2-1?>(b)</num>
+       <content>
+        <p>the period within which the designated counterparty must comply <?L 2-2?>with the direction,</p>
+       </content>
+      </level>
+      <level GUID="_685eb615-54b1-4d0c-b13b-5a9c6b784fae" class="para1" eId="sec_1__subsec_4__para_c">
+       <num><?L 2-3?>(c)</num>
+       <content>
+        <p>the terms on which the offer is to be made, and</p>
+       </content>
+      </level>
+      <level GUID="_f82e237f-be3f-4f96-8bb7-56fc8ef8a201" class="para1" eId="sec_1__subsec_4__para_d">
+       <num><?L 2-4?>(d)</num>
+       <content>
+        <p>the period for which the offer is to be open for acceptance.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_25dc3450-cf9c-450a-ab93-160d4938ba07" class="prov2" eId="sec_1__subsec_5">
+      <num><?L 2-5?>(5)</num>
+      <content>
+       <p>No direction may be given under <ref class="valid" href="#sec_1__subsec_1" ukl:targetGuid="_64f0bac8-7e90-4ace-a379-ec60fb5c4e20">subsection (1)</ref> after the end of the period <?L 2-6?>of 10 years beginning with the day on which this Act is passed.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_85af3e10-38fd-4815-9ae5-88bf8bc2e805" class="prov2" eId="sec_1__subsec_6">
+      <num><?L 2-7?>(6)</num>
+      <content>
+       <p>The Secretary of State may by regulations amend <ref class="valid" href="#sec_1__subsec_5" ukl:targetGuid="_25dc3450-cf9c-450a-ab93-160d4938ba07">subsection (5)</ref> so as to extend <?L 2-8?>the period during which a direction may be given by up to 5 years at a time.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_f27bc5f2-09ea-40a5-a0d8-0664c49b73dd" class="prov1" eId="sec_2" ukl:jref="j20"><?DMS-Component componentId="3c92a34e-291a-4154-b31d-4a1c6007cd2e" seriesId="b5cabef1-ae29-41f9-9c23-f19137753f39" versionNumber="1"?>
+     
+     <num><?L 2-9?>2</num>
+     <heading GUID="_92aca38e-f5e2-4b93-9d21-39df5274499c" eId="sec_2__hdg">Notice of directions and revocation</heading>
+     <subsection GUID="_f662536b-168c-4386-84c3-8ce1407b95aa" class="prov2" eId="sec_2__subsec_1">
+      <num><?L 2-10?>(1)</num>
+      <content>
+       <p>The Secretary of State must send a copy of a direction under section <ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">1</ref> to the <?L 2-11?>producer named in the direction.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_69d11538-428c-4b28-8d23-0c1f3ec3294d" class="prov2" eId="sec_2__subsec_2">
+      <num><?L 2-12?>(2)</num>
+      <content>
+       <p>The Secretary of State may revoke a direction under section <ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">1</ref> by giving written <?L 2-13?>notice to the designated counterparty and the producer.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_ceda133d-3e03-4d63-97dd-84953313fc45" class="prov2" eId="sec_2__subsec_3">
+      <num><?L 2-14?>(3)</num>
+      <content>
+       <p>If a direction is revoked, any offer made in pursuance of the direction but <?L 2-15?>not yet accepted lapses.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_968aebb8-525f-44e2-bfa2-edb0b2ea9cd1" class="prov1" eId="sec_3" ukl:jref="j019"><?DMS-Component componentId="6ea7e4bf-fe64-4c4f-b732-b5867a7f7c42" seriesId="548d99b1-24a4-492a-ae1b-c56b30cee2b6" versionNumber="1"?>
+     
+     <num><?L 2-16?>3</num>
+     <heading GUID="_1640b557-da66-4212-b110-056133557ec3" eId="sec_3__hdg">Registration and publication of contracts</heading>
+     <subsection GUID="_5551eead-b67e-437a-b706-0f5aba93e0ed" class="prov2" eId="sec_3__subsec_1">
+      <num><?L 2-17?>(1)</num>
+      <intro GUID="_5a57f8a3-6fd8-4b30-819a-c881b465391b" eId="sec_3__subsec_1__intro">
+       <p>The Secretary of State may make regulations requiring the designated <?L 2-18?>counterparty to—</p>
+      </intro>
+      <level GUID="_f60f334f-2667-4390-8bb9-4680df478501" class="para1" eId="sec_3__subsec_1__para_a">
+       <num><?L 2-19?>(a)</num>
+       <content>
+        <p>maintain a register of information in relation to revenue certainty <?L 2-20?>contracts;</p>
+       </content>
+      </level>
+      <level GUID="_958cb56c-fd0b-4e98-a4c5-afc0e798ac5e" class="para1" eId="sec_3__subsec_1__para_b">
+       <num><?L 2-21?>(b)</num>
+       <content>
+        <p>publish revenue certainty contracts or details about them.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_3468e03b-2b43-4eac-811a-f27f23ea1d0a" class="prov2" eId="sec_3__subsec_2">
+      <num><?L 2-22?>(2)</num>
+      <intro GUID="_0ecaa037-e2f4-4f12-81a4-47a9def7811f" eId="sec_3__subsec_2__intro">
+       <p>Regulations under subsection <mref><ref class="valid" href="#sec_3__subsec_1" ukl:targetGuid="_5551eead-b67e-437a-b706-0f5aba93e0ed">(1)</ref><ref class="valid" href="#sec_3__subsec_1__para_a" ukl:targetGuid="_f60f334f-2667-4390-8bb9-4680df478501">(a)</ref></mref> may, in particular, make provision about—</p>
+      </intro>
+      <level GUID="_1e118f48-02ac-4386-b0c7-373a7d7b1eb9" class="para1" eId="sec_3__subsec_2__para_a">
+       <num><?L 2-23?>(a)</num>
+       <content>
+        <p>the information to be contained in the register;</p>
+       </content>
+      </level>
+      <level GUID="_3ccc2108-e9f9-4b60-b013-a24dee560f08" class="para1" eId="sec_3__subsec_2__para_b">
+       <num><?L 2-24?>(b)</num>
+       <content>
+        <p>publication of the register.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_127bc2b6-184f-46d0-8b0f-d0fd034fadb4" class="prov2" eId="sec_3__subsec_3">
+      <num><?L 2-25?>(3)</num>
+      <content>
+       <p>Regulations under subsection <mref><ref class="valid" href="#sec_3__subsec_1" ukl:targetGuid="_5551eead-b67e-437a-b706-0f5aba93e0ed">(1)</ref><ref class="valid" href="#sec_3__subsec_1__para_b" ukl:targetGuid="_958cb56c-fd0b-4e98-a4c5-afc0e798ac5e">(b)</ref></mref> may require revenue certainty contracts <?L 2-26?>to be published subject to redactions made in accordance with provision made <?L 2-27?>by the regulations.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_4f32ddaa-b567-472f-915b-b7c4b804042c" class="prov2" eId="sec_3__subsec_4">
+      <num><?L 2-28?>(4)</num>
+      <intro GUID="_c9eb2897-8de9-41d7-992e-69f1c5353e89" eId="sec_3__subsec_4__intro">
+       <p>The provision that may be made about the redaction of material in a revenue <?L 2-29?>certainty contract includes provision authorising or requiring redactions to <?L 2-30?>be made—</p>
+      </intro>
+      <level GUID="_4e71514f-d521-467e-91a8-51f1993ba58d" class="para1" eId="sec_3__subsec_4__para_a">
+       <num><?L 2-31?>(a)</num>
+       <content>
+        <p>in accordance with a provision of the contract;</p>
+       </content>
+      </level>
+      <level GUID="_709165f4-6479-4e5f-b9d3-49472db63863" class="para1" eId="sec_3__subsec_4__para_b">
+       <num><?L 2-32?>(b)</num>
+       <content>
+        <p>in accordance with a decision made by the Secretary of State.</p>
+       </content>
+      </level>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_96d49583-1198-46fc-b6cb-bd9cbb775196" class="group7" eId="xhdg_6" name="crossheading"><?DMS-Component componentId="b3566560-e121-4d45-943b-514e59fa6409" seriesId="340b09f3-658e-4b8c-ab8c-82f123a2ec3a" versionNumber="1"?>
+    
+    <heading GUID="_44525b9e-e64e-496c-9e39-a8060cbf6b00" eId="xhdg_6__hdg"><?L 2-33?>Designated counterparty</heading>
+    <section GUID="_e3058066-54f9-4fb7-82da-16f9ca119c59" class="prov1" eId="sec_4" ukl:jref="j004"><?DMS-Component componentId="01842bda-a97c-4b4a-a95d-237642badcb2" seriesId="9dd6e985-613c-451a-b3f2-7cb8807331ff" versionNumber="1"?>
+     
+     <num><?L 2-34?>4</num>
+     <heading GUID="_1e6cd468-b750-4cfc-a79e-0effc7dfab83" eId="sec_4__hdg">Designation of counterparty</heading>
+     <subsection GUID="_b8cdb261-28a0-43a7-b01d-3471842f5649" class="prov2" eId="sec_4__subsec_1">
+      <num><?L 2-35?>(1)</num>
+      <content>
+       <p>The Secretary of State may designate a company as the counterparty for <?L 2-36?>revenue certainty contracts by giving it a notice under this subsection.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_ebfbcd02-33c4-48ea-8f4a-01f73802b0a4" class="prov2" eId="sec_4__subsec_2">
+      <num><?L 3-1?>(2)</num>
+      <content>
+       <p>The company so designated is referred to in this Act as “the designated <?L 3-2?>counterparty”.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_0ddc778a-b0f7-42ff-91cd-bbe3ed510f3e" class="prov2" eId="sec_4__subsec_3">
+      <num><?L 3-3?>(3)</num>
+      <intro GUID="_e0f9e48d-ff8b-4eb2-95b6-6b1d5d6be586" eId="sec_4__subsec_3__intro">
+       <p>A company may be designated under this section only if—</p>
+      </intro>
+      <level GUID="_7a272824-db9e-4e9b-9aef-c34cf2254c49" class="para1" eId="sec_4__subsec_3__para_a">
+       <num><?L 3-4?>(a)</num>
+       <content>
+        <p>it is limited by shares, and</p>
+       </content>
+      </level>
+      <level GUID="_3704bf72-a423-45ab-ad18-d0be9dca1ea5" class="para1" eId="sec_4__subsec_3__para_b">
+       <num><?L 3-5?>(b)</num>
+       <content>
+        <p>each share in the company is held by a Minister of the Crown.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_f0b618fd-084a-4762-9e8f-0287cc7f400e" class="prov2" eId="sec_4__subsec_4">
+      <num><?L 3-6?>(4)</num>
+      <content>
+       <p>A company may be designated under this section only if it consents to the <?L 3-7?>designation.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_05a2d80e-3f8e-4322-8dec-d6bf2c5dfe0f" class="prov2" eId="sec_4__subsec_5">
+      <num><?L 3-8?>(5)</num>
+      <content>
+       <p>The Secretary of State may revoke a designation under this section by giving <?L 3-9?>a notice to the company designated.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_f736eb59-ea45-4af1-9df5-ede387a20349" class="prov2" eId="sec_4__subsec_6">
+      <num><?L 3-10?>(6)</num>
+      <content>
+       <p>If the designated counterparty gives the Secretary of State written notice <?L 3-11?>withdrawing its consent to the designation, the Secretary of State must <?L 3-12?>designate a replacement (but it remains the designated counterparty until <?L 3-13?>replaced).</p>
+      </content>
+     </subsection>
+     <subsection GUID="_47b3ea2a-6a03-40be-8f59-a486b0cf4620" class="prov2" eId="sec_4__subsec_7">
+      <num><?L 3-14?>(7)</num>
+      <intro GUID="_79655237-5e8e-4a34-b36e-c65485629da3" eId="sec_4__subsec_7__intro">
+       <p>A notice under subsection <ref class="valid" href="#sec_4__subsec_1" ukl:targetGuid="_b8cdb261-28a0-43a7-b01d-3471842f5649">(1)</ref> or <ref class="valid" href="#sec_4__subsec_5" ukl:targetGuid="_05a2d80e-3f8e-4322-8dec-d6bf2c5dfe0f">(5)</ref>—</p>
+      </intro>
+      <level GUID="_1ec4fed7-71b5-49da-b4c5-cba05075745a" class="para1" eId="sec_4__subsec_7__para_a">
+       <num><?L 3-15?>(a)</num>
+       <content>
+        <p>must specify when the designation or revocation takes effect, and</p>
+       </content>
+      </level>
+      <level GUID="_1f22c57f-7812-4723-91f5-ea6b7504486a" class="para1" eId="sec_4__subsec_7__para_b">
+       <num><?L 3-16?>(b)</num>
+       <content>
+        <p>must be published by the Secretary of State.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_c8981109-d448-4e8b-93f9-49824ebd1bb6" class="prov2" eId="sec_4__subsec_8">
+      <num><?L 3-17?>(8)</num>
+      <content>
+       <p>The Secretary of State must ensure that, at all times after the first designation <?L 3-18?>under this section takes effect, there is a designation that has effect.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_616fa839-c7f4-4d5b-aff9-ce9003e7cfb8" class="prov2" eId="sec_4__subsec_9">
+      <num><?L 3-19?>(9)</num>
+      <content>
+       <p>In this section “company” means a company registered under the Companies <?L 3-20?>Act 2006.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_e34171bf-1dbb-4bd9-b2b8-48a18197b0e4" class="prov1" eId="sec_5" ukl:jref="j020"><?DMS-Component componentId="5798119a-e06f-44da-9b89-21c43b5060ff" seriesId="51304847-c7b8-4f7f-8ed9-920c702b910a" versionNumber="1"?>
+     
+     <num><?L 3-21?>5</num>
+     <heading GUID="_3f58cf3c-70b6-4640-a9b2-5bf95ce29a4f" eId="sec_5__hdg">Transfer schemes</heading>
+     <subsection GUID="_77da17ca-6ec8-42fb-94d5-1441f8d47a74" class="prov2" eId="sec_5__subsec_1">
+      <num><?L 3-22?>(1)</num>
+      <content>
+       <p>Where a company’s designation under <ref class="valid" href="#sec_4" ukl:targetGuid="_e3058066-54f9-4fb7-82da-16f9ca119c59" ukl:targetJref="j004">section 4</ref> is revoked, the Secretary of <?L 3-23?>State may make one or more schemes for the transfer of the company’s <?L 3-24?>property, rights and liabilities to the new designated counterparty.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_16229bef-9109-4e19-95a7-229859e9135e" class="prov2" eId="sec_5__subsec_2">
+      <num><?L 3-25?>(2)</num>
+      <intro GUID="_4052ad4f-895d-4616-8166-4288efce01e6" eId="sec_5__subsec_2__intro">
+       <p>The things that may be transferred under a transfer scheme include—</p>
+      </intro>
+      <level GUID="_20720d07-bdde-430b-9b17-3be08031219f" class="para1" eId="sec_5__subsec_2__para_a">
+       <num><?L 3-26?>(a)</num>
+       <content>
+        <p>rights and liabilities relating to a contract of employment;</p>
+       </content>
+      </level>
+      <level GUID="_e7576cf7-5305-4385-a11d-364c13205cb0" class="para1" eId="sec_5__subsec_2__para_b">
+       <num><?L 3-27?>(b)</num>
+       <content>
+        <p>property, rights and liabilities that could not otherwise be transferred;</p>
+       </content>
+      </level>
+      <level GUID="_c5445402-0d17-4023-b103-ce97e56a0bcb" class="para1" eId="sec_5__subsec_2__para_c">
+       <num><?L 3-28?>(c)</num>
+       <content>
+        <p>property acquired, and rights and liabilities arising, after the making <?L 3-29?>of the scheme but before it takes effect.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_e578c209-8917-4d97-bbef-a973cd389055" class="prov2" eId="sec_5__subsec_3">
+      <num><?L 3-30?>(3)</num>
+      <intro GUID="_289f3e35-90b2-447e-b151-c914f6766444" eId="sec_5__subsec_3__intro">
+       <p>A transfer scheme may—</p>
+      </intro>
+      <level GUID="_b130144e-d54a-4604-95f6-842180309a85" class="para1" eId="sec_5__subsec_3__para_a">
+       <num><?L 3-31?>(a)</num>
+       <content>
+        <p>create rights, or impose liabilities, in relation to property, rights or <?L 3-32?>liabilities transferred;</p>
+       </content>
+      </level>
+      <level GUID="_cac2f378-a4cb-4d45-be41-5e9b2fe2ad2e" class="para1" eId="sec_5__subsec_3__para_b">
+       <num><?L 3-33?>(b)</num>
+       <content>
+        <p>make provision about the continuing effect of things done by the <?L 3-34?>transferor in respect of anything transferred;</p>
+       </content>
+      </level>
+      <level GUID="_00da19c8-8724-47ab-9476-78b676621d78" class="para1" eId="sec_5__subsec_3__para_c">
+       <num><?L 3-35?>(c)</num>
+       <content>
+        <p>make provision about the continuation of things (including legal <?L 3-36?>proceedings) in the process of being done by, on behalf of or in relation <?L 3-37?>to the transferor in respect of anything transferred;</p>
+       </content>
+      </level>
+      <level GUID="_4e8add7e-a627-4d8c-b2ff-f7992e5b8f83" class="para1" eId="sec_5__subsec_3__para_d">
+       <num><?L 3-38?>(d)</num>
+       <content>
+        <p>make provision for references to the transferor in an instrument or <?L 3-39?>other document in respect of anything transferred to be treated as <?L 3-40?>references to the transferee;</p>
+       </content>
+      </level>
+      <level GUID="_c8b9d506-bbcb-41f3-82ad-f399a788c46d" class="para1" eId="sec_5__subsec_3__para_e">
+       <num><?L 3-41?>(e)</num>
+       <content>
+        <p>make provision for apportioning property, rights or liabilities;</p>
+       </content>
+      </level>
+      <level GUID="_8b9659d8-a069-4001-b54f-438990a16137" class="para1" eId="sec_5__subsec_3__para_f">
+       <num><?L 4-1?>(f)</num>
+       <content>
+        <p>make provision which is the same as or similar to the TUPE <?L 4-2?>regulations;</p>
+       </content>
+      </level>
+      <level GUID="_35ff04c5-a7bf-446e-81cd-12f1de01701c" class="para1" eId="sec_5__subsec_3__para_g">
+       <num><?L 4-3?>(g)</num>
+       <content>
+        <p>make other consequential, supplementary, incidental or transitional <?L 4-4?>provision.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_6e91c88e-ef09-440c-8a59-32bf2060c90a" class="prov2" eId="sec_5__subsec_4">
+      <num><?L 4-5?>(4)</num>
+      <content>
+       <p>In <mref><ref class="valid" href="#sec_5__subsec_3" ukl:targetGuid="_e578c209-8917-4d97-bbef-a973cd389055">subsection (3)</ref><ref class="valid" href="#sec_5__subsec_3__para_f" ukl:targetGuid="_8b9659d8-a069-4001-b54f-438990a16137">(f)</ref></mref>, <def GUID="_10f0cae6-de65-48ab-84aa-3a7954125f01" eId="sec_5__subsec_4__def_theTUPEregulations" ukl:endQuote="”" ukl:startQuote="“">the TUPE regulations</def> means the <ref class="valid" href="https://www.legislation.gov.uk/uksi/2006/246" ukl:aliasDefinitionId="_10f0cae6-de65-48ab-84aa-3a7954125f01" ukl:alternativeReference="https://www.legislation.gov.uk/uksi/2006/246/contents">Transfer of <?L 4-6?>Undertakings (Protection of Employment) Regulations 2006</ref> (S.I. 2006/246).</p>
+      </content>
+     </subsection>
+     <subsection GUID="_160a4234-f52d-4694-a409-ef2a43fe7f5c" class="prov2" eId="sec_5__subsec_5">
+      <num><?L 4-7?>(5)</num>
+      <content>
+       <p>A transfer scheme may include provision for compensation by the Secretary <?L 4-8?>of State to any person whose interests are adversely affected by it.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_96630aca-1e62-4e16-a4df-b99c9407d4d3" class="prov2" eId="sec_5__subsec_6">
+      <num><?L 4-9?>(6)</num>
+      <content>
+       <p>The Secretary of State may modify a transfer scheme.</p>
+      </content>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_acb092d4-a4d9-4ae0-bb4f-35e552654dee" class="group7" eId="xhdg_7" name="crossheading"><?DMS-Component componentId="6ab340b8-74a5-4771-ae91-683b7c371ecb" seriesId="c25c00dc-d921-43a9-b37a-2b1afb7401c9" versionNumber="1"?>
+    
+    <heading GUID="_50ab3b14-8fe7-4ed9-be4b-d488b5ead6a4" eId="xhdg_7__hdg"><?L 4-10?>Levy funding</heading>
+    <section GUID="_ef496fdb-540a-4d90-8aac-629dd7175b01" class="prov1" eId="sec_6" ukl:jref="j005"><?DMS-Component componentId="7c612d1e-cc1d-4618-a5d6-16337dfd7a57" seriesId="5461d0b2-2449-4d34-a476-778f954d5307" versionNumber="0"?>
+     
+     <num><?L 4-11?>6</num>
+     <heading GUID="_36d1eb42-f5ef-4899-a9bf-a139761ad991" eId="sec_6__hdg">Levy on suppliers</heading>
+     <subsection GUID="_1c93a379-49c0-4313-8cea-dcee8467af06" class="prov2" eId="sec_6__subsec_1">
+      <num><?L 4-12?>(1)</num>
+      <intro GUID="_b3f44526-89c8-499e-b8b9-cfe0d37a0f66" eId="sec_6__subsec_1__intro">
+       <p>The Secretary of State may make regulations (“levy regulations”) requiring <?L 4-13?>relevant suppliers of aviation fuel to pay a levy to the designated counterparty <?L 4-14?>for the purpose of enabling the counterparty to meet—</p>
+      </intro>
+      <level GUID="_4d07d4c4-cf2e-490e-b567-d8904c4a5f0d" class="para1" eId="sec_6__subsec_1__para_a">
+       <num><?L 4-15?>(a)</num>
+       <content>
+        <p>the cost of payments under revenue certainty contracts, and</p>
+       </content>
+      </level>
+      <level GUID="_95517ffa-a9ee-4366-9999-5e8a02226f02" class="para1" eId="sec_6__subsec_1__para_b">
+       <num><?L 4-16?>(b)</num>
+       <content>
+        <p>other costs incurred under or by virtue of this Act.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_154adc5f-c6c8-46b3-85db-634b3569dcf9" class="prov2" eId="sec_6__subsec_2">
+      <num><?L 4-17?>(2)</num>
+      <content>
+       <p>Levy regulations may include provision for the purpose of setting the levy <?L 4-18?>at a level that enables the designated counterparty to hold sums in reserve.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_b1a4817f-0017-4d34-9739-6e54f168bc53" class="prov2" eId="sec_6__subsec_3">
+      <num><?L 4-19?>(3)</num>
+      <content>
+       <p>Levy regulations may require relevant suppliers of aviation fuel to pay <?L 4-20?>different amounts based on criteria relating to their relative market share (and <?L 4-21?>may include provision about how their market share is to be determined for <?L 4-22?>these purposes).</p>
+      </content>
+     </subsection>
+     <subsection GUID="_b6770c7e-1c10-4bde-924c-597f597b2bdd" class="prov2" eId="sec_6__subsec_4">
+      <num><?L 4-23?>(4)</num>
+      <content>
+       <p>Levy regulations may create exemptions from the requirement to pay the <?L 4-24?>levy.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_c7c6a219-d190-415d-b77b-9271c57b8a17" class="prov2" eId="sec_6__subsec_5">
+      <num><?L 4-25?>(5)</num>
+      <intro GUID="_a0efce31-0441-467b-9707-047bc2ccb7df" eId="sec_6__subsec_5__intro">
+       <p>Levy regulations may—</p>
+      </intro>
+      <level GUID="_6412a420-6327-4e41-8ddc-16c0416de74b" class="para1" eId="sec_6__subsec_5__para_a">
+       <num><?L 4-26?>(a)</num>
+       <content>
+        <p>require a person to make payments on account of any liability of the <?L 4-27?>person to pay the levy;</p>
+       </content>
+      </level>
+      <level GUID="_e7d1e50a-7be4-42f2-a27c-65e4521ef980" class="para1" eId="sec_6__subsec_5__para_b">
+       <num><?L 4-28?>(b)</num>
+       <content>
+        <p>include provision about the repayment of sums paid on account.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_a3b0d369-2c55-4c70-bb52-cc61a8642752" class="prov2" eId="sec_6__subsec_6">
+      <num><?L 4-29?>(6)</num>
+      <intro GUID="_109d9842-6f45-4022-bad4-7716d6872a2c" eId="sec_6__subsec_6__intro">
+       <p>Levy regulations may make provision about—</p>
+      </intro>
+      <level GUID="_13674c5e-adcd-44e7-971b-cee85b0029b2" class="para1" eId="sec_6__subsec_6__para_a">
+       <num><?L 4-30?>(a)</num>
+       <content>
+        <p>the method by which sums payable under the regulations are to be <?L 4-31?>determined;</p>
+       </content>
+      </level>
+      <level GUID="_a7dbf664-4642-46f8-8444-1b131957c74d" class="para1" eId="sec_6__subsec_6__para_b">
+       <num><?L 4-32?>(b)</num>
+       <content>
+        <p>the payment of interest on late payments.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_2a725f05-6766-4786-8723-29043af891dd" class="prov2" eId="sec_6__subsec_7">
+      <num><?L 4-33?>(7)</num>
+      <content>
+       <p>Before making levy regulations the Secretary of State must consult any persons <?L 4-34?>the Secretary of State considers appropriate.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_2ebdedef-57ae-486e-abf7-3e951611d187" class="prov2" eId="sec_6__subsec_8">
+      <num><?L 4-35?>(8)</num>
+      <content>
+       <p>In this section “relevant supplier of aviation fuel” means a person who is or <?L 4-36?>becomes subject to a renewable transport fuel obligation by virtue of supplying <?L 4-37?>aviation fuel during the period specified in levy regulations.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_a42d5bb9-a7ec-47ce-afae-de5238509339" class="prov2" eId="sec_6__subsec_9">
+      <num><?L 4-38?>(9)</num>
+      <content>
+       <p>In <ref class="valid" href="#sec_6__subsec_8" ukl:targetGuid="_2ebdedef-57ae-486e-abf7-3e951611d187">subsection (8)</ref> “renewable transport fuel obligation” has the meaning given <?L 4-39?>by <mref><ref class="valid" href="https://www.legislation.gov.uk/ukpga/2004/20#sec_124" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/2004/20/section/124">section 124</ref><ref class="valid" href="https://www.legislation.gov.uk/ukpga/2004/20#sec_124__subsec_1" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/2004/20/section/124">(1)</ref> of the <ref class="valid" href="https://www.legislation.gov.uk/ukpga/2004/20" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/2004/20/contents">Energy Act 2004</ref></mref>.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_89d04f8e-8a3f-4088-8389-43762555bf64" class="prov1" eId="sec_7" ukl:jref="j016"><?DMS-Component componentId="29892f79-01e5-48c7-817a-ded3e7627766" seriesId="775bb361-71dd-481c-93ea-64a0d6f6f726" versionNumber="0"?>
+     
+     <num><?L 5-1?>7</num>
+     <heading GUID="_41fd3500-2d7f-489e-877a-64e0362c3984" eId="sec_7__hdg">Collateral for levy</heading>
+     <subsection GUID="_e29d354e-4ff2-4986-a294-327185129d10" class="prov2" eId="sec_7__subsec_1">
+      <num><?L 5-2?>(1)</num>
+      <content>
+       <p>Levy regulations may require a person to provide financial collateral to the <?L 5-3?>designated counterparty (whether in cash, securities or any other form) in <?L 5-4?>respect of any liability of the person to pay the levy.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_54e48a25-5af0-46b4-a752-9f1881deec1c" class="prov2" eId="sec_7__subsec_2">
+      <num><?L 5-5?>(2)</num>
+      <content>
+       <p>The provision that may be made under subsection <ref class="valid" href="#sec_7__subsec_1" ukl:targetGuid="_e29d354e-4ff2-4986-a294-327185129d10">(1)</ref> includes provision for <?L 5-6?>the designated counterparty to determine the form and terms of any financial <?L 5-7?>collateral.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_b965de5b-9d7f-4319-b62b-d6defb1d9d14" class="prov1" eId="sec_8" ukl:jref="j19"><?DMS-Component componentId="acb11d41-86c2-4e97-8b36-c241456844bf" seriesId="e5ddb14e-3a83-4656-aada-61f4c30b0303" versionNumber="1"?>
+     
+     <num><?L 5-8?>8</num>
+     <heading GUID="_e61a5549-ecf9-489c-8d4b-5494688c4506" eId="sec_8__hdg">Administration etc of levy and disputes</heading>
+     <subsection GUID="_86eafe7b-94ad-4ea1-b85f-a0b92a79e593" class="prov2" eId="sec_8__subsec_1">
+      <num><?L 5-9?>(1)</num>
+      <content>
+       <p>Levy regulations may confer functions on the designated counterparty in <?L 5-10?>connection with the administration and enforcement of the regulations <?L 5-11?>(including power to require the provision of information).</p>
+      </content>
+     </subsection>
+     <subsection GUID="_b574ff99-98d0-4218-8f27-85a22fe06a53" class="prov2" eId="sec_8__subsec_2">
+      <num><?L 5-12?>(2)</num>
+      <content>
+       <p>Levy regulations may make provision about the resolution of disputes, <?L 5-13?>including provision about arbitration and appeals.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_d030218f-9942-4239-87e6-015d6a8c77d3" class="prov1" eId="sec_9" ukl:jref="j18"><?DMS-Component componentId="6874e9b1-3568-46a6-9722-b0b393c4490d" seriesId="d1fea87c-47b0-4470-8e5b-e4664dbf483d" versionNumber="1"?>
+     
+     <num><?L 5-14?>9</num>
+     <heading GUID="_ca7b1a3f-a274-4b28-b392-8ad881f23c7f" eId="sec_9__hdg">Calculation or determination of matters under levy regulations</heading>
+     <intro GUID="_670539ec-f267-4d97-8af9-0093a08ade83" eId="sec_9__intro">
+      <p><?L 5-15?>Levy regulations may provide for anything which is to be calculated or <?L 5-16?>determined under the regulations to be calculated or determined—</p>
+     </intro>
+     <level GUID="_e6749dc8-3a0b-4551-b166-0d62eb28861f" class="para1" eId="sec_9__para_a">
+      <num><?L 5-17?>(a)</num>
+      <content>
+       <p>by such persons,</p>
+      </content>
+     </level>
+     <level GUID="_c02ae74f-54d9-4c42-b6b6-ae32d23e82fa" class="para1" eId="sec_9__para_b">
+      <num><?L 5-18?>(b)</num>
+      <content>
+       <p>in accordance with such procedure, and</p>
+      </content>
+     </level>
+     <level GUID="_5d33886b-ff3a-4ef4-8265-66e661c268a5" class="para1" eId="sec_9__para_c">
+      <num><?L 5-19?>(c)</num>
+      <content>
+       <p>by reference to such matters and to the opinion of such persons,</p>
+      </content>
+     </level>
+     <wrapUp GUID="_cec8397c-b16e-4245-8656-399bceb85d5f" eId="sec_9__wrapup">
+      <p><?L 5-20?>as may be specified in the regulations.</p>
+     </wrapUp>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_33b41cf0-dea4-4c70-b8e7-fa81f3c83fbe" class="group7" eId="xhdg_11" name="crossheading"><?DMS-Component componentId="44e7abc3-12c5-45b8-96c0-b28bee19d005" seriesId="ffe337b6-843e-4b04-8abe-40080f45b9fe" versionNumber="1"?>
+    
+    <heading GUID="_1ad517e5-cfae-47a7-ae39-e1a7d5d749b8" eId="xhdg_11__hdg"><?L 5-21?>Surpluses</heading>
+    <section GUID="_4c18b9ce-f549-4a58-96d5-748456e61547" class="prov1" eId="sec_10" ukl:jref="j006"><?DMS-Component componentId="6078cd04-6918-4333-b31a-e37c397aad7c" seriesId="bb43f456-a1b4-469f-a86b-a37fa25d9fe2" versionNumber="1"?>
+     
+     <num><?L 5-22?>10</num>
+     <heading GUID="_b0ac0ee6-ef6e-4257-bd9e-f1ac6a0fb900" eId="sec_10__hdg">Payment of surpluses to levy payers</heading>
+     <subsection GUID="_d5f48a83-108a-427e-a17e-dc50331bed19" class="prov2" eId="sec_10__subsec_1">
+      <num><?L 5-23?>(1)</num>
+      <intro GUID="_c5c8a38d-ad58-41bf-9905-00dc93a96f03" eId="sec_10__subsec_1__intro">
+       <p>The Secretary of State may by regulations—</p>
+      </intro>
+      <level GUID="_b136398a-fdce-4452-bc22-f2e73415c386" class="para1" eId="sec_10__subsec_1__para_a">
+       <num><?L 5-24?>(a)</num>
+       <content>
+        <p>require the designated counterparty, in the event that it has a surplus <?L 5-25?>(whether derived from payments made to it under revenue certainty <?L 5-26?>contracts (see <mref><ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">section 1</ref><ref class="valid" href="#sec_1__subsec_2" ukl:targetGuid="_b7c78b5c-6cff-4746-831e-b4ae01f88f74">(2)</ref><ref class="valid" href="#sec_1__subsec_2__para_b" ukl:targetGuid="_d9fdec83-e3ac-4081-b1a7-fc96c624e7ca">(b)</ref></mref>) or otherwise), to make payments to <?L 5-27?>persons who have had to pay the levy;</p>
+       </content>
+      </level>
+      <level GUID="_9951f7a4-90fb-4f56-af59-73d92ecf3b4f" class="para1" eId="sec_10__subsec_1__para_b">
+       <num><?L 5-28?>(b)</num>
+       <content>
+        <p>require a person who receives such a payment to ensure that its <?L 5-29?>customers receive such benefits from the payment as may be specified <?L 5-30?>in or determined in accordance with the regulations.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_0ba58d4d-25f8-4efe-9abc-f181d6903622" class="prov2" eId="sec_10__subsec_2">
+      <num><?L 5-31?>(2)</num>
+      <intro GUID="_27b5e2a9-982a-49f9-991d-e552effbb04f" eId="sec_10__subsec_2__intro">
+       <p>The regulations may, in particular, make provision about—</p>
+      </intro>
+      <level GUID="_b68454b4-f26f-44e2-a2cc-36a2321f1053" class="para1" eId="sec_10__subsec_2__para_a">
+       <num><?L 5-32?>(a)</num>
+       <content>
+        <p>what amounts to a surplus, including provision about the method by <?L 5-33?>which the surplus is to be determined and the period by reference to <?L 5-34?>which it is to be determined whether there is a surplus;</p>
+       </content>
+      </level>
+      <level GUID="_15bfd2cc-8719-4afd-8054-13c19788f28a" class="para1" eId="sec_10__subsec_2__para_b">
+       <num><?L 5-35?>(b)</num>
+       <content>
+        <p>the method by which the amount of a payment to a person is to be <?L 5-36?>determined.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_93bcdc08-d766-40f1-b75a-e4a8df370c05" class="prov2" eId="sec_10__subsec_3">
+      <num><?L 5-37?>(3)</num>
+      <content>
+       <p>The regulations may make provision for payments to be provided subject to <?L 5-38?>conditions as to repayment in the event that the recipient fails to comply with <?L 5-39?>a requirement imposed under <mref><ref class="valid" href="#sec_10__subsec_1" ukl:targetGuid="_d5f48a83-108a-427e-a17e-dc50331bed19">subsection (1)</ref><ref class="valid" href="#sec_10__subsec_1__para_b" ukl:targetGuid="_9951f7a4-90fb-4f56-af59-73d92ecf3b4f">(b)</ref></mref>.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_78c91241-f19e-482c-b8a3-a681ed53b5df" class="prov2" eId="sec_10__subsec_4">
+      <num><?L 6-1?>(4)</num>
+      <intro GUID="_6543f27d-4bbf-4e2c-8436-f58bea4a3866" eId="sec_10__subsec_4__intro">
+       <p>Before making regulations under <ref class="valid" href="#sec_10" ukl:targetGuid="_4c18b9ce-f549-4a58-96d5-748456e61547" ukl:targetJref="j006">this section</ref> the Secretary of State must <?L 6-2?>consult—</p>
+      </intro>
+      <level GUID="_5d0a4330-c60d-48d3-a227-747e4b3eb269" class="para1" eId="sec_10__subsec_4__para_a">
+       <num><?L 6-3?>(a)</num>
+       <content>
+        <p>the Welsh Ministers, if the regulations contain provision which would <?L 6-4?>be within the legislative competence of Senedd Cymru if contained <?L 6-5?>in an Act of the Senedd;</p>
+       </content>
+      </level>
+      <level GUID="_e63d055c-bc87-40b0-b3ba-a1eb4b94e30a" class="para1" eId="sec_10__subsec_4__para_b">
+       <num><?L 6-6?>(b)</num>
+       <content>
+        <p>the Scottish Ministers, if the regulations contain provision which would <?L 6-7?>be within the legislative competence of the Scottish Parliament if <?L 6-8?>contained in an Act of the Scottish Parliament;</p>
+       </content>
+      </level>
+      <level GUID="_b61dee59-10f3-48f4-9106-472a74e3fa7d" class="para1" eId="sec_10__subsec_4__para_c">
+       <num><?L 6-9?>(c)</num>
+       <intro GUID="_58a7dc80-5507-4494-ba72-273381656848" eId="sec_10__subsec_4__para_c__intro">
+        <p>the Department for the Economy in Northern Ireland, if the regulations <?L 6-10?>contain provision which—</p>
+       </intro>
+       <level GUID="_c87d98be-6cde-4137-bf62-55d5ff841f4d" class="para2" eId="sec_10__subsec_4__para_c__subpara_i">
+        <num><?L 6-11?>(i)</num>
+        <content>
+         <p>would be within the legislative competence of the Northern <?L 6-12?>Ireland Assembly if contained in an Act of the Assembly, and</p>
+        </content>
+       </level>
+       <level GUID="_76123735-e659-40f4-8c81-8a3794faf3a7" class="para2" eId="sec_10__subsec_4__para_c__subpara_ii">
+        <num><?L 6-13?>(ii)</num>
+        <content>
+         <p>would not, if it were contained in a Bill for an Act of the <?L 6-14?>Northern Ireland Assembly, result in the Bill requiring the <?L 6-15?>consent of the Secretary of State under <mref><ref class="valid" href="https://www.legislation.gov.uk/ukpga/1998/47#sec_8" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/1998/47/section/8">section 8</ref> of the <ref class="valid" href="https://www.legislation.gov.uk/ukpga/1998/47" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/1998/47/contents">Northern <?L 6-16?>Ireland Act 1998</ref></mref>;</p>
+        </content>
+       </level>
+      </level>
+      <level GUID="_1ff03efb-1222-48c0-8f5e-91be73bc9173" class="para1" eId="sec_10__subsec_4__para_d">
+       <num><?L 6-17?>(d)</num>
+       <content>
+        <p>any other persons the Secretary of State considers appropriate.</p>
+       </content>
+      </level>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_97c4abe5-22ba-49ab-b149-88852c69f0db" class="group7" eId="xhdg" name="crossheading"><?DMS-Component componentId="04b789e5-2d5f-4b7f-98d2-6ff75edb7b27" seriesId="e1827098-3c12-448d-99dc-552796ee5a45" versionNumber="1"?>
+    
+    <heading GUID="_3f413fa2-e3d3-46df-8023-323366dc25e5" eId="xhdg__hdg"><?L 6-18?>Financial penalties</heading>
+    <section GUID="_b686128e-99e3-40d3-859c-606682241141" class="prov1" eId="sec_11" ukl:jref="j17"><?DMS-Component componentId="37d55243-aae1-46c5-8b53-4840e30ad859" seriesId="ec7c4dd2-3298-41fb-8a11-f0ec151f4a16" versionNumber="1"?>
+     
+     <num><?L 6-19?>11</num>
+     <heading GUID="_f3310165-62d2-4483-819e-21832ac8b967" eId="sec_11__hdg">Financial penalties</heading>
+     <subsection GUID="_8e882aeb-2fe6-4d61-82b2-09d26acf07f9" class="prov2" eId="sec_11__subsec_1">
+      <num><?L 6-20?>(1)</num>
+      <intro GUID="_42b3f65d-966f-415c-8cad-450dd34ee45f" eId="sec_11__subsec_1__intro">
+       <p>The Secretary of State may impose a financial penalty on a person other than <?L 6-21?>the designated counterparty if—</p>
+      </intro>
+      <level GUID="_15cfa21a-d88e-424c-8c4e-8bd867b55608" class="para1" eId="sec_11__subsec_1__para_a">
+       <num><?L 6-22?>(a)</num>
+       <content>
+        <p>the Secretary of State is satisfied that the person has breached a <?L 6-23?>requirement imposed by levy regulations, and</p>
+       </content>
+      </level>
+      <level GUID="_d86b9a5f-2ac7-49c6-9467-c914f2a72bda" class="para1" eId="sec_11__subsec_1__para_b">
+       <num><?L 6-24?>(b)</num>
+       <content>
+        <p>the requirement was, at the time of the breach, specified in the levy <?L 6-25?>regulations as a requirement in respect of the breach of which a <?L 6-26?>financial penalty may be imposed.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_2d581d55-8247-4eb4-ae9c-569bc4c16cfd" class="prov2" eId="sec_11__subsec_2">
+      <num><?L 6-27?>(2)</num>
+      <content>
+       <p>The Secretary of State may impose a financial penalty on a person if the <?L 6-28?>Secretary of State is satisfied that the person has breached a requirement <?L 6-29?>imposed by regulations under section <mref><ref class="valid" href="#sec_10" ukl:targetGuid="_4c18b9ce-f549-4a58-96d5-748456e61547" ukl:targetJref="j006">10</ref><ref class="valid" href="#sec_10__subsec_1" ukl:targetGuid="_d5f48a83-108a-427e-a17e-dc50331bed19">(1)</ref><ref class="valid" href="#sec_10__subsec_1__para_b" ukl:targetGuid="_9951f7a4-90fb-4f56-af59-73d92ecf3b4f">(b)</ref></mref>.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_b21b0e95-5c1c-4f39-8de5-8b1c7f1c9d08" class="prov2" eId="sec_11__subsec_3">
+      <num><?L 6-30?>(3)</num>
+      <intro GUID="_dea68359-e094-4e0d-8ca7-35e180628473" eId="sec_11__subsec_3__intro">
+       <p>The amount of the financial penalty imposed under this section must not <?L 6-31?>exceed the lesser of—</p>
+      </intro>
+      <level GUID="_31c64d44-2389-46b9-a83f-ca8280d2cc99" class="para1" eId="sec_11__subsec_3__para_a">
+       <num><?L 6-32?>(a)</num>
+       <content>
+        <p>£100,000, and</p>
+       </content>
+      </level>
+      <level GUID="_d37e4988-5dae-4702-af49-4fc97327a881" class="para1" eId="sec_11__subsec_3__para_b">
+       <num><?L 6-33?>(b)</num>
+       <content>
+        <p>an amount equal to 10% of turnover of the person on whom it is <?L 6-34?>imposed.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_f7a50343-ac27-4684-925d-288f7cfc28f8" class="prov2" eId="sec_11__subsec_4">
+      <num><?L 6-35?>(4)</num>
+      <intro GUID="_59b0e0db-bf96-4a4c-8d4f-94b00cdbf584" eId="sec_11__subsec_4__intro">
+       <p>The Secretary of State may by regulations—</p>
+      </intro>
+      <level GUID="_59979f43-6d89-4ed0-9f30-60c95d383039" class="para1" eId="sec_11__subsec_4__para_a">
+       <num><?L 6-36?>(a)</num>
+       <content>
+        <p>amend the amount specified in <mref><ref class="valid" href="#sec_11__subsec_3" ukl:targetGuid="_b21b0e95-5c1c-4f39-8de5-8b1c7f1c9d08">subsection (3)</ref><ref class="valid" href="#sec_11__subsec_3__para_a" ukl:targetGuid="_31c64d44-2389-46b9-a83f-ca8280d2cc99">(a)</ref></mref> in light of inflation;</p>
+       </content>
+      </level>
+      <level GUID="_0ea46800-2ab8-4cb4-8c44-8f3da89afefa" class="para1" eId="sec_11__subsec_4__para_b">
+       <num><?L 6-37?>(b)</num>
+       <content>
+        <p>make provision as to how a person’s turnover is to be determined for <?L 6-38?>the purposes of <mref><ref class="valid" href="#sec_11__subsec_3" ukl:targetGuid="_b21b0e95-5c1c-4f39-8de5-8b1c7f1c9d08">subsection (3)</ref><ref class="valid" href="#sec_11__subsec_3__para_b" ukl:targetGuid="_d37e4988-5dae-4702-af49-4fc97327a881">(b)</ref></mref>.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_13d6d95f-05d6-4605-8c24-33163c7726fd" class="prov2" eId="sec_11__subsec_5">
+      <num><?L 6-39?>(5)</num>
+      <content>
+       <p><ref class="valid" href="#sched" ukl:targetGuid="_72a7b1d2-7c17-41ca-b300-aad6343400e3">The Schedule</ref> makes further provision about financial penalties under <ref class="valid" href="#sec_11" ukl:targetGuid="_b686128e-99e3-40d3-859c-606682241141" ukl:targetJref="j17">this <?L 6-40?>section</ref>.</p>
+      </content>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_9433a46b-2d2b-4fe7-9f34-fed17fa5f785" class="group7" eId="xhdg_14" name="crossheading"><?DMS-Component componentId="6c5237a6-14e7-45eb-a2d6-c9c6361480b3" seriesId="9b022b0c-40a1-47c3-8e9c-514cc6c6a812" versionNumber="1"?>
+    
+    <heading GUID="_b2e9da06-56db-4ef9-a7a7-b6df9d2f9356" eId="xhdg_14__hdg"><?L 7-1?>Directions, information and advice</heading>
+    <section GUID="_cc936ad4-e7a7-4637-83aa-94c1e0eddc86" class="prov1" eId="sec_12" ukl:jref="j21"><?DMS-Component componentId="28413f75-c145-4d40-b4dd-41cbb4f392af" seriesId="56638310-3c58-46a3-b637-b34ef75bea4e" versionNumber="1"?>
+     
+     <num><?L 7-2?>12</num>
+     <heading GUID="_be1a4fe9-5916-46c7-b3da-2c3730bed2fd" eId="sec_12__hdg">Power to direct designated counterparty</heading>
+     <subsection GUID="_d873a67b-cba7-481d-b4ab-23ae20b27c15" class="prov2" eId="sec_12__subsec_1">
+      <num><?L 7-3?>(1)</num>
+      <content>
+       <p>The Secretary of State may give the designated counterparty directions as to <?L 7-4?>the exercise of any of the functions conferred on it under or by virtue of this <?L 7-5?>Act.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_dfb4c3c0-bfb3-421b-b021-cab76b033e99" class="prov2" eId="sec_12__subsec_2">
+      <num><?L 7-6?>(2)</num>
+      <content>
+       <p>The Secretary of State must publish any direction given under <ref class="valid" href="#sec_12__subsec_1" ukl:targetGuid="_d873a67b-cba7-481d-b4ab-23ae20b27c15">subsection (1)</ref>.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_ca1d6bda-2c18-44cb-94d7-2feee8a678c6" class="prov1" eId="sec_13" ukl:jref="j013"><?DMS-Component componentId="2a212155-1557-4116-a7c6-f339e3c95e4d" seriesId="ef19220b-0890-470c-b4ba-c83cd38e7c0c" versionNumber="1"?>
+     
+     <num><?L 7-7?>13</num>
+     <heading GUID="_1702a9a1-497e-4ca6-8412-5760619843ce" eId="sec_13__hdg">Information and advice</heading>
+     <subsection GUID="_335a257b-594c-4523-80f6-cd91d4a4b120" class="prov2" eId="sec_13__subsec_1">
+      <num><?L 7-8?>(1)</num>
+      <content>
+       <p>The designated counterparty must comply with any requirement imposed by <?L 7-9?>the Secretary of State to provide the Secretary of State with information or <?L 7-10?>advice in connection with the exercise of the counterparty’s functions.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_a7bcdc88-9196-4324-aca9-374723886134" class="prov2" eId="sec_13__subsec_2">
+      <num><?L 7-11?>(2)</num>
+      <content>
+       <p>A requirement may include provision about how or when information or <?L 7-12?>advice is to be provided.</p>
+      </content>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_6788c6be-4a24-426d-9fe7-72bd0b814555" class="group7" eId="xhdg_16__oc_1" name="crossheading"><?DMS-Component componentId="5024a9be-553a-47d1-967e-a0d60749e179" seriesId="49e7caa5-1ec3-4bc6-9d63-d4ddf9e3ed76" versionNumber="1"?>
+    
+    <heading GUID="_4f6c997d-f5af-400c-8675-4610386d3d27" eId="xhdg_16__oc_1__hdg"><?L 7-13?>Financial assistance</heading>
+    <section GUID="_25f4eb65-8919-4e89-958a-be0cf6ccc2bc" class="prov1" eId="sec_14" ukl:jref="j129"><?DMS-Component componentId="79efaed1-e41d-47b8-8905-992bb5729ad9" seriesId="a551ebda-8c88-42fc-bef9-9618be646da5" versionNumber="0"?>
+     
+     <num><?L 7-14?>14</num>
+     <heading GUID="_44ab7cfd-68b5-40d5-b07b-3745c2d70acb" eId="sec_14__hdg">Financial assistance for designated counterparty</heading>
+     <subsection GUID="_1957e7ab-dc13-4365-9e52-4c833a8d982f" class="prov2" eId="sec_14__subsec_1">
+      <num><?L 7-15?>(1)</num>
+      <content>
+       <p>The Secretary of State may provide financial assistance to the designated <?L 7-16?>counterparty.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_2b40c209-a51b-4016-88ca-db1b0c546ec0" class="prov2" eId="sec_14__subsec_2">
+      <num><?L 7-17?>(2)</num>
+      <intro GUID="_508611cf-2ccd-4882-8f6a-df01e0bdf72e" eId="sec_14__subsec_2__intro">
+       <p>The financial assistance may be provided in any form and in particular may <?L 7-18?>be provided—</p>
+      </intro>
+      <level GUID="_8cea9da6-5818-453a-8430-af8fbb3e5406" class="para1" eId="sec_14__subsec_2__para_a">
+       <num><?L 7-19?>(a)</num>
+       <content>
+        <p>by way of grant, loan, guarantee or indemnity or the provision of <?L 7-20?>insurance, or</p>
+       </content>
+      </level>
+      <level GUID="_61dc98fe-785b-4258-b516-6d1c30fa08dd" class="para1" eId="sec_14__subsec_2__para_b">
+       <num><?L 7-21?>(b)</num>
+       <content>
+        <p>by incurring expenditure for the benefit of the designated counterparty.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_02669f7f-4eb0-4c13-b7b3-76be3d73634e" class="prov2" eId="sec_14__subsec_3">
+      <num><?L 7-22?>(3)</num>
+      <content>
+       <p>Financial assistance under this section may be provided subject to such <?L 7-23?>conditions as the Secretary of State considers appropriate, which may include <?L 7-24?>conditions about repayment with or without interest or other return.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_20049604-01d8-46a4-b059-10b7d8368b46" class="prov2" eId="sec_14__subsec_4">
+      <num><?L 7-25?>(4)</num>
+      <content>
+       <p>The power to provide financial assistance under this section is in addition to <?L 7-26?>(and does not limit or replace) any other power of a Minister of the Crown <?L 7-27?>to provide financial assistance.</p>
+      </content>
+     </subsection>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_5841fec8-fd76-4175-a10e-298e584328d7" class="group7" eId="xhdg_17" name="crossheading"><?DMS-Component componentId="d5d2d333-c98d-4c38-ae62-3cd90836a6af" seriesId="841805d4-8f9a-46f9-bffa-5651e2197a8e" versionNumber="1"?>
+    
+    <heading GUID="_88dfb595-e348-4b5f-b2df-e66e96240285" eId="xhdg_17__hdg"><?L 7-28?>General</heading>
+    <section GUID="_6a413e26-8932-44c5-8b23-cfa4b8da3d0c" class="prov1" eId="sec_15" ukl:jref="j015"><?DMS-Component componentId="5df81b11-d8d7-4a08-a46c-914ee3d1e911" seriesId="f48e7cc4-5644-46b7-852a-e3bc2a6c17d2" versionNumber="0"?>
+     
+     <num ukl:autonumber="yes"><?L 7-29?>15</num>
+     <heading GUID="_c46cd4ab-f4fc-4cf9-bf0e-b3ca5f5831a9" eId="sec_15__hdg">Regulations</heading>
+     <subsection GUID="_82e2f39a-3e09-4007-9121-ca7b5f141f4b" class="prov2" eId="sec_15__subsec_1">
+      <num><?L 7-30?>(1)</num>
+      <intro GUID="_53603a33-adc7-4272-93c8-998981e4a8d3" eId="sec_15__subsec_1__intro">
+       <p>A power to make regulations under any provision of this Act includes power <?L 7-31?>to make—</p>
+      </intro>
+      <level GUID="_b496fef5-aaf2-4f54-a12a-6b94968570bc" class="para1" eId="sec_15__subsec_1__para_a">
+       <num><?L 7-32?>(a)</num>
+       <content>
+        <p>consequential, supplementary, incidental, transitional or saving <?L 7-33?>provision;</p>
+       </content>
+      </level>
+      <level GUID="_1b147ac1-9c0d-46d9-b7a8-ac589973fdf8" class="para1" eId="sec_15__subsec_1__para_b">
+       <num><?L 7-34?>(b)</num>
+       <content>
+        <p>different provision for different purposes.</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_1a4e02d1-f4ae-4750-a281-b88fab68df60" class="prov2" eId="sec_15__subsec_2">
+      <num><?L 7-35?>(2)</num>
+      <content>
+       <p>Regulations under this Act are to be made by statutory instrument.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_cecdfa9b-3398-4a01-949e-fb9af1673a8c" class="prov2" eId="sec_15__subsec_3">
+      <num><?L 8-1?>(3)</num>
+      <intro GUID="_0773d91a-3c0a-4284-a173-6388193182c8" eId="sec_15__subsec_3__intro">
+       <p>A statutory instrument containing regulations under any of the following <?L 8-2?>provisions (whether alone or with other provision) may not be made unless <?L 8-3?>a draft of the instrument has been laid before and approved by a resolution <?L 8-4?>of each House of Parliament—</p>
+      </intro>
+      <level GUID="_61ed2416-9b32-4653-9fc3-b27b3b28a839" class="para1" eId="sec_15__subsec_3__para_a">
+       <num><?L 8-5?>(a)</num>
+       <content>
+        <p><mref><ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">section 1</ref><ref class="valid" href="#sec_1__subsec_6" ukl:targetGuid="_85af3e10-38fd-4815-9ae5-88bf8bc2e805">(6)</ref></mref> (extension of period within which direction may be given);</p>
+       </content>
+      </level>
+      <level GUID="_3f789b37-8ad5-4f62-9994-71e36da2c3f7" class="para1" eId="sec_15__subsec_3__para_b">
+       <num><?L 8-6?>(b)</num>
+       <content>
+        <p><mref><ref class="valid" href="#sec_6" ukl:targetGuid="_ef496fdb-540a-4d90-8aac-629dd7175b01" ukl:targetJref="j005">section 6</ref><ref class="valid" href="#sec_6__subsec_1" ukl:targetGuid="_1c93a379-49c0-4313-8cea-dcee8467af06">(1)</ref></mref> (levy regulations);</p>
+       </content>
+      </level>
+      <level GUID="_4a26380e-997a-4e78-bfd7-7593359d631c" class="para1" eId="sec_15__subsec_3__para_c">
+       <num ukl:autonumber="yes"><?L 8-7?>(c)</num>
+       <content>
+        <p><ref class="valid" href="#sec_10" ukl:targetGuid="_4c18b9ce-f549-4a58-96d5-748456e61547" ukl:targetJref="j006">section 10</ref> (payment of surpluses to levy payers);</p>
+       </content>
+      </level>
+      <level GUID="_62394365-d548-4dfc-b34a-2e714956d1d6" class="para1" eId="sec_15__subsec_3__para_d">
+       <num><?L 8-8?>(d)</num>
+       <content>
+        <p><mref><ref class="valid" href="#sec_11" ukl:targetGuid="_b686128e-99e3-40d3-859c-606682241141" ukl:targetJref="j17">section 11</ref><ref class="valid" href="#sec_11__subsec_4" ukl:targetGuid="_f7a50343-ac27-4684-925d-288f7cfc28f8" ukl:targetJref="">(4)</ref><ref class="valid" href="#sec_11__subsec_4__para_a" ukl:targetGuid="_59979f43-6d89-4ed0-9f30-60c95d383039" ukl:targetJref="">(a)</ref></mref> (power to amend maximum financial penalty).</p>
+       </content>
+      </level>
+     </subsection>
+     <subsection GUID="_64b97de0-4b96-4340-92ff-5a39e31bd890" class="prov2" eId="sec_15__subsec_4">
+      <num><?L 8-9?>(4)</num>
+      <content>
+       <p>Any other statutory instrument containing regulations under this Act is subject <?L 8-10?>to annulment in pursuance of a resolution of either House of Parliament.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_f13b9557-d2b1-4e6d-bfae-c15c6e25988d" class="prov1" eId="sec_16" ukl:jref="j008"><?DMS-Component componentId="c8fed55d-34ed-4d1b-aa63-00cfa2562a80" seriesId="14f4fea6-f39a-4f61-97b1-78466423bf47" versionNumber="1"?>
+     
+     <num><?L 8-11?>16</num>
+     <heading GUID="_be6a0d1a-1f2c-4cf7-8323-3033000448c1" eId="sec_16__hdg">Interpretation</heading>
+     <intro GUID="_df13e07d-7be3-4df8-b9d8-8acfc471fd3c" eId="sec_16__intro">
+      <p><?L 8-12?>In this Act—</p>
+     </intro>
+     <hcontainer GUID="_73ef8759-6aad-4d79-bc56-53eddc985049" class="definition" eId="sec_16__def_aviationfuel_" name="definition">
+      <intro GUID="_90931da7-294c-438c-b92c-da752b1039f7" eId="sec_16__def_aviationfuel__intro">
+       <p><def GUID="_f682e908-1c40-4cb8-81c3-171f9d2b572c" eId="sec_16__def_aviationfuel" ukl:endQuote="”" ukl:startQuote="“"><?L 8-13?>aviation fuel</def> means fuel for—</p>
+      </intro>
+      <level GUID="_d7a2ccbf-7103-4436-9993-9efeb7e781c5" class="para1" eId="sec_16__def_aviationfuel__para_a">
+       <num><?L 8-14?>(a)</num>
+       <content>
+        <p>use in aircraft, or</p>
+       </content>
+      </level>
+      <level GUID="_d5130a7c-85e0-4791-88ab-473daea53303" class="para1" eId="sec_16__def_aviationfuel__para_b">
+       <num><?L 8-15?>(b)</num>
+       <content>
+        <p>use in testing engines for use in aircraft;</p>
+       </content>
+      </level>
+     </hcontainer>
+     <hcontainer GUID="_d6a202cd-5798-4c8e-a73a-50c03eb6eb67" class="definition" eId="sec_16__def_thedesignatedcounterparty_" name="definition">
+      <content>
+       <p><def GUID="_4762114e-ed38-4742-a9cb-716448fe0b1d" eId="sec_16__def_thedesignatedcounterparty" ukl:endQuote="”" ukl:startQuote="“"><?L 8-16?>the designated counterparty</def> has the meaning given by <mref><ref class="valid" href="#sec_4" ukl:targetGuid="_e3058066-54f9-4fb7-82da-16f9ca119c59" ukl:targetJref="j004">section 4</ref><ref class="valid" href="#sec_4__subsec_2" ukl:targetGuid="_ebfbcd02-33c4-48ea-8f4a-01f73802b0a4">(2)</ref></mref>;</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_9d828349-15cb-4df6-b706-542369bb471c" class="definition" eId="sec_16__def_thelevy_" name="definition">
+      <content>
+       <p><def GUID="_7e3f3b7e-7039-45ae-975a-852c177003da" eId="sec_16__def_thelevy" ukl:endQuote="”" ukl:startQuote="“"><?L 8-17?>the levy</def> means a levy imposed by regulations under <mref><ref class="valid" href="#sec_6" ukl:targetGuid="_ef496fdb-540a-4d90-8aac-629dd7175b01" ukl:targetJref="j005">section 6</ref><ref class="valid" href="#sec_6__subsec_1" ukl:targetGuid="_1c93a379-49c0-4313-8cea-dcee8467af06">(1)</ref></mref>;</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_668fde44-f73f-41fa-9ba9-db3c2804f8ef" class="definition" eId="sec_16__def_levyregulations_" name="definition">
+      <content>
+       <p><def GUID="_ab40376c-aac3-4fbe-8395-4cffcf191879" eId="sec_16__def_levyregulations" ukl:endQuote="”" ukl:startQuote="“"><?L 8-18?>levy regulations</def> has the meaning given by <mref><ref class="valid" href="#sec_6" ukl:targetGuid="_ef496fdb-540a-4d90-8aac-629dd7175b01" ukl:targetJref="j005">section 6</ref><ref class="valid" href="#sec_6__subsec_1" ukl:targetGuid="_1c93a379-49c0-4313-8cea-dcee8467af06">(1)</ref></mref>;</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_91dbf08d-84b3-44cc-9dac-4fd4e3ada9a2" class="definition" eId="sec_16__def_liability_" name="definition">
+      <content>
+       <p><def GUID="_019a3e0b-40eb-4c20-a70c-38c3558ae941" eId="sec_16__def_liability" ukl:endQuote="”" ukl:startQuote="“"><?L 8-19?>liability</def> includes contingent liability;</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_7d57a49b-da4a-4909-8da9-84e1ed68a4dc" class="definition" eId="sec_16__def_MinisteroftheCrown_" name="definition">
+      <content>
+       <p><def GUID="_be5f1806-4a36-4b76-b892-d7f515fb9d22" eId="sec_16__def_MinisteroftheCrown" ukl:endQuote="”" ukl:startQuote="“"><?L 8-20?>Minister of the Crown</def> has the same meaning as in the <ref class="valid" href="https://www.legislation.gov.uk/ukpga/1975/26" ukl:alternativeReference="https://www.legislation.gov.uk/ukpga/1975/26/contents">Ministers of <?L 8-21?>the Crown Act 1975</ref> (see section 8(1) of that Act);</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_2804e140-0630-4b2e-bb5d-65e7bcc3e133" class="definition" eId="sec_16__def_renewabletransportfuel_" name="definition">
+      <content>
+       <p><def GUID="_d7145c3c-6333-4ebe-8391-6991233a5e75" eId="sec_16__def_renewabletransportfuel" ukl:endQuote="”" ukl:startQuote="“"><?L 8-22?>renewable transport fuel</def> means anything that is (or is treated as) <?L 8-23?>renewable transport fuel for the purposes of Chapter 5 of Part 2 of <?L 8-24?>the Energy Act 2004 (see sections 131D(2) and 132(1) of that Act);</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_cc585461-19a1-41a6-96e6-76e9f446567f" class="definition" eId="sec_16__def_revenuecertaintycontract_" name="definition">
+      <content>
+       <p><def GUID="_9ff9483e-d670-4258-b92d-8ac7711cf307" eId="sec_16__def_revenuecertaintycontract" ukl:endQuote="”" ukl:startQuote="“"><?L 8-25?>revenue certainty contract</def> has the meaning given by <mref><ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">section 1</ref><ref class="valid" href="#sec_1__subsec_2" ukl:targetGuid="_b7c78b5c-6cff-4746-831e-b4ae01f88f74">(2)</ref></mref>;</p>
+      </content>
+     </hcontainer>
+     <hcontainer GUID="_368fa53b-2a68-400a-a617-4b50508e25a2" class="definition" eId="sec_16__def_sustainableaviationfuel_" name="definition">
+      <content>
+       <p><def GUID="_b45e61ed-792e-4d9c-a5f8-930a2e989f18" eId="sec_16__def_sustainableaviationfuel" ukl:endQuote="”" ukl:startQuote="“"><?L 8-26?>sustainable aviation fuel</def> means aviation fuel that is renewable transport <?L 8-27?>fuel.</p>
+      </content>
+     </hcontainer>
+    </section>
+    <section GUID="_2f68085e-17a6-47b2-a2ba-61e89dae250d" class="prov1" eId="sec_17" ukl:jref="j009"><?DMS-Component componentId="cdcf02db-22de-45b3-94d9-70a081ecc0ae" seriesId="f778cd60-cdf7-4cd7-aa67-5a10747a919b" versionNumber="1"?>
+     
+     <num><?L 8-28?>17</num>
+     <heading GUID="_a5116ffa-9fbd-4a7b-84ec-ebb0e309262c" eId="sec_17__hdg">Extent</heading>
+     <content>
+      <p><?L 8-29?>This Act extends to England and Wales, Scotland and Northern Ireland.</p>
+     </content>
+    </section>
+    <section GUID="_edf74805-e5ae-4028-9172-5e031e2ff527" class="prov1" eId="sec_18" ukl:jref="j010"><?DMS-Component componentId="926a5321-58f0-41b2-a3fe-d7b65adabcfb" seriesId="0d22363b-a1b3-465e-81b3-b66ac1246ada" versionNumber="1"?>
+     
+     <num><?L 8-30?>18</num>
+     <heading GUID="_a8a0ad3b-56c9-4205-a9bd-02136277a474" eId="sec_18__hdg">Commencement</heading>
+     <subsection GUID="_61d4b8ce-410f-4c9e-a99e-c53cccf979b2" class="prov2" eId="sec_18__subsec_1">
+      <num><?L 8-31?>(1)</num>
+      <content>
+       <p>This Act, apart from section <ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">1</ref>, comes into force on the day on which it is <?L 8-32?>passed.</p>
+      </content>
+     </subsection>
+     <subsection GUID="_0a50d476-0c8f-475a-b1f8-b239d1a3ccb7" class="prov2" eId="sec_18__subsec_2">
+      <num><?L 8-33?>(2)</num>
+      <content>
+       <p>Section <ref class="valid" href="#sec_1" ukl:targetGuid="_8fac53b4-789e-495b-a733-cbee436be766" ukl:targetJref="j002">1</ref> comes into force at the end of the period of two months beginning <?L 8-34?>with the day on which this Act is passed.</p>
+      </content>
+     </subsection>
+    </section>
+    <section GUID="_ede6e735-3872-4168-8606-7e2158bc50bd" class="prov1" eId="sec_19" ukl:jref="j011"><?DMS-Component componentId="450ef1b4-af2d-4343-962e-2fab66087448" seriesId="66364d4c-1a0d-4edb-be18-83665d685460" versionNumber="1"?>
+     
+     <num><?L 8-35?>19</num>
+     <heading GUID="_8942e67a-0437-420e-a383-20d9e6a43f56" eId="sec_19__hdg">Short title</heading>
+     <content>
+      <p><?L 8-36?>This Act may be cited as the Sustainable Aviation Fuel Act 2025.</p>
+     </content>
+    </section>
+   </hcontainer>
+   <hcontainer GUID="_3a26bc32-d70b-4b3e-921d-7e79ec9607aa" class="schs" eId="scheds" name="schedules"><?DMS-Component componentId="d2c00328-d474-4ab1-8741-12551f4c78ad" seriesId="86453ade-eabe-45f5-add2-3fef44644c29" versionNumber="1"?>
+    
+    <hcontainer GUID="_72a7b1d2-7c17-41ca-b300-aad6343400e3" class="sch" eId="sched" name="schedule"><?DMS-Component componentId="016851c5-c2e0-4562-a8b9-5ec153ab9506" seriesId="b805da85-201e-43a2-bab3-842a97faeb9d" versionNumber="1"?>
+     
+     <num><?L 9-1?>Schedule<authorialNote GUID="_aa6cfef2-c5c4-4a9b-9340-e0aefad19aa6" class="referenceNote" eId="sched__aNote">
+      <p>Section <ref class="valid" href="#sec_11" ukl:targetGuid="_b686128e-99e3-40d3-859c-606682241141" ukl:targetJref="j17">11</ref></p>
+      </authorialNote></num>
+     <heading GUID="_e7bddf6a-0992-425c-9504-7eac635cd504" eId="sched__hdg"><?L 9-2?>Financial penalties for failure to comply with levy regulations</heading>
+     <hcontainer GUID="_ecf11148-6e86-4bf2-a854-271a33617c0e" class="schGroup7" eId="sched__xhdg_1" name="crossheading"><?DMS-Component componentId="98cd6baf-88c7-4b08-b29b-439cdacf63b5" seriesId="888df6c9-5968-4da2-81b8-df15c4389576" versionNumber="1"?>
+      
+      <heading GUID="_76daeae9-c971-406f-a83f-618ffefd6af6" eId="sched__xhdg_1__hdg"><?L 9-3?>Introduction</heading>
+      <paragraph GUID="_4ccd604e-b211-4fee-a9b6-659cdd26b033" class="schProv1" eId="sched__para_1">
+       <num><?L 9-4?>1</num>
+       <content>
+        <p>This Schedule makes further provision in connection with financial penalties <?L 9-5?>under section <ref class="valid" href="#sec_11" ukl:targetGuid="_b686128e-99e3-40d3-859c-606682241141" ukl:targetJref="j17">11</ref>.</p>
+       </content>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_c0ab0a9d-ea04-4893-bc2a-427fcc6dadc3" class="schGroup7" eId="sched__xhdg_2" name="crossheading"><?DMS-Component componentId="79c298d5-a4f5-4b0d-86ab-ed57538738f0" seriesId="74cc5b1e-c96f-4587-a852-b37b6409e9a6" versionNumber="1"?>
+      
+      <heading GUID="_6d7deb9c-b199-4ee5-bfef-0b0d465a6089" eId="sched__xhdg_2__hdg"><?L 9-6?>Notices of intent</heading>
+      <paragraph GUID="_b18a8a1e-ac18-461a-812b-4bc666c67939" class="schProv1" eId="sched__para_2">
+       <num><?L 9-7?>2</num>
+       <subparagraph GUID="_943f9769-aa25-4e35-9386-858b0191a8fb" class="schProv2" eId="sched__para_2__subpara_1">
+        <num>(1)</num>
+        <content GUID="_cb432c5e-7ae4-492f-ab7f-bed7a7ace320">
+         <p>The Secretary of State must, before imposing a financial penalty on a person, <?L 9-8?>give the person a written notice (a “notice of intent”) of the proposed <?L 9-9?>financial penalty.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_013a3788-51f8-4cbe-9114-72dd81425bfa" class="schProv2" eId="sched__para_2__subpara_2">
+        <num><?L 9-10?>(2)</num>
+        <intro GUID="_81f5f962-cfab-4c4d-8cc7-0fbe8d0e920b" eId="sched__para_2__subpara_2__intro">
+         <p>A notice of intent must specify—</p>
+        </intro>
+        <level GUID="_ee1e4f9b-af54-40bb-bddd-6fd53de0bc05" class="para1" eId="sched__para_2__subpara_2__para_a">
+         <num><?L 9-11?>(a)</num>
+         <content>
+          <p>the amount of the proposed financial penalty,</p>
+         </content>
+        </level>
+        <level GUID="_e1c53eae-ce44-4316-9b57-86341868ab2f" class="para1" eId="sched__para_2__subpara_2__para_b">
+         <num><?L 9-12?>(b)</num>
+         <content>
+          <p>the reasons for proposing to impose the penalty,</p>
+         </content>
+        </level>
+        <level GUID="_388fd0b6-212f-430f-b68d-35d50f93664d" class="para1" eId="sched__para_2__subpara_2__para_c">
+         <num><?L 9-13?>(c)</num>
+         <content>
+          <p>information about the right to make representations under <ref class="valid" href="#sched__para_3" ukl:targetGuid="_7eae0d8e-3798-4337-a17b-2943ce545299">paragraph <?L 9-14?>3</ref>, and</p>
+         </content>
+        </level>
+        <level GUID="_d7fd6cda-fae5-4589-ad29-788f0e15525e" class="para1" eId="sched__para_2__subpara_2__para_d">
+         <num><?L 9-15?>(d)</num>
+         <content>
+          <p>the date by which any representations must be made.</p>
+         </content>
+        </level>
+       </subparagraph>
+       <subparagraph GUID="_c565aeeb-399a-465e-9f49-9df921b8b9fd" class="schProv2" eId="sched__para_2__subpara_3">
+        <num><?L 9-16?>(3)</num>
+        <content>
+         <p>The date specified under <ref class="valid" href="#sched__para_2__subpara_2" ukl:targetGuid="_013a3788-51f8-4cbe-9114-72dd81425bfa">sub-paragraph (2)</ref><ref class="valid" href="#sched__para_2__subpara_2__para_d" ukl:targetGuid="_d7fd6cda-fae5-4589-ad29-788f0e15525e">(d)</ref> must be a date more than <?L 9-17?>28 days after the day on which the notice of intent is given to the person.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_097ffd2b-bf28-479b-a6fa-c541a8498bc9" class="schProv2" eId="sched__para_2__subpara_4">
+        <num><?L 9-18?>(4)</num>
+        <content>
+         <p>The Secretary of State may at any time withdraw the notice of intent, or <?L 9-19?>amend it to reduce the amount of the proposed financial penalty, by giving <?L 9-20?>written notice to the person.</p>
+        </content>
+       </subparagraph>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_43917881-9053-4a00-b7e1-623bebe57e99" class="schGroup7" eId="sched__xhdg_3" name="crossheading"><?DMS-Component componentId="0a83fa28-78f2-40ed-a740-644d7bacdc44" seriesId="7de78db4-9231-4e95-b586-ff3c8e372587" versionNumber="1"?>
+      
+      <heading GUID="_9f8d8fb2-390b-4db7-97ea-aac4483c675f" eId="sched__xhdg_3__hdg"><?L 9-21?>Right to make representations</heading>
+      <paragraph GUID="_7eae0d8e-3798-4337-a17b-2943ce545299" class="schProv1" eId="sched__para_3">
+       <num><?L 9-22?>3</num>
+       <subparagraph GUID="_6e814823-e4e0-4841-ab46-c0f50e302a9c" class="schProv2" eId="sched__para_3__subpara_1">
+        <num>(1)</num>
+        <content>
+         <p>A person who is given a notice of intent under <ref class="valid" href="#sched__para_2" ukl:targetGuid="_b18a8a1e-ac18-461a-812b-4bc666c67939">paragraph 2</ref> may make <?L 9-23?>written representations to the Secretary of State about the proposal to <?L 9-24?>impose a financial penalty.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_724d75c4-e336-4f91-9e5a-27f091e7dc9f" class="schProv2" eId="sched__para_3__subpara_2">
+        <num><?L 9-25?>(2)</num>
+        <content>
+         <p>Any representations must be made within the period (“the period for <?L 9-26?>representations”) ending with the date specified under <ref class="valid" href="#sched__para_2" ukl:targetGuid="_b18a8a1e-ac18-461a-812b-4bc666c67939">paragraph 2</ref><ref class="valid" href="#sched__para_2__subpara_2" ukl:targetGuid="_013a3788-51f8-4cbe-9114-72dd81425bfa">(2)</ref><ref class="valid" href="#sched__para_2__subpara_2__para_d" ukl:targetGuid="_d7fd6cda-fae5-4589-ad29-788f0e15525e">(d)</ref>.</p>
+        </content>
+       </subparagraph>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_4355dd2e-984b-4a12-8305-fecd3f864f1b" class="schGroup7" eId="sched__xhdg_4" name="crossheading"><?DMS-Component componentId="e66d0d25-a298-498d-8ea9-d8c6f4cfea35" seriesId="b094d8bb-81ea-4f47-b819-6af74f61718d" versionNumber="1"?>
+      
+      <heading GUID="_e14c8fc8-d454-45a5-b604-398fc492dc81" eId="sched__xhdg_4__hdg"><?L 9-27?>Final notices</heading>
+      <paragraph GUID="_c59f21e5-c0a8-4443-910c-afae66830b68" class="schProv1" eId="sched__para_4">
+       <num><?L 9-28?>4</num>
+       <subparagraph GUID="_e7aac704-fddc-426a-bb92-72a1d82eae99" class="schProv2" eId="sched__para_4__subpara_1">
+        <num>(1)</num>
+        <content GUID="_14a7c509-6110-480a-8c6e-d6505d86f4d3">
+         <p>After the end of the period for representations the Secretary of State must <?L 9-29?>decide whether to impose a financial penalty on the person.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_c148c890-4903-4736-b0bf-62a6a2adb60b" class="schProv2" eId="sched__para_4__subpara_2">
+        <num><?L 9-30?>(2)</num>
+        <content>
+         <p>If the Secretary of State decides to impose a financial penalty on the person, <?L 9-31?>the Secretary of State must give the person a written notice (a “final notice”) <?L 9-32?>imposing the penalty.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_2d7621b9-d4cc-4260-ab1c-7fc7919688aa" class="schProv2" eId="sched__para_4__subpara_3">
+        <num><?L 9-33?>(3)</num>
+        <intro GUID="_3a508635-4ede-4423-8c94-c57d893eba35" eId="sched__para_4__subpara_3__intro">
+         <p>A final notice must specify—</p>
+        </intro>
+        <level GUID="_e1f7ac1b-50bc-444a-a7a7-25057c6dc0ff" class="para1" eId="sched__para_4__subpara_3__para_a">
+         <num><?L 9-34?>(a)</num>
+         <content>
+          <p>the amount of the financial penalty (which may be less than the <?L 9-35?>amount specified in the notice of intent, but cannot be more);</p>
+         </content>
+        </level>
+        <level GUID="_11da103a-c8e7-4598-bd58-3c9314a59ddd" class="para1" eId="sched__para_4__subpara_3__para_b">
+         <num><?L 9-36?>(b)</num>
+         <content>
+          <p>the reasons for imposing the penalty,</p>
+         </content>
+        </level>
+        <level GUID="_a036fbc9-f343-4e2d-8d5d-41593e23d42b" class="para1" eId="sched__para_4__subpara_3__para_c">
+         <num><?L 9-37?>(c)</num>
+         <content>
+          <p>the date by which the penalty must be paid,</p>
+         </content>
+        </level>
+        <level GUID="_ddd7f5ab-9127-4c08-bfa0-b2dce858f5c8" class="para1" eId="sched__para_4__subpara_3__para_d">
+         <num><?L 9-38?>(d)</num>
+         <content>
+          <p>information about the right of appeal under <ref class="valid" href="#sched__para_5" ukl:targetGuid="_3cbcdeec-3b55-4c2d-af1a-e666699d152e">paragraph 5</ref>, and</p>
+         </content>
+        </level>
+        <level GUID="_5224c30b-4c0f-48c0-909c-b19ef219e223" class="para1" eId="sched__para_4__subpara_3__para_e">
+         <num><?L 10-1?>(e)</num>
+         <content>
+          <p>the consequences of failure to comply with the final notice.</p>
+         </content>
+        </level>
+       </subparagraph>
+       <subparagraph GUID="_51c0b27c-83e0-4b9c-8792-ce064f8b641a" class="schProv2" eId="sched__para_4__subpara_4">
+        <num><?L 10-2?>(4)</num>
+        <content>
+         <p>The date specified under <ref class="valid" href="#sched__para_4__subpara_3" ukl:targetGuid="_2d7621b9-d4cc-4260-ab1c-7fc7919688aa">sub-paragraph (3)</ref><ref class="valid" href="#sched__para_4__subpara_3__para_c" ukl:targetGuid="_a036fbc9-f343-4e2d-8d5d-41593e23d42b">(c)</ref> must be a date more than <?L 10-3?>28 days after the day on which the final notice is given to the person.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_ee218afc-917e-44e8-a886-05981595b76a" class="schProv2" eId="sched__para_4__subpara_5">
+        <num><?L 10-4?>(5)</num>
+        <content>
+         <p>The Secretary of State may at any time withdraw a final notice, or amend <?L 10-5?>it to reduce the amount of the financial penalty, by giving written notice <?L 10-6?>to the person.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_ecc9a476-8b64-410a-b24e-e96b7c5319cc" class="schProv2" eId="sched__para_4__subpara_6">
+        <num><?L 10-7?>(6)</num>
+        <content>
+         <p>A final notice may not be given more than 28 days after the last day of the <?L 10-8?>period for representations.</p>
+        </content>
+       </subparagraph>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_9a0eda1a-40a1-48be-a880-96e541ed3a78" class="schGroup7" eId="sched__xhdg_5" name="crossheading"><?DMS-Component componentId="773833c2-54a3-46c7-bff4-e1940110f010" seriesId="4f6c4040-840e-4b85-a63e-49c485e89f5d" versionNumber="1"?>
+      
+      <heading GUID="_84ec5826-ae7b-4997-bea5-9ac599ce65b3" eId="sched__xhdg_5__hdg"><?L 10-9?>Appeals</heading>
+      <paragraph GUID="_3cbcdeec-3b55-4c2d-af1a-e666699d152e" class="schProv1" eId="sched__para_5">
+       <num><?L 10-10?>5</num>
+       <subparagraph GUID="_a2b1cb9f-c1f1-45cd-bc79-d63586cc3844" class="schProv2" eId="sched__para_5__subpara_1">
+        <num>(1)</num>
+        <intro GUID="_5e8d92d4-5f63-43b8-9f25-7c8ae361c9e8" eId="sched__para_5__subpara_1__intro">
+         <p>A person on whom a financial penalty is imposed under section <ref class="valid" href="#sec_11" ukl:targetGuid="_b686128e-99e3-40d3-859c-606682241141" ukl:targetJref="j17">11</ref> may <?L 10-11?>appeal to the court against—</p>
+        </intro>
+        <level GUID="_252bd173-8add-4942-8edf-4b80350a3ab9" class="para1" eId="sched__para_5__subpara_1__para_a">
+         <num><?L 10-12?>(a)</num>
+         <content>
+          <p>the decision to impose the penalty, or</p>
+         </content>
+        </level>
+        <level GUID="_cc5ee033-aff5-413b-bf94-ff6f77f5194f" class="para1" eId="sched__para_5__subpara_1__para_b">
+         <num><?L 10-13?>(b)</num>
+         <content>
+          <p>the amount of the penalty.</p>
+         </content>
+        </level>
+       </subparagraph>
+       <subparagraph GUID="_8b1965ff-64d8-4b85-abd2-05ca40c5c998" class="schProv2" eId="sched__para_5__subpara_2">
+        <num><?L 10-14?>(2)</num>
+        <content>
+         <p>An appeal under <ref class="valid" href="#sched__para_5" ukl:targetGuid="_3cbcdeec-3b55-4c2d-af1a-e666699d152e">this paragraph</ref> must be brought before the end of the <?L 10-15?>period of 28 days beginning with the day after the day on which the final <?L 10-16?>notice is given to the person in accordance with <ref class="valid" href="#sched__para_4" ukl:targetGuid="_c59f21e5-c0a8-4443-910c-afae66830b68">paragraph 4</ref>.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_4f4dc386-1631-4673-ae4e-1d2766638e24" class="schProv2" eId="sched__para_5__subpara_3">
+        <num><?L 10-17?>(3)</num>
+        <content>
+         <p>On an appeal under <ref class="valid" href="#sched__para_5" ukl:targetGuid="_3cbcdeec-3b55-4c2d-af1a-e666699d152e">this paragraph</ref> the court may confirm, reduce or cancel <?L 10-18?>the penalty.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_ea79d280-8529-4800-a2f1-e09d07083e6a" class="schProv2" eId="sched__para_5__subpara_4">
+        <num><?L 10-19?>(4)</num>
+        <content>
+         <p>If a person appeals under <ref class="valid" href="#sched__para_5" ukl:targetGuid="_3cbcdeec-3b55-4c2d-af1a-e666699d152e">this paragraph</ref>, the final notice is suspended <?L 10-20?>until the appeal is finally determined, withdrawn or abandoned.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_e824597b-3f87-46c4-8397-c530d11e1db3" class="schProv2" eId="sched__para_5__subpara_5">
+        <num><?L 10-21?>(5)</num>
+        <intro GUID="_8dd60203-cf03-4f5d-8f0d-7383cc2eaae2" eId="sched__para_5__subpara_5__intro">
+         <p>In this section “the court” means—</p>
+        </intro>
+        <level GUID="_5683d55c-facc-452d-886e-1ffcb773258b" class="para1" eId="sched__para_5__subpara_5__para_a">
+         <num><?L 10-22?>(a)</num>
+         <content>
+          <p>in England and Wales or Northern Ireland, the High Court;</p>
+         </content>
+        </level>
+        <level GUID="_9ccbbe22-89e1-4648-a594-63531bbcdb5b" class="para1" eId="sched__para_5__subpara_5__para_b">
+         <num><?L 10-23?>(b)</num>
+         <content>
+          <p>in Scotland, the Court of Session.</p>
+         </content>
+        </level>
+       </subparagraph>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_c4500105-c7c7-418a-9627-234e02e8bcb5" class="schGroup7" eId="sched__xhdg_6" name="crossheading"><?DMS-Component componentId="d8074be0-38a1-4f10-9137-0fb9f4d4aee8" seriesId="bd31778a-8dd9-4856-8368-3c50ab19b36e" versionNumber="0"?>
+      
+      <heading GUID="_ad53ab35-9926-4e8d-aea3-8a81b7b05f4d" eId="sched__xhdg_6__hdg"><?L 10-24?>Recovery</heading>
+      <paragraph GUID="_9323454c-f5a9-4c13-8198-9f315c838566" class="schProv1" eId="sched__para_6">
+       <num><?L 10-25?>6</num>
+       <subparagraph GUID="_ce712052-51fd-426e-bcd3-b2302fb32307" class="schProv2" eId="sched__para_6__subpara_1">
+        <num>(1)</num>
+        <content>
+         <p><ref class="valid" href="#sched__para_6" ukl:targetGuid="_9323454c-f5a9-4c13-8198-9f315c838566">This paragraph</ref> applies if a person fails to pay the whole or part of a <?L 10-26?>financial penalty before the end of the period within which the person is <?L 10-27?>required to pay the penalty.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_ce2d7a1b-3125-4e5c-9a7f-f0fdad0540ed" class="schProv2" eId="sched__para_6__subpara_2">
+        <num><?L 10-28?>(2)</num>
+        <content>
+         <p>In England and Wales or Northern Ireland the unpaid amount is recoverable <?L 10-29?>by the Secretary of State as if it were payable under an order of the county <?L 10-30?>court.</p>
+        </content>
+       </subparagraph>
+       <subparagraph GUID="_a813c915-05fc-4d1f-bfe5-995001e23923" class="schProv2" eId="sched__para_6__subpara_3">
+        <num><?L 10-31?>(3)</num>
+        <content>
+         <p>In Scotland, the unpaid amount may be enforced in the same manner as <?L 10-32?>an extract registered decree arbitral bearing a warrant for execution issued <?L 10-33?>by the sheriff of any sheriffdom.</p>
+        </content>
+       </subparagraph>
+      </paragraph>
+     </hcontainer>
+     <hcontainer GUID="_62d9a3ae-6ad6-4268-80f4-56edd2db509d" class="schGroup7" eId="sched__xhdg_7" name="crossheading"><?DMS-Component componentId="44a3023c-b984-44ae-9fa8-4328671c389d" seriesId="8cab513c-eb3a-413b-951c-8c1b81b6d44b" versionNumber="0"?>
+      
+      <heading GUID="_fb92e8c8-46ec-4a11-ae52-ddf212adb29f" eId="sched__xhdg_7__hdg"><?L 10-34?>Payment of proceeds into Consolidated Fund</heading>
+      <paragraph GUID="_57114cc6-e5b0-4de1-afaa-9a8be70f639f" class="schProv1" eId="sched__para_7">
+       <num><?L 10-35?>7</num>
+       <content>
+        <p>Any sums received in pursuance of final notices given under <ref class="valid" href="#sched__para_4" ukl:targetGuid="_c59f21e5-c0a8-4443-910c-afae66830b68">paragraph 4</ref><?L 10-36?> must be paid into the Consolidated Fund.</p>
+       </content>
+      </paragraph>
+     </hcontainer>
+    </hcontainer>
+   </hcontainer>
+  </body>
+  <conclusions GUID="_f19a6eda-ecfc-4536-8d8f-f13b74a8acdd" eId="backCover"><?DMS-Component componentId="1a20f7d1-d217-46fc-9696-ac060526f7c0" seriesId="0b1b64a3-e855-4174-928f-8ba5b6c2bf08" versionNumber="0"?>
+   
+   <block GUID="_20e4a4e1-1e87-4120-80de-7a73ea045734" eId="backCover__st" name="title"><docTitle GUID="_e6def452-5078-48a3-8a36-fca298778827" eId="backCover__st__dtitle"><ref class="placeholder" href="#varBillTitle"/></docTitle></block>
+   <block GUID="_7329f0a9-9405-46ba-8504-bd0078c282f8" eId="backCover__stage" name="stageVersion">[<docStage><ref class="placeholder" href="#varStageVersion"/></docStage>]</block>
+   <longTitle GUID="_089f933a-a22e-4200-a505-ea3f2f116185" eId="backCover__longtitle">
+    <p><ref class="placeholder" href="#preface__longtitle"/></p>
+   </longTitle>
+   <block GUID="_ab54306a-1858-4fb2-8d16-4224f2be2687" eId="backCover__mbr" name="introducingMember">
+    <inline name="prompt">Presented by </inline>
+    <docIntroducer><ref class="placeholder" href="#person-4038"/></docIntroducer>
+   </block>
+   <block GUID="_6c5f3cbf-d2d5-4904-ba7e-4cde76ce9ca6" eId="backCover__mbrs" name="supportingMembers"><inline name="prompt">supported by </inline> <docProponent><ref class="placeholder" href="#person-4514">the Prime Minister</ref>, </docProponent><docProponent><ref class="placeholder" href="#person-4031">the Chancellor of the Exchequer</ref>, </docProponent><docProponent><ref class="placeholder" href="#person-1510"/>, </docProponent><docProponent><ref class="placeholder" href="#person-413"/>, </docProponent><docProponent><ref class="placeholder" href="#person-3966"/>, </docProponent><docProponent><ref class="placeholder" href="#person-4425"/>, </docProponent><docProponent><ref class="placeholder" href="#person-4268"/> and </docProponent><docProponent><ref class="placeholder" href="#person-4316"/></docProponent></block>
+   <blockContainer class="publicationDate">
+    <p>Ordered, by The <span class="uk-text-capitalize"><ref class="placeholder" href="#varHouse"/></span>, to be Printed, <docDate GUID="_7835f542-d273-4d13-b584-bbba753ac1cf" date="2017-07-13" eId="backCover__ddate"> <ref class="placeholder" href="#varPublicationDate" ukl:dateFormat="d'th' MMMM yyyy"/></docDate>.</p>
+   </blockContainer>
+   <tblock class="copyrightStatement">
+    <p>© Parliamentary copyright House of Commons <ref class="placeholder" href="#varBillYear"/></p>
+    <p class="italic">This publication may be reproduced under the terms of the Open Parliament Licence, which is published at <a href="https://www.parliament.uk/site-information/copyright">www.parliament.uk/site-information/copyright</a></p>
+   </tblock>
+   <tblock class="publishingStatement">
+    <p>Published by the authority of the House of Commons</p>
+   </tblock>
+  </conclusions>
+ </bill>
+</akomaNtoso>
