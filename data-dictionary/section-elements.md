@@ -114,7 +114,7 @@ For Bills and Acts see [Oasis AKN documentation for
 //subsection](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_subsection.html)
 
 For SIs/SSIs see [Oasis AKN documentation for
-//paragraph](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_rule.html).
+//paragraph](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_paragraph.html).
 
 ## Subheadings
 
