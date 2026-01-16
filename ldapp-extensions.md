@@ -30,8 +30,8 @@ For [`ref`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/
 
 - `num@ukl:autonumber` - Set to "no" if the contents of the [`num`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_num.html) are not to be changed when auto-numbering
 - `def@ukl:startQuote` and `def@ukl:endQuote` - Mirror those used in `quotedStructure` for the [`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_def.html) element
-- `*[@class="prov1"]@ukl:jref` and `*[@class="sch"]@ukl:jref` - Store the user-defined J-ref string used while provision numbering is still in flux
-- `*[@class="prov1|prov2|schProv1|schProv2|para1|para2|para3"]@ukl:type` - Initially either unset or with the value "money" for financial provisions - other supported values to be determined
+- `@ukl:jref`- Stores a user-defined ID against a section, schedule or equivalent provision. Used while provision numbering is still in flux to be used as a reference in correspondence. the name "jref" comes from "job reference", a term used with earlier drafting software.
+- `@ukl:type` - Optional attribute to add a semantic type to hcontainer type elements. Used with the value "money" to indicate the provision in a House of Commons Bill is a financial provision.
 
 ## Change Tracking Attributes
 
