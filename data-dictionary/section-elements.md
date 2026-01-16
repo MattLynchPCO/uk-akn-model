@@ -20,6 +20,8 @@ body of subordinate legislation (SIs, SSIs, Orders, etc).
 the schedule //num's including the first one e.g. “Schedule 1” and the
 second is “Schedule 2”.
 
+**Note about current examples:** The example files currently contain only Bills (not SIs/SSIs). Therefore, examples of //rule, //article, and //hcontainer\[@name="regulation"\] are not present. Additionally, the examples use standard //section and //subsection elements with @class="prov1" and @class="prov2" respectively, and //level elements with @class="para1", @class="para2", and @class="para3" for paragraphing. Schedule-specific classes like @class="schedProv1" and @class="schedProv2" are not found in the current examples.
+
 ## Paragraphing in Acts, Bills, SIs and SSIs
 
 Within the body of an Act or Bill, the following applies (within SI, SSI
@@ -75,15 +77,11 @@ We do not expect //blockList to occur here (except possibly for bullet
 lists) but prefer to make use of named hierarchical elements.
 
 For Bills and Acts see [Oasis AKN documentation for
-//section](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_section.html)
+//section](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_section.html)
 
-For SIs/SSIs see [Oasis AKN documentation for *rule\]\],
-\[\[http:*docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs\_xsd\_Element\_article.html|Oasis
-AKN documentation for *article\]\] and, where AKN doesn't provide a
-specific element (such as for "regulation"),
-\[\[http:*docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs\_xsd\_Element\_hcontainer.html|Oasis
-AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_rule.html)
+For SIs/SSIs see [Oasis AKN documentation for //rule](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_rule.html), [Oasis AKN documentation for //article](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_article.html), and, where AKN doesn't provide a specific element (such as for "regulation"), [Oasis AKN documentation for //hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+
+**Note:** The current example files contain only Bills, which use //section elements. Examples of //article, //rule, and //hcontainer\[@name="regulation"\] in SIs/SSIs are not present in the current examples directory.
 
 ## @class="prov2" (subsection-level elements)
 
@@ -113,10 +111,10 @@ We do not expect //blockList to occur here (except possibly for bullet
 lists) but prefer to make use of named hierarchical elements.
 
 For Bills and Acts see [Oasis AKN documentation for
-//subsection](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_subsection.html)
+//subsection](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_subsection.html)
 
 For SIs/SSIs see [Oasis AKN documentation for
-//paragraph](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_rule.html).
+//paragraph](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_paragraph.html).
 
 ## Subheadings
 
@@ -165,7 +163,7 @@ In reference wording to definitions, the phrase 'the definition of
 with the quotation marks part of the text.
 
 See [Oasis AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_hcontainer.html)
+//hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
 
 ## //level\[@class="para1"\]
 
@@ -189,7 +187,7 @@ only expect //hcontainer\[@name="definition"\] to occur within a
 paragraph if preceded by //tblock\[@class="formula"\].
 
 See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
+//level](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
 
 ## //level\[@class="para2"\]
 
@@ -209,7 +207,7 @@ lists) but prefer to make use of hierarchical elements to allows for
 nested hierarchical elements.
 
 See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
+//level](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
 
 ## //level\[@class="para3"\] and //level\[@class="para4"\]
 
@@ -217,6 +215,8 @@ There are some variations in the naming of elements at this level,
 nominally a sub-sub-paragraph-level element within an Act, but more
 variation in other contexts. Hence we continue the use of //level at
 this level and below.
+
+**Note:** The current example files contain //level\[@class="para3"\] elements (found in the Land Reform Bill), demonstrating the third level of paragraph nesting. However, //level\[@class="para4"\] is not present in the current examples, though the framework supports deeper nesting if required.
 
 We would expect these always to have //num (note that the content of
 //num will include the opening and closing brackets) and rarely have a
@@ -230,7 +230,7 @@ We do not expect //blockList to occur here (except possibly for bullet
 lists) but prefer to make use of named hierarchical elements.
 
 See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
+//level](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
 
 ## //proviso
 
@@ -250,7 +250,9 @@ We do not expect //blockList to occur here (except possibly for bullet
 lists) but prefer to make use of named hierarchical elements.
 
 See [Oasis AKN documentation for
-//proviso](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_proviso.html)
+//proviso](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_proviso.html)
+
+**Note:** Proviso elements are rare and typically only occur in older legislation. They are not present in the current example files.
 
 ## Finance Resolutions
 
@@ -267,4 +269,6 @@ statutory effect under the provisions of the Provisional Collection of
 Taxes Act 1968."
 
 See [Oasis AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_hcontainer.html)
+//hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+
+**Note:** Finance Resolutions are a specialized document type. They are not present in the current example files, which contain only Bills.
