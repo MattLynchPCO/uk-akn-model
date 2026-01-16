@@ -122,23 +122,6 @@ The `subheading` element is a `block` element in AKN intended to be used to supp
 
 However, subheadings in UK legislation appear below the section (or equivalent) level, sometimes grouping subsections, paragraphs and subparagraphs, etc (see section 2 in the [National Insurance Contributions Act 2014](http://www.legislation.gov.uk/ukpga/2014/7/pdfs/ukpga_20140007_en.pdf)) and sometimes despite identical formatting they are really headings to a particular subsection, paragraph, sub-paragraph etc (see section 3 in the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf)). We adopt a pragmatic approach to these choosing to use `subsection|level/heading` regardless of whether the heading applies to a single subsection (or lower) or a group of them. This avoids any confusion with the `subheading` element in AKN (which may be used for some schedules or EU legislation but is unlikely to be used in the main body of UK legislation).
 
-## //hcontainer\[@name="crossheading"\]
-
-Crossheadings are grouping elements that organize sections within the body of legislation. Rather than using the AKN //crossHeading element (which appears as a sibling rather than a container), this implementation uses //hcontainer\[@name="crossheading"\] to properly wrap the elements they contain. This approach is consistent with the AKN principle that containers should wrap the elements they contain.
-
-Crossheadings typically appear:
-- Within a //part, grouping related sections
-- Directly in the //body when there are no parts
-- Within schedules, grouping schedule paragraphs
-
-Normally in the body, crossheadings appear with @class="group7" and, in schedules, @class="schGroup7".
-
-**Note:** Crossheadings are present in all current example files and are a widely-used structural element.
-
-For more details on crossheadings, see the [grouping-elements.md](grouping-elements.md) documentation.
-
-See [Oasis AKN documentation for //hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html) and contrast with [Oasis AKN documentation for //crossHeading](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_crossHeading.html)
-
 ## //hcontainer\[@name="definition"\]
 
 AKN does not provide a generic element for definitions despite all
