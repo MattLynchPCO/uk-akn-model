@@ -118,6 +118,12 @@ For Bills and Acts see [Oasis AKN documentation for
 For SIs/SSIs see [Oasis AKN documentation for
 //paragraph](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_rule.html).
 
+## Subheadings
+
+The `subheading` element is a `block` element in AKN intended to be used to supplement the `heading` element (typically immediately after it).
+
+However, subheadings in UK legislation appear below the section (or equivalent) level, sometimes grouping subsections, paragraphs and subparagraphs, etc (see section 2 in the [National Insurance Contributions Act 2014](http://www.legislation.gov.uk/ukpga/2014/7/pdfs/ukpga_20140007_en.pdf)) and sometimes despite identical formatting they are really headings to a particular subsection, paragraph, sub-paragraph etc (see section 3 in the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf)). We adopt a pragmatic approach to these choosing to use `subsection|level/heading` regardless of whether the heading applies to a single subsection (or lower) or a group of them. This avoids any confusion with the `subheading` element in AKN (which may be used for some schedules or EU legislation but is unlikely to be used in the main body of UK legislation).
+
 ## //hcontainer\[@name="definition"\]
 
 AKN does not provide a generic element for definitions despite all

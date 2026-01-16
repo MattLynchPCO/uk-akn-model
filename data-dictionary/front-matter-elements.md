@@ -620,9 +620,7 @@ The simple case with a single block is obvious:
 
 We avoid the use of multiple //recital elements unless the top level
 blocks are numbered preferring to use a single //recital with multiple
-//p elements and paragraphing within the single recital. See also [Lists
-and
-paragraphing](https://ldapp.teratext.leidos.com.au/doku.php?id=naming-conventions#lists_v_paragraphing).
+//p elements and paragraphing within the single recital. See also [Lists vs Paragraphing](../general-principles.md#lists-vs-paragraphing).
 
 ``` 
  <recitals>
