@@ -26,16 +26,18 @@ second is “Schedule 2”.
 
 ## Paragraphing in Acts, Bills, SIs and SSIs
 
-Within the body of an Act or Bill, the following applies (within SI, SSI
-or schedule there are some variations):
+When sections, subsections, regulations, articles, SI paragraphs, Schedule paragraphs are further tabulated into numbered paragraphs/sub-paragraphs etc., the following applies. Naming of these provisions isn't always consistent:
+they may be described as "paragraphs", "sub-paragraphs", "heads", "points" or "sub-sub-paragraph" depending on the context. In Lawmaker, the `level` element is used together with a `@class` attribute to model these kinds of paragraphs.
 
 |                                                         |                                                              |                                           |
 | ------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------- |
 | **Numbered element**                                    | **'Normal/regular' number format (in square brackets)**      | \*\*Starting 'normal/regular' number \*\* |
-| Paragraph (including within schedules - @class="para1") | (\[lowercase alphabetical\])                                 | (a)                                       |
-| Subparagraph (including within schedules)               | (\[lowercase roman\])                                        | (i)                                       |
-| Subsubparagraph (including within schedules)            | (\[double lowercase alphabetical\]) - UK Bills and Acts only | (aa)                                      |
-| Subsubparagraph (including within schedules)            | (\[uppercase alphabetical\]) - all other document types      | (A)                                       |
+| 1st level (@class="para1")                              | (\[lowercase alphabetical\])                                 | (a)                                       |
+| 2nd level (@class="para2")                              | (\[lowercase roman\])                                        | (i)                                       |
+| 3rd level (@class="para3")                              | (\[double lowercase alphabetical\])                          | (aa)                                      |
+| 3rd level (@class="para3")                              | (\[uppercase alphabetical\])                                 | (A)                                       |
+
+
 
 Note that the naming below "subparagraph" is not always consistent in
 the body of an Act or Bill. Within SI, SSI and schedule, even for para1
