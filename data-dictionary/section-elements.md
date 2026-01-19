@@ -1,32 +1,34 @@
 # Section-level and below standard elements
 
-These are elements at the section level in the body of the Act which
-includes Bill clauses, rules, regulations, by-laws and paragraphs in the
-body of subordinate legislation (SIs, SSIs, Orders, etc).
+This page covers elements at or below the section level in a Bill, Act or statutory instrument etc.
 
-|                                                                                                                                    |                                                         |                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
-| **Numbered element**                                                                                                               | **'Normal/regular' number format (in square brackets)** | **Starting 'normal/regular' value in the num element** |
-| Section, Clause (@class="prov1")                                                                                                   | \[arabic\]                                              | 1                                                      |
-| Rule, Regulation, Article (@class="prov1")                                                                                         | \[arabic\].                                             | 1.                                                     |
-| Subsection (@class="prov2")                                                                                                        | (\[arabic\])                                            | (1)                                                    |
-| SI paragraph (@class="prov2")                                                                                                      | (\[arabic\])                                            | (1)                                                    |
-| Schedule paragraph (@class="schProv1")                                                                                             | \[arabic\]                                              | 1                                                      |
-| Schedule subparagraph (@class="schProv2")                                                                                          | (\[arabic\])                                            | (1)                                                    |
-| Step                                                                                                                               | Step \[arabic\]                                         | Step 1                                                 |
-| Table                                                                                                                              | Table \[arabic\]                                        | Table 1                                                |
-| Schedule                                                                                                                           | Schedule \[arabic\]\*                                   | Schedule                                               |
+"Section level" provisions are:
+
+* In Bills and Acts: sections (sometime refered to as "clauses") and schedule paragraphs.
+* In Statutory Instruments: regulations, articles, rules and schedule paragraphs.
+* In EU legislation: articles.
+
+|                                                        |                                                         |                                                        |
+| ------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------ |
+| **Numbered element**                                   | **'Normal/regular' number format (in square brackets)** | **Starting 'normal/regular' value in the num element** |
+| Section, Clause (@class="prov1")                       | \[arabic\]                                              | 1                                                      |
+| Rule, Regulation, Article (@class="prov1")             | \[arabic\].                                             | 1.                                                     |
+| Subsection (@class="prov2")                            | (\[arabic\])                                            | (1)                                                    |
+| SI paragraph (@class="prov2")                          | (\[arabic\])                                            | (1)                                                    |
+| Schedule paragraph (@class="schProv1")                 | \[arabic\]                                              | 1                                                      |
+| Schedule subparagraph (@class="schProv2")              | (\[arabic\])                                            | (1)                                                    |
+| Step                                                   | Step \[arabic\]                                         | Step 1                                                 |
+| Table                                                  | Table \[arabic\]                                        | Table 1                                                |
+| Schedule                                               | Schedule \[arabic\]\*                                   | Schedule                                               |
 
 \* NB: if only one schedule, no number is assigned (the //num content is
 "Schedule"); when there are 2 schedules, "Schedule *N*" appears in all
 the schedule //num's including the first one e.g. “Schedule 1” and the
 second is “Schedule 2”.
 
-**Note about current examples:** The example files currently contain only Bills (not SIs/SSIs). Therefore, examples of //rule, //article, and //hcontainer\[@name="regulation"\] are not present. Additionally, the examples use standard //section and //subsection elements with @class="prov1" and @class="prov2" respectively, and //level elements with @class="para1", @class="para2", and @class="para3" for paragraphing. Schedule-specific classes like @class="schedProv1" and @class="schedProv2" are not found in the current examples.
+## Paragraphing of provisions
 
-## Paragraphing in Acts, Bills, SIs and SSIs
-
-When sections, subsections, regulations, articles, SI paragraphs, Schedule paragraphs are further tabulated into numbered paragraphs/sub-paragraphs etc., the following applies. Naming of these provisions isn't always consistent:
+When sections, subsections, regulations, articles, SI paragraphs, Schedule paragraphs etc. are further tabulated into numbered paragraphs/sub-paragraphs and so on, the following applies in terms of numbering. Naming of these provisions isn't always consistent:
 they may be described as "paragraphs", "sub-paragraphs", "heads", "points" or "sub-sub-paragraph" depending on the context. In Lawmaker, the `level` element is used together with a `@class` attribute to model these kinds of paragraphs.
 
 |                                                         |                                                              |                                           |
@@ -38,81 +40,57 @@ they may be described as "paragraphs", "sub-paragraphs", "heads", "points" or "s
 | 3rd level (@class="para3")                              | (\[uppercase alphabetical\])                                 | (A)                                       |
 
 
-
-Note that the naming below "subparagraph" is not always consistent in
-the body of an Act or Bill. Within SI, SSI and schedule, even for para1
-and para2 examples the name alternates between "paragraph" and
-"sub-paragraph" depending on the context and the usage is not always
-consistent. In SI, SSI and schedules, the prov2, schProv1 and sometimes
-even prov1 elements can be referred to as "paragraph" there is quite a
-lot of ambiguity in the correct name for anything in the para*N*
-classes.
-
-Because the names are not agreed but the elements are hierarchical and
-can contain nested hierarchical elements including definitions, tables,
-as well as lower para*N* classes, we use the //level element with @class
-used to identify the default numbering and relative indentation level.
-
-In contexts that don't allow //hcontainer, we use
-//blockContainer\[@class="para*N*"\] as an alternative (e.g. //preface,
+**Note:** In contexts that don't allow //hcontainer, we use //blockContainer\[@class="para*N*"\] as an alternative (e.g. //preface,
 //preamble, //conclusions etc.).
 
-## @class="prov1" (section-level elements)
+## Section level elements - @class="prov1", "schProv1" and "EUProv1"
 
-This is the standard section-level element within the body. In Bills and
-Acts, this will be a //section element. In SIs this will be one of
-//article (Orders), //rule (Rules), //hcontainer\[@name="regulation"\]
-(Regulations). This list is likely to expand as we investigate SIs.
+These classes are associated with the standard section-level element within legislative documents. The following elements are used:
 
-We would expect these always to have //num and //heading (in that order)
-and to contain after that either:
+* `<section class="prov1">` (Primary legislation)
+* `<article class="prov1">` (Secondary legislation)
+* `<hcontainer name="regulation" class="prov1">` (Secondary legislation)
+* `<rule class="prov1">` (Secondary legislation)
+* `<paragraph class="schProv1">` (within schedules of both Primary and Secondary legislation)
+* `<article class="EUProv1">` (EU legislation)
 
-``` 
- * @class="prov2" (%%//%%subsection if this element is %%//%%section)
- * %%//%%content (if there are no paragraphs or definitions in the content)
- * %%//%%intro followed either by:
-   * %%//%%paragraph[@class="para1"]
-   * %%//%%hcontainer[@name="definition"]
-   * and then followed by optional %%//%%wrapUp
- * %%//%%proviso - these are rare and typically only occur in older legislation.
+These elements, with the exception of  `paragraph`, should normally contain both a `num` and a `heading`. A `section` in UKP, SP and SC Bills will contain these in the following order
+
+```
+<section>
+   <num/>
+   <heading/>
+...
+</section>
 ```
 
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
+In secondary legislation, and sections in NI Bills, the order is as follows:
+
+```
+<section>
+   <heading/>
+   <num/>
+...
+</section>
+```
+
+The schedule `paragraph` should normally contain a `num` but not a `heading` (and may be unnumbered).
 
 For Bills and Acts see [Oasis AKN documentation for
 //section](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_section.html)
 
 For SIs/SSIs see [Oasis AKN documentation for //rule](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_rule.html), [Oasis AKN documentation for //article](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_article.html), and, where AKN doesn't provide a specific element (such as for "regulation"), [Oasis AKN documentation for //hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
 
-**Note:** The current example files contain only Bills, which use //section elements. Examples of //article, //rule, and //hcontainer\[@name="regulation"\] in SIs/SSIs are not present in the current examples directory.
+## Subsection level elements - @class="prov2", "schProv2" and "EUProv2"
 
-## @class="prov2" (subsection-level elements)
+These classes are associated with the standard subsection-level element within legislative documents. The following elements are used:
 
-This is the standard subsection-level element within the body. In Bills
-and Acts, this will be a //subsection element. In SIs this may depend on
-the name of the containing @class="prov1" but is normally a //paragraph.
-Note in particular that, although some English-speaking jurisdictions
-would call this element within a //rule a //subrule, that is not the
-current practice for LDAPP users. We therefore are unlikely to use
-//subrule (except possibly in incorporated EU legislation or quoted
-treaties).
+* `<subsection class="prov2">` (Primary legislation)
+* `<paragraph class="prov2">` (Secondary legislation)
+* `<subparagraph class="schProv2">` (within schedules of both Primary and Secondary legislation)
+* `<paragraph class="EUProv2">` (EU legislation)
 
-We would expect these always to have //num (note that the content of
-//num will include the opening and closing brackets) and rarely to have
-a //heading (typically before the //num) and to contain after that
-either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed either by:
-      - //paragraph|subparagraph\[@class="para1"\]
-      - //hcontainer\[@name="definition"\]
-      - and then followed by optional //wrapUp
-  - //proviso - these are rare and typically only occur in older
-    legislation.
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
+These elements should normally contain a `num` but not usually a `heading`.
 
 For Bills and Acts see [Oasis AKN documentation for
 //subsection](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_subsection.html)
