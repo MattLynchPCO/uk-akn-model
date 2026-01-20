@@ -1,270 +1,191 @@
 # Section-level and below standard elements
 
-These are elements at the section level in the body of the Act which
-includes Bill clauses, rules, regulations, by-laws and paragraphs in the
-body of subordinate legislation (SIs, SSIs, Orders, etc).
+This page covers elements at or below the section level in a Bill, Act or statutory instrument etc.
 
-|                                                                                                                                    |                                                         |                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------ |
-| **Numbered element**                                                                                                               | **'Normal/regular' number format (in square brackets)** | **Starting 'normal/regular' value in the num element** |
-| Section (including //rule, //hcontainer\[@name="regulation"\] and //article in SIs/SSIs - pretty much anything with @class="prov1" | \[arabic\]                                              | 1                                                      |
-| Subsection (including //paragraph\[@class="prov2"\])                                                                               | (\[arabic\])                                            | (1)                                                    |
-| Schedule paragraph (@class="schedProv1") - these are referred to as "paragraphs"                                                   | \[arabic\]                                              | 1                                                      |
-| Schedule subparagraph (@class="schedProv2")                                                                                        | (\[arabic\])                                            | (1)                                                    |
-| Step                                                                                                                               | Step \[arabic\]                                         | Step 1                                                 |
-| Table                                                                                                                              | Table \[arabic\]                                        | Table 1                                                |
-| Schedule                                                                                                                           | Schedule \[arabic\]\*                                   | Schedule                                               |
+"Section level" provisions are:
+
+* In Bills and Acts: sections (sometime refered to as "clauses") and schedule paragraphs.
+* In Statutory Instruments: regulations, articles, rules and schedule paragraphs.
+* In EU legislation: articles.
+
+|                                                        |                                                         |                                                        |
+| ------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------ |
+| **Numbered element**                                   | **'Normal/regular' number format (in square brackets)** | **Starting 'normal/regular' value in the num element** |
+| Section, Clause (@class="prov1")                       | \[arabic\]                                              | 1                                                      |
+| Rule, Regulation, Article (@class="prov1")             | \[arabic\].                                             | 1.                                                     |
+| Subsection (@class="prov2")                            | (\[arabic\])                                            | (1)                                                    |
+| SI paragraph (@class="prov2")                          | (\[arabic\])                                            | (1)                                                    |
+| Schedule paragraph (@class="schProv1")                 | \[arabic\]                                              | 1                                                      |
+| Schedule subparagraph (@class="schProv2")              | (\[arabic\])                                            | (1)                                                    |
+| Step                                                   | Step \[arabic\]                                         | Step 1                                                 |
+| Table                                                  | Table \[arabic\]                                        | Table 1                                                |
+| Schedule                                               | Schedule \[arabic\]\*                                   | Schedule                                               |
 
 \* NB: if only one schedule, no number is assigned (the //num content is
 "Schedule"); when there are 2 schedules, "Schedule *N*" appears in all
 the schedule //num's including the first one e.g. “Schedule 1” and the
 second is “Schedule 2”.
 
-## Paragraphing in Acts, Bills, SIs and SSIs
 
-Within the body of an Act or Bill, the following applies (within SI, SSI
-or schedule there are some variations):
+
+## Section level elements - @class="prov1", "schProv1" and "EUProv1"
+
+These classes are associated with the standard section-level element within legislative documents. The following elements are used:
+
+* `<section class="prov1">` (Primary legislation)
+* `<article class="prov1">` (Secondary legislation)
+* `<hcontainer name="regulation" class="prov1">` (Secondary legislation)
+* `<rule class="prov1">` (Secondary legislation)
+* `<paragraph class="schProv1">` (within schedules of both Primary and Secondary legislation)
+* `<article class="EUProv1">` (EU legislation)
+
+These elements, with the exception of  `paragraph`, should normally contain both a `num` and a `heading`. A `section` in UKP, SP and SC Bills will contain these in the following order
+
+```
+<section>
+   <num/>
+   <heading/>
+...
+</section>
+```
+
+In secondary legislation, and sections in NI Bills, the order is as follows:
+
+```
+<section>
+   <heading/>
+   <num/>
+...
+</section>
+```
+
+The schedule `paragraph` should normally contain a `num` but not a `heading` (and may be unnumbered).
+
+For Bills and Acts see [Oasis AKN documentation for
+`section`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_section.html)
+
+For SIs/SSIs see [Oasis AKN documentation for `rule`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_rule.html), [Oasis AKN documentation for `article`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_article.html), and, where AKN doesn't provide a specific element (such as for "regulation"), [Oasis AKN documentation for `hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+
+## Subsection level elements - @class="prov2", "schProv2" and "EUProv2"
+
+These classes are associated with the standard subsection-level element within legislative documents. The following elements are used:
+
+* `<subsection class="prov2">` (Primary legislation)
+* `<paragraph class="prov2">` (Secondary legislation)
+* `<subparagraph class="schProv2">` (within schedules of both Primary and Secondary legislation)
+* `<paragraph class="EUProv2">` (EU legislation)
+
+These elements should normally contain a `num` but not usually a `heading`.
+
+* [Oasis AKN documentation for
+`subsection`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_subsection.html)
+* [Oasis AKN documentation for
+`paragraph`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_paragraph.html)
+
+## Subheadings within section-level elements
+Section-level elements are occasionally divided by subheadings in addition to the standard subdivsions (e.g. subsections). See, for example, [section 2 of the National Insurance Contributions Act 2014](https://www.legislation.gov.uk/ukpga/2014/7/section/2) and section 3 of the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf).
+
+Lawmaker implements a pragmatic approach and treats these subheadings as headings of the subdivision they proceed rather than as headings of a separate grouping element. For example:
+
+```
+<section>
+   <num>2</num>
+   <heading>Exceptions</heading>
+   <subsection>
+      <heading>Public authorities</heading>
+      <num>(1)</num>
+      <content>
+         <p>A person cannot qualify for an employment allowance for a tax year if, at any time in the tax year, the person is a public authority which is not a charity.</p>
+      </content>
+   </subsection>
+   <subsection>
+      <num>(2)</num>
+      <intro>
+         <p>In subsection (1)—</p>
+      </intro>
+      <hcontainer name="definition">
+         <content>
+            <p>“<def>charity</def>” has the same meaning as in the Small Charitable Donations Act 2012 (see section 18(1) of that Act), and</p>
+         </content>
+      </hcontainer>
+      <hcontainer name="definition">
+         <content>
+            <p>“<def>public authority</def>” includes any person whose activities involve, wholly or mainly, the performance of functions (whether or not in the United Kingdom) which are of a public nature.</p>
+         </content>
+      </hcontainer>
+   </subsection>
+   <subsection>
+      <heading>Personal, family or household affairs</heading>
+      <num>(3)</num>
+      <content>
+         <p>Liabilities to pay secondary Class 1 contributions incurred by a person (“P”) are “excluded liabilities” if they are incurred in respect of an employed earner who is employed (wholly or partly) for purposes connected with P's personal, family or household affairs.</p>
+      </content>
+   </subsection>
+   ...
+</section>
+```
+
+Note that there is a `subheading` element in the AKN schema which is not used in this case.
+
+## Definitions - `//hcontainer[@name="definition"]`
+
+Given the tradition in UK legislation of referring to certain provisions as "definitions", Lawmaker models such provisions using the element `<hcontainer name="definition">`.
+
+Any defined term within the definition is represented by a `def` element. Additonal attributes `@ukl:startQuote` and `@ukl:endQuote` are used on the `def` element, mirroring those used in `quotedText`, to make the authoring process simpler but can be transformed into literal characters for publication.
+
+For example:
+
+```
+<hcontainer name="definition" class="definition">
+   <content>
+      <p><def ukl:endQuote="”" ukl:startQuote="“">damage</def>, in relation to livestock, includes suffering, injury or disease,</p>
+   </content>
+</hcontainer>
+```
+
+Such definitions should usually be a child of a section-level element or a subsection-level element and the definition element will usually appear in groups of two or more.
+
+The `def` element can also be used in other provisions (e.g. `subsection') to indicate a defined term, reflecting the fact that definitions can occur within other named provisions, not just the specific definition element.
+
+* [Oasis AKN documentation for
+`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+* [Oasis AKN documentation for
+`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_def.html)
+
+## Paragraphing of provisions
+
+This section describes the approach taken when sections, subsections, regulations, articles, SI paragraphs, Schedule paragraphs etc. are further tabulated into numbered paragraphs/sub-paragraphs and so on.
+
+Naming of these sub-provisions isn't consistent: they may be described as "paragraphs", "sub-paragraphs", "heads", "points" or "sub-sub-paragraph" depending on the context. 
+As a result Lawmaker uses the generic hcontainer-type element `level` element together with a `@class` attribute to model these kinds of provision.
+
+The following table sets out the possible values and the expected numbering format:
 
 |                                                         |                                                              |                                           |
 | ------------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------- |
 | **Numbered element**                                    | **'Normal/regular' number format (in square brackets)**      | \*\*Starting 'normal/regular' number \*\* |
-| Paragraph (including within schedules - @class="para1") | (\[lowercase alphabetical\])                                 | (a)                                       |
-| Subparagraph (including within schedules)               | (\[lowercase roman\])                                        | (i)                                       |
-| Subsubparagraph (including within schedules)            | (\[double lowercase alphabetical\]) - UK Bills and Acts only | (aa)                                      |
-| Subsubparagraph (including within schedules)            | (\[uppercase alphabetical\]) - all other document types      | (A)                                       |
+| `<level class="para1">`                                 | (\[lowercase alphabetical\])                                 | (a)                                       |
+| `<level class="para2">`                                 | (\[lowercase roman\])                                        | (i)                                       |
+| `<level class="para3">`                                 | (\[double lowercase alphabetical\])                          | (aa)                                      |
+| `<level class="para3">`                                 | (\[uppercase alphabetical\])                                 | (A)                                       |
 
-Note that the naming below "subparagraph" is not always consistent in
-the body of an Act or Bill. Within SI, SSI and schedule, even for para1
-and para2 examples the name alternates between "paragraph" and
-"sub-paragraph" depending on the context and the usage is not always
-consistent. In SI, SSI and schedules, the prov2, schProv1 and sometimes
-even prov1 elements can be referred to as "paragraph" there is quite a
-lot of ambiguity in the correct name for anything in the para*N*
-classes.
+The `level` element is always expected to have a `num` and is not expected to have a `heading`.,
 
-Because the names are not agreed but the elements are hierarchical and
-can contain nested hierarchical elements including definitions, tables,
-as well as lower para*N* classes, we use the //level element with @class
-used to identify the default numbering and relative indentation level.
+The `level` element may be nested to create sub-paragraphs and sub-sub-paragraphs and it is expected that the top level `level` will have a class value of `para1`, the next `level` will have a class value of `para2` and so on.
 
-In contexts that don't allow //hcontainer, we use
-//blockContainer\[@class="para*N*"\] as an alternative (e.g. //preface,
+The number format for `para3` elements varies depending on the document type:
+* for provisions in UK Bills/Acts, Scottish Bills/Acts and Welsh Bills/Acts, the format used is (A), (B), (C) etc.
+* For provisions in NI Bills/Acts and secondary legislation, the format used is (aa), (bb), (cc) etc.
+
+**Note:** In contexts that don't allow //hcontainer, we use //blockContainer\[@class="para*N*"\] as equivalent markup (e.g. in //preface,
 //preamble, //conclusions etc.).
 
-## @class="prov1" (section-level elements)
+* [Oasis AKN documentation for
+level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
 
-This is the standard section-level element within the body. In Bills and
-Acts, this will be a //section element. In SIs this will be one of
-//article (Orders), //rule (Rules), //hcontainer\[@name="regulation"\]
-(Regulations). This list is likely to expand as we investigate SIs.
+## Provisios - `<provisio>`
 
-We would expect these always to have //num and //heading (in that order)
-and to contain after that either:
+Lawmaker does not permit the creation of Proviso elements as Provisos are not expected to occur in contemporary legislation.
 
-``` 
- * @class="prov2" (%%//%%subsection if this element is %%//%%section)
- * %%//%%content (if there are no paragraphs or definitions in the content)
- * %%//%%intro followed either by:
-   * %%//%%paragraph[@class="para1"]
-   * %%//%%hcontainer[@name="definition"]
-   * and then followed by optional %%//%%wrapUp
- * %%//%%proviso - these are rare and typically only occur in older legislation.
-```
+* [Oasis AKN documentation for `proviso`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_proviso.html)
 
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
-
-For Bills and Acts see [Oasis AKN documentation for
-//section](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_section.html)
-
-For SIs/SSIs see [Oasis AKN documentation for *rule\]\],
-\[\[http:*docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs\_xsd\_Element\_article.html|Oasis
-AKN documentation for *article\]\] and, where AKN doesn't provide a
-specific element (such as for "regulation"),
-\[\[http:*docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs\_xsd\_Element\_hcontainer.html|Oasis
-AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_rule.html)
-
-## @class="prov2" (subsection-level elements)
-
-This is the standard subsection-level element within the body. In Bills
-and Acts, this will be a //subsection element. In SIs this may depend on
-the name of the containing @class="prov1" but is normally a //paragraph.
-Note in particular that, although some English-speaking jurisdictions
-would call this element within a //rule a //subrule, that is not the
-current practice for LDAPP users. We therefore are unlikely to use
-//subrule (except possibly in incorporated EU legislation or quoted
-treaties).
-
-We would expect these always to have //num (note that the content of
-//num will include the opening and closing brackets) and rarely to have
-a //heading (typically before the //num) and to contain after that
-either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed either by:
-      - //paragraph|subparagraph\[@class="para1"\]
-      - //hcontainer\[@name="definition"\]
-      - and then followed by optional //wrapUp
-  - //proviso - these are rare and typically only occur in older
-    legislation.
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
-
-For Bills and Acts see [Oasis AKN documentation for
-//subsection](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_subsection.html)
-
-For SIs/SSIs see [Oasis AKN documentation for
-//paragraph](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_rule.html).
-
-## Subheadings
-
-The `subheading` element is a `block` element in AKN intended to be used to supplement the `heading` element (typically immediately after it).
-
-However, subheadings in UK legislation appear below the section (or equivalent) level, sometimes grouping subsections, paragraphs and subparagraphs, etc (see section 2 in the [National Insurance Contributions Act 2014](http://www.legislation.gov.uk/ukpga/2014/7/pdfs/ukpga_20140007_en.pdf)) and sometimes despite identical formatting they are really headings to a particular subsection, paragraph, sub-paragraph etc (see section 3 in the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf)). We adopt a pragmatic approach to these choosing to use `subsection|level/heading` regardless of whether the heading applies to a single subsection (or lower) or a group of them. This avoids any confusion with the `subheading` element in AKN (which may be used for some schedules or EU legislation but is unlikely to be used in the main body of UK legislation).
-
-## //hcontainer\[@name="definition"\]
-
-AKN does not provide a generic element for definitions despite all
-English-speaking jurisdictions and many European influenced
-jurisdictions including referenceable objects that are described as
-"definitions". We therefore propose to use an
-//hcontainer\[@name="definition"\] to wrap what would normally be
-referred to as a definition (typically within a section or subsection or
-similar but they can occur elsewhere, e.g. Queensland tends to put
-definitions in a "glossary" or "dictionary" schedule in more recent
-Acts).
-
-Although many jurisdictions do not indent definitions differently to
-blocks within the same context, a number do (including Scotland and the
-UK). A separate container element allows this flexibility. Because they
-are referenceable (and deletable as a container which might include
-paragraphs, formulas, and nested definitions), a //block element isn't
-sufficient.
-
-A list of definitions typically appears within a //section or
-//subsection (or equivalents in SIs/SSIs) immediately after //intro text
-like "In this Act—" or similar. Another common construct is intro text
-followed by a formula followed by the text "where—" and a list of
-definitions defining the terms used in the formula (see
-//hcontainer\[@name="equation"\]). This last construct is just as likely
-to appear within a //paragraph also so definitions can appear at
-different indentation levels.
-
-The first //p within a //hcontainer\[@name="definition"\] will start
-with an inline //def element that should contain the term that is
-defined (including the quotations within the //def tags). Some
-definitions may have more than one //def element but most will contain
-only one. It seems redundant to use //embeddedText for the quotation
-marks - we simply use //def an quotation marks in the text. \_Query
-whether //def should use the same quote attributes as //embeddedText\_\_
-
-In reference wording to definitions, the phrase 'the definition of
-"*defined term*"' should be surrounded by a single pair of //ref tags
-with the quotation marks part of the text.
-
-See [Oasis AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_hcontainer.html)
-
-## //level\[@class="para1"\]
-
-This is the standard paragraph-level element typical of the first level
-of English paragraphing. As explained above, we use the //level element
-(to allow consistent usage in all contexts as the name is not standard
-or agreed within the UK across different document types).
-
-We would expect these always to have //num (note that the content of
-//num will include the opening and closing brackets) and sometimes have
-a //heading (typically before the //num) and to contain after that
-either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed by //subparagraph\[@class="para2"\] and then an
-    optional //wrapUp
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements. We would
-only expect //hcontainer\[@name="definition"\] to occur within a
-paragraph if preceded by //tblock\[@class="formula"\].
-
-See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
-
-## //level\[@class="para2"\]
-
-This is the standard sub-paragraph-level element within the body of an
-Act. As explained above we use nested //level elements for this level We
-would expect these always to have //num (note that the content of //num
-will include the opening and closing brackets) and rarely have a
-//heading (typically before the //num) and to contain after that either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed either by:
-  - //level\[@class="para3"\]
-  - and then followed by optional //wrapUp
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of hierarchical elements to allows for
-nested hierarchical elements.
-
-See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
-
-## //level\[@class="para3"\] and //level\[@class="para4"\]
-
-There are some variations in the naming of elements at this level,
-nominally a sub-sub-paragraph-level element within an Act, but more
-variation in other contexts. Hence we continue the use of //level at
-this level and below.
-
-We would expect these always to have //num (note that the content of
-//num will include the opening and closing brackets) and rarely have a
-//heading (typically before the //num) and to contain after that either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed by //level\[@class="para4"\] and then followed by
-    optional //wrapUp.
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
-
-See [Oasis AKN documentation for
-//level](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_level.html)
-
-## //proviso
-
-This is the standard proviso element within the body. Provisos typically
-start with "Provided that .." or similar and have their own context as
-they may in turn have paragraphs which start numbering again within the
-proviso.
-
-We would expect these not to have either a //num or a //heading
-(typically before the //num) and to contain after that either:
-
-  - //content (if there are no paragraphs or definitions in the content)
-  - //intro followed by 2 or more //paragraph\[@class="para1"\] and then
-    followed by optional //wrapUp
-
-We do not expect //blockList to occur here (except possibly for bullet
-lists) but prefer to make use of named hierarchical elements.
-
-See [Oasis AKN documentation for
-//proviso](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_proviso.html)
-
-## Finance Resolutions
-
-Unique to Finance Resolutions, instead of a //section equivalent, the
-bulk of the content of these documents is contained in resolutions. Each
-of these is represented in the XML by an
-//hcontainer\[@name="resolution"\]. These typically contain a number
-(//num) and heading (//heading) followed by an //intro with the main
-content of the resolution, optionally follwed by subsections
-(//subsection) or paragraphs (//level), then followed by a //wrapUp
-which contains the boilerplate text "And it is declared that it is
-expedient in the public interest that this Resolution should have
-statutory effect under the provisions of the Provisional Collection of
-Taxes Act 1968."
-
-See [Oasis AKN documentation for
-//hcontainer](http://docs.oasis-open.org/legaldocml/akn-core/v1.0/csd02/part2-specs/materials/akn-core-v1.0-csd02-part2-specs_xsd_Element_hcontainer.html)
