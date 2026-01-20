@@ -92,60 +92,80 @@ These classes are associated with the standard subsection-level element within l
 
 These elements should normally contain a `num` but not usually a `heading`.
 
-For Bills and Acts see [Oasis AKN documentation for
+* [Oasis AKN documentation for
 //subsection](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_subsection.html)
-
-For SIs/SSIs see [Oasis AKN documentation for
-//paragraph](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_paragraph.html).
+* [Oasis AKN documentation for
+//paragraph](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_paragraph.html)
 
 ## Subheadings
+Section-level elements are occasionally divided by subheadings in addition to the standard subdivsions (e.g. subsections). See, for example, [section 2 of the National Insurance Contributions Act 2014](https://www.legislation.gov.uk/ukpga/2014/7/section/2) and section 3 of the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf).
 
-The `subheading` element is a `block` element in AKN intended to be used to supplement the `heading` element (typically immediately after it).
+Lawmaker implements a pragmatic approach and treats these subheadings as headings of the subdivision they proceed rather than as headings of a separate grouping element. For example:
 
-However, subheadings in UK legislation appear below the section (or equivalent) level, sometimes grouping subsections, paragraphs and subparagraphs, etc (see section 2 in the [National Insurance Contributions Act 2014](http://www.legislation.gov.uk/ukpga/2014/7/pdfs/ukpga_20140007_en.pdf)) and sometimes despite identical formatting they are really headings to a particular subsection, paragraph, sub-paragraph etc (see section 3 in the [Modern Slavery Act 2015](http://www.legislation.gov.uk/ukpga/2015/30/pdfs/ukpga_20150030_en.pdf)). We adopt a pragmatic approach to these choosing to use `subsection|level/heading` regardless of whether the heading applies to a single subsection (or lower) or a group of them. This avoids any confusion with the `subheading` element in AKN (which may be used for some schedules or EU legislation but is unlikely to be used in the main body of UK legislation).
+```
+<section>
+   <num>2</num>
+   <heading>Exceptions</heading>
+   <subsection>
+      <heading>Public authorities</heading>
+      <num>(1)</num>
+      <content>
+         <p>A person cannot qualify for an employment allowance for a tax year if, at any time in the tax year, the person is a public authority which is not a charity.</p>
+      </content>
+   </subsection>
+   <subsection>
+      <num>(2)</num>
+      <intro>
+         <p>In subsection (1)—</p>
+      </intro>
+      <hcontainer name="definition">
+         <content>
+            <p>“<def>charity</def>” has the same meaning as in the Small Charitable Donations Act 2012 (see section 18(1) of that Act), and</p>
+         </content>
+      </hcontainer>
+      <hcontainer name="definition">
+         <content>
+            <p>“<def>public authority</def>” includes any person whose activities involve, wholly or mainly, the performance of functions (whether or not in the United Kingdom) which are of a public nature.</p>
+         </content>
+      </hcontainer>
+   </subsection>
+   <subsection>
+      <heading>Personal, family or household affairs</heading>
+      <num>(3)</num>
+      <content>
+         <p>Liabilities to pay secondary Class 1 contributions incurred by a person (“P”) are “excluded liabilities” if they are incurred in respect of an employed earner who is employed (wholly or partly) for purposes connected with P's personal, family or household affairs.</p>
+      </content>
+   </subsection>
+   ...
+</section>
+```
 
-## //hcontainer\[@name="definition"\]
+Note that there is a `subheading` element in the AKN schema which is not used in this case.
 
-AKN does not provide a generic element for definitions despite all
-English-speaking jurisdictions and many European influenced
-jurisdictions including referenceable objects that are described as
-"definitions". We therefore propose to use an
-//hcontainer\[@name="definition"\] to wrap what would normally be
-referred to as a definition (typically within a section or subsection or
-similar but they can occur elsewhere, e.g. Queensland tends to put
-definitions in a "glossary" or "dictionary" schedule in more recent
-Acts).
+## Definitions - `//hcontainer[@name="definition"]`
 
-Although many jurisdictions do not indent definitions differently to
-blocks within the same context, a number do (including Scotland and the
-UK). A separate container element allows this flexibility. Because they
-are referenceable (and deletable as a container which might include
-paragraphs, formulas, and nested definitions), a //block element isn't
-sufficient.
+Given the tradition in UK legislation of referring to certain provisions as "definitions", Lawmaker models such provisions using the element `<hcontainer name="definition">`.
 
-A list of definitions typically appears within a //section or
-//subsection (or equivalents in SIs/SSIs) immediately after //intro text
-like "In this Act—" or similar. Another common construct is intro text
-followed by a formula followed by the text "where—" and a list of
-definitions defining the terms used in the formula (see
-//hcontainer\[@name="equation"\]). This last construct is just as likely
-to appear within a //paragraph also so definitions can appear at
-different indentation levels.
+Any defined term within the definition is represented by a `def` element. Additonal attributes `@ukl:startQuote` and `@ukl:endQuote` are used on the `def` element, mirroring those used in `quotedText`, to make the authoring process simpler but can be transformed into literal characters for publication.
 
-The first //p within a //hcontainer\[@name="definition"\] will start
-with an inline //def element that should contain the term that is
-defined (including the quotations within the //def tags). Some
-definitions may have more than one //def element but most will contain
-only one. It seems redundant to use //embeddedText for the quotation
-marks - we simply use //def an quotation marks in the text. \_Query
-whether //def should use the same quote attributes as //embeddedText\_\_
+For example:
 
-In reference wording to definitions, the phrase 'the definition of
-"*defined term*"' should be surrounded by a single pair of //ref tags
-with the quotation marks part of the text.
+```
+<hcontainer name="definition" class="definition">
+   <content>
+      <p><def ukl:endQuote="”" ukl:startQuote="“">damage</def>, in relation to livestock, includes suffering, injury or disease,</p>
+   </content>
+</hcontainer>
+```
 
-See [Oasis AKN documentation for
-//hcontainer](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+Such definitions should usually be a child of a section-level element or a subsection-level element and the definition element will usually appear in groups of two or more.
+
+The `def` element can also be used in other provisions (e.g. `subsection') to indicate a defined term, reflecting the fact that definitions can occur within other named provisions, not just the specific definition element.
+
+* [Oasis AKN documentation for
+`hcontainer`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_hcontainer.html)
+* [Oasis AKN documentation for
+`def`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_def.html)
 
 ## //level\[@class="para1"\]
 
