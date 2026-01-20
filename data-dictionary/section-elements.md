@@ -127,7 +127,7 @@ Lawmaker implements a pragmatic approach and treats these subheadings as heading
 
 Note that there is a `subheading` element in the AKN schema which is not used in this case.
 
-## Definitions - `//hcontainer[@name="definition"]`
+## Definitions - `<hcontainer name="definition">`
 
 Given the tradition in UK legislation of referring to certain provisions as "definitions", Lawmaker models such provisions using the element `<hcontainer name="definition">`.
 
@@ -181,7 +181,7 @@ The number format for `para3` elements varies depending on the document type:
 //preamble, //conclusions etc.).
 
 * [Oasis AKN documentation for
-level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
+`level`](https://docs.oasis-open.org/legaldocml/akn-core/v1.0/os/part2-specs/os-part2-specs_xsd_Element_level.html)
 
 ## Provisios - `<provisio>`
 
